@@ -1,0 +1,23 @@
+{
+  "name": "comparador-veiculos-ivecco",
+  "version": "1.0.0",
+  "description": "Aplicativo comparador de veículos para cliente Ivecco.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suportepa/Comparador-Veiculos-Ivecco.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suportepa/Comparador-Veiculos-Ivecco/issues"
+  },
+  "homepage": "https://github.com/suportepa/Comparador-Veiculos-Ivecco#readme",
+  "dependencies": {
+    "expo": "^54.0.20"
+  }
+}
