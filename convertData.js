@@ -1,4 +1,4 @@
-// convertData.js
+// convertData.js - VERSÃO CORRIGIDA PARA SEPARADOR DE PONTO E VÍRGULA (;)
 const fs = require('fs');
 const path = require('path');
 const csv = require('csv-parser');
@@ -6,7 +6,6 @@ const csv = require('csv-parser');
 // =======================================================
 // === CONFIGURAÇÃO: NOME DO ARQUIVO CSV DE ENTRADA ===
 // =======================================================
-// Certifique-se de que seu arquivo CSV esteja na raiz do projeto
 const INPUT_CSV_FILE = 'dados_veiculos.csv'; // MANTENHA ESTE NOME
 
 // Nome do arquivo de saída (substitui o seu veiculos.ts)
@@ -14,7 +13,7 @@ const OUTPUT_TS_FILE = path.join('data', 'veiculos.ts');
 
 /**
  * Função para criar um ID limpo e único a partir do nome do veículo.
- * @param {string} text - Nome do veículo.
+ * @param {string} text - Nome do nome do veículo.
  * @returns {string} ID formatado.
  */
 const slugify = (text) => {
@@ -25,6 +24,18 @@ const slugify = (text) => {
         .replace(/[\s_-]+/g, '_');
 };
 
+/**
+ * Função para limpar e retornar o primeiro valor de uma string com múltiplos valores (ex: "1.200 | 1.500")
+ * @param {string} value - Valor da célula.
+ * @returns {string} O primeiro valor limpo.
+ */
+const cleanValue = (value) => {
+    if (!value) return '';
+    // Pega o que estiver antes do primeiro espaço ou caractere especial
+    const firstValue = value.split(/[\s|]/)[0]; 
+    return firstValue.trim().replace('.', ''); // Remove o ponto (milhar)
+};
+
 const VeiculosData = [];
 
 // Garante que a pasta 'data' exista
@@ -33,50 +44,52 @@ if (!fs.existsSync('data')) {
 }
 
 fs.createReadStream(INPUT_CSV_FILE)
-    .pipe(csv())
+    // ATENÇÃO: MUDANÇA AQUI! USANDO PONTO E VÍRGULA COMO SEPARADOR
+    .pipe(csv({ separator: ';' }))
     .on('data', (row) => {
-        // As colunas essenciais para o comparador:
-        const potenciaCv = row.cv;
-        const torqueNm = row.nm;
+        // Limpeza dos dados de potência e torque que podem ter múltiplos valores ou caracteres especiais
+        const potenciaCv = cleanValue(row.cv);
+        const torqueNm = cleanValue(row.nm);
         const modeloVeiculo = row.modelo;
         const fabricanteMotor = row.Fabricante;
         
-        // Ignora linhas que não têm o modelo ou dados de motor
+        // Ignora linhas que não têm o modelo ou dados de motor limpos
         if (!modeloVeiculo || !potenciaCv || !torqueNm || !fabricanteMotor) {
-            // console.warn("Linha ignorada por falta de dados essenciais:", row); // Descomente para debug
+            // Se quiser ver as linhas que estão sendo ignoradas, descomente a linha abaixo:
+            // console.warn("Linha ignorada por falta de dados essenciais:", row); 
             return; 
         }
 
-        // Mapeamento e transformação dos dados do CSV para a interface Veiculo do TypeScript
+        // Mapeamento e transformação dos dados
         const veiculo = {
-            id: slugify(modeloVeiculo), // Ex: 'cf_fac_8x2'
-            nome: `${row.marca} ${modeloVeiculo}`, // Ex: 'DAF CF FAC 8x2'
-            modelo: modeloVeiculo, // Usando o modelo como nome do veículo
-            imagem: row.imagem || "https://via.placeholder.com/300x200?text=Iveco", // Link da imagem
-            resumoVantagem: row.resumoVantagem || "Ponto forte do veículo a ser adicionado.", // Sua coluna de resumo
+            id: slugify(`${row.marca}_${modeloVeiculo}_${potenciaCv}`), 
+            nome: `${row.marca} ${modeloVeiculo}`, 
+            modelo: modeloVeiculo, 
+            imagem: row.imagem || "https://via.placeholder.com/300x200?text=Iveco", 
+            resumoVantagem: row.resumoVantagem || "Ponto forte do veículo a ser adicionado.", 
             
             fichaTecnica: {
-                motor: fabricanteMotor, // Coluna 'Fabricante'
-                potencia: `${potenciaCv} cv`, // Coluna 'cv'
-                torque: `${torqueNm} Nm`, // Coluna 'nm'
+                motor: fabricanteMotor, 
+                potencia: `${potenciaCv} cv`, 
+                torque: `${torqueNm} Nm`, 
                 
-                // Combinação das colunas 'acionamento' e 'nMarchas'
-                transmissao: `${row.acionamento} (${row.nMarchas} marchas)`, 
+                // Mapeamento das colunas de transmissão
+                // Nota: A coluna 'acionamento' tem valores longos como 'Manual | Automatizada | Direct Drive'
+                transmissao: `${row.acionamento || 'N/A'} (${row.nMarchas || '?'} marchas)`, 
                 
-                // Coluna 'Peso Em Ordem De Marcha' não estava clara, deixando N/A.
-                pesoEmOrdemDeMarcha: "N/A - Conferir Coluna", 
-                
-                pbtTecnico: row.pbtTecnico || "N/A", // Coluna 'pbtTecnico'
-                cmt: row.cmt || "N/A", // Coluna 'cmt'
+                // Os dados de peso/PBT/CMT ainda precisam ser ajustados manualmente no seu CSV se necessário, 
+                // mas estamos usando as colunas nomeadas que você indicou:
+                pesoEmOrdemDeMarcha: "N/A - Conferir Coluna", // Coluna "peso" não está clara nas colunas que mapeamos.
+                pbtTecnico: row.pbtTecnico || "N/A", 
+                cmt: row.cmt || "N/A", 
             }
         };
 
         VeiculosData.push(veiculo);
     })
     .on('end', () => {
-        // Estrutura do arquivo TypeScript de saída
         const tsContent = `
-// data/veiculos.ts - ARQUIVO GERADO AUTOMATICAMENTE
+// data/veiculos.ts - ARQUIVO GERADO AUTOMATICAMENTE (Total: ${VeiculosData.length} veículos)
 
 export interface FichaTecnica {
   motor: string;
@@ -100,7 +113,6 @@ export interface Veiculo {
 export const VeiculosData: Veiculo[] = ${JSON.stringify(VeiculosData, null, 2)};
 `;
 
-        // Escreve o novo conteúdo no veiculos.ts
         fs.writeFileSync(OUTPUT_TS_FILE, tsContent);
         
         console.log('----------------------------------------------------');
