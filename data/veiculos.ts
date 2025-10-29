@@ -20,7 +20,6 @@ export interface Veiculo {
   fichaTecnica: FichaTecnica;
 }
 
-// ... (Resto do código de interface e export)
 export const VeiculosData: Veiculo[] = [
   {
     "id": "zf_traxon_cf_fac_8x2_px_7_308",
@@ -32,8 +31,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "PACCAR PX-7",
       "potencia": "308 cv",
       "torque": "1200 Nm",
-      "transmissao": "Manual | Automatizada | Direct Drive (9 velocidades a frente + 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (9 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "33.000",
       "cmt": "35.000"
     }
@@ -48,8 +47,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "PACCAR MX 13",
       "potencia": "480 cv",
       "torque": "2350 Nm",
-      "transmissao": "Automatizada | Overdrive (12 velocidades a frente + 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "58.000",
       "cmt": "150.000"
     }
@@ -64,8 +63,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "PACCAR PX-7",
       "potencia": "261 cv",
       "torque": "1000 Nm",
-      "transmissao": "Manual | Automatizada | Direct Drive (9 velocidades a frente + 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (9 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "26.500",
       "cmt": "35.000"
     }
@@ -80,8 +79,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "PACCAR PX-7",
       "potencia": "290 cv",
       "torque": "1100 Nm",
-      "transmissao": "Manual | Automatizada | Direct Drive (9 velocidades a frente + 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (9 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "26.500",
       "cmt": "35.000"
     }
@@ -96,8 +95,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "PACCAR PX-7",
       "potencia": "308 cv",
       "torque": "1200 Nm",
-      "transmissao": "Manual | Automatizada | Direct Drive (9 velocidades a frente + 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (9 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "26.500",
       "cmt": "35.000"
     }
@@ -112,8 +111,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "PACCAR PX-9",
       "potencia": "380 cv",
       "torque": "1700 Nm",
-      "transmissao": "Automatizada | Direct Drive (12 velocidades a frente + 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "18.100",
       "cmt": "60.000"
     }
@@ -128,8 +127,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "PACCAR MX-11",
       "potencia": "370 cv",
       "torque": "1800 Nm",
-      "transmissao": "Automatizada | Direct Drive (12 velocidades a frente + 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "18.100",
       "cmt": "60.000"
     }
@@ -144,8 +143,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "PACCAR MX-11",
       "potencia": "410 cv",
       "torque": "2000 Nm",
-      "transmissao": "Automatizada | Direct Drive (12 velocidades a frente + 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "18.100",
       "cmt": "60.000"
     }
@@ -160,8 +159,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "PACCAR MX-11",
       "potencia": "450 cv",
       "torque": "2200 Nm",
-      "transmissao": "Automatizada | Direct Drive (12 velocidades a frente + 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "18.100",
       "cmt": "60.000"
     }
@@ -176,8 +175,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "PACCAR MX-11",
       "potencia": "410 cv",
       "torque": "2000 Nm",
-      "transmissao": "Automatizada | Direct Drive (12 velocidades a frente + 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "27.100",
       "cmt": "60.000"
     }
@@ -192,8 +191,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "PACCAR MX-11",
       "potencia": "450 cv",
       "torque": "2200 Nm",
-      "transmissao": "Automatizada | Direct Drive (12 velocidades a frente + 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "27.100",
       "cmt": "60.000"
     }
@@ -208,8 +207,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "PACCAR MX 13",
       "potencia": "480 cv",
       "torque": "2350 Nm",
-      "transmissao": "Automatizada | Overdrive (12 velocidades a frente + 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "33.500",
       "cmt": "125.000"
     }
@@ -224,8 +223,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "PACCAR MX 13",
       "potencia": "480 cv",
       "torque": "2350 Nm",
-      "transmissao": "Automatizada | Direct Drive (12 velocidades a frente + 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "18.100",
       "cmt": "60.000"
     }
@@ -240,8 +239,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "PACCAR MX 13",
       "potencia": "530 cv",
       "torque": "2500 Nm",
-      "transmissao": "Automatizada | Direct Drive (12 velocidades a frente + 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "18.100",
       "cmt": "60.000"
     }
@@ -256,8 +255,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "PACCAR MX 13",
       "potencia": "480 cv",
       "torque": "2350 Nm",
-      "transmissao": "Automatizada | Direct Drive (12 velocidades a frente + 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "27.100",
       "cmt": "60.000"
     }
@@ -272,8 +271,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "PACCAR MX 13",
       "potencia": "530 cv",
       "torque": "2500 Nm",
-      "transmissao": "Automatizada | Direct Drive (12 velocidades a frente + 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "27.100",
       "cmt": "60.000"
     }
@@ -288,8 +287,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "PACCAR MX 13",
       "potencia": "480 cv",
       "torque": "2350 Nm",
-      "transmissao": "Automatizada | Direct Drive (12 velocidades a frente + 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.100",
       "cmt": "74.000"
     }
@@ -304,8 +303,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "PACCAR MX 13",
       "potencia": "530 cv",
       "torque": "2500 Nm",
-      "transmissao": "Automatizada | Direct Drive (12 velocidades a frente + 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.100",
       "cmt": "74.000"
     }
@@ -320,8 +319,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "PACCAR MX 13",
       "potencia": "480 cv",
       "torque": "2350 Nm",
-      "transmissao": "Automatizada | Overdrive (12 velocidades a frente + 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "33.500",
       "cmt": "125.000 | 150.000"
     }
@@ -336,8 +335,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "PACCAR MX 13",
       "potencia": "530 cv",
       "torque": "2500 Nm",
-      "transmissao": "Automatizada | Overdrive (12 velocidades a frente + 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "33.500",
       "cmt": "125.000 | 150.000"
     }
@@ -352,8 +351,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "FPT / F1C Max",
       "potencia": "160 cv",
       "torque": "380 Nm",
-      "transmissao": "Manual | Cabo (6 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.500",
       "cmt": "6.500"
     }
@@ -368,8 +367,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "FPT / F1C Max",
       "potencia": "160 cv",
       "torque": "380 Nm",
-      "transmissao": "Manual | Autom�tico (6 sincronizadas � frente e 1 � r� / 8 sincronizadas � frente e 1 a r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.500",
       "cmt": "6.500"
     }
@@ -384,8 +383,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "FPT / F1C Max",
       "potencia": "180 cv",
       "torque": "430 Nm",
-      "transmissao": "Manual | Autom�tico (6 sincronizadas � frente e 1 � r� / 8 sincronizadas � frente e 1 a r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.500",
       "cmt": "6.500"
     }
@@ -400,8 +399,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "FPT / F1C Max",
       "potencia": "180 cv",
       "torque": "430 Nm",
-      "transmissao": "Manual | Autom�tico (6 sincronizadas � frente e 1 � r� / 8 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "5.300",
       "cmt": "8.000"
     }
@@ -416,8 +415,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "FPT / F1C Max",
       "potencia": "180 cv",
       "torque": "430 Nm",
-      "transmissao": "Manual | Autom�tico (6 sincronizadas � frente e 1 � r� / 8 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "5.950",
       "cmt": "8.800"
     }
@@ -432,127 +431,127 @@ export const VeiculosData: Veiculo[] = [
       "motor": "FPT / F1C Max",
       "potencia": "180 cv",
       "torque": "430 Nm",
-      "transmissao": "Manual | Autom�tico (6 sincronizadas � frente e 1 � r� / 8 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "6.500",
       "cmt": "8.800"
     }
   },
   {
     "id": "zf_6s_480_vo_zf_el55_daily_furgo_30_160_160",
-    "nome": "ZF 6S 480 VO (ZF EL55) DAILY FURG�O 30-160",
-    "modelo": "DAILY FURG�O 30-160",
+    "nome": "ZF 6S 480 VO (ZF EL55) DAILY FURGï¿½O 30-160",
+    "modelo": "DAILY FURGï¿½O 30-160",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT / F1C VGT",
       "potencia": "160 cv",
       "torque": "380 Nm",
-      "transmissao": "Manual | Cabo (6 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.500",
       "cmt": "6.500"
     }
   },
   {
     "id": "zf_6s_480_vo_zf_el55_daily_furgo_30_160_predisp_ambulncia_160",
-    "nome": "ZF 6S 480 VO (ZF EL55) DAILY FURG�O 30-160 PREDISP. AMBUL�NCIA",
-    "modelo": "DAILY FURG�O 30-160 PREDISP. AMBUL�NCIA",
+    "nome": "ZF 6S 480 VO (ZF EL55) DAILY FURGï¿½O 30-160 PREDISP. AMBULï¿½NCIA",
+    "modelo": "DAILY FURGï¿½O 30-160 PREDISP. AMBULï¿½NCIA",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT / F1C VGT",
       "potencia": "160 cv",
       "torque": "380 Nm",
-      "transmissao": "Manual | Cabo (6 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.900",
       "cmt": "6.500"
     }
   },
   {
     "id": "zf_6s_480_vo_zf_el55_zf_8hp_daily_furgo_45_160_hi_matic_predisp_ambulncia_160",
-    "nome": "ZF 6S 480 VO (ZF EL55) ZF 8HP DAILY FURG�O 45-160 HI-MATIC PREDISP. AMBUL�NCIA",
-    "modelo": "DAILY FURG�O 45-160 HI-MATIC PREDISP. AMBUL�NCIA",
+    "nome": "ZF 6S 480 VO (ZF EL55) ZF 8HP DAILY FURGï¿½O 45-160 HI-MATIC PREDISP. AMBULï¿½NCIA",
+    "modelo": "DAILY FURGï¿½O 45-160 HI-MATIC PREDISP. AMBULï¿½NCIA",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT / F1C Max",
       "potencia": "160 cv",
       "torque": "380 Nm",
-      "transmissao": "Manual | Autom�tico (6 sincronizadas � frente e 1 � r� / 8 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "4.300",
       "cmt": "6.500"
     }
   },
   {
     "id": "zf_6s_480_vo_zf_el55_zf_8hp_daily_furgo_45_160_manual_hi_matic_160",
-    "nome": "ZF 6S 480 VO (ZF EL55) ZF 8HP DAILY FURG�O 45-160 MANUAL | HI-MATIC",
-    "modelo": "DAILY FURG�O 45-160 MANUAL | HI-MATIC",
+    "nome": "ZF 6S 480 VO (ZF EL55) ZF 8HP DAILY FURGï¿½O 45-160 MANUAL | HI-MATIC",
+    "modelo": "DAILY FURGï¿½O 45-160 MANUAL | HI-MATIC",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT / F1C Max",
       "potencia": "160 cv",
       "torque": "380 Nm",
-      "transmissao": "Manual | Autom�tico (6 sincronizadas � frente e 1 � r� / 8 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "4.400",
       "cmt": "6.500"
     }
   },
   {
     "id": "zf_6s_480_vo_zf_el55_zf_8hp_daily_furgo_45_180_hi_matic_predisp_ambulncia_180",
-    "nome": "ZF 6S 480 VO (ZF EL55) ZF 8HP DAILY FURG�O 45-180 HI-MATIC PREDISP. AMBUL�NCIA",
-    "modelo": "DAILY FURG�O 45-180 HI-MATIC PREDISP. AMBUL�NCIA",
+    "nome": "ZF 6S 480 VO (ZF EL55) ZF 8HP DAILY FURGï¿½O 45-180 HI-MATIC PREDISP. AMBULï¿½NCIA",
+    "modelo": "DAILY FURGï¿½O 45-180 HI-MATIC PREDISP. AMBULï¿½NCIA",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT / F1C Max",
       "potencia": "180 cv",
       "torque": "380 Nm",
-      "transmissao": "Manual | Autom�tico (6 sincronizadas � frente e 1 � r� / 8 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "4.300",
       "cmt": "6.500"
     }
   },
   {
     "id": "zf_6s_480_vo_zf_el55_zf_8hp_daily_furgo_45_180_manual_hi_matic_180",
-    "nome": "ZF 6S 480 VO (ZF EL55) ZF 8HP DAILY FURG�O 45-180 MANUAL | HI-MATIC",
-    "modelo": "DAILY FURG�O 45-180 MANUAL | HI-MATIC",
+    "nome": "ZF 6S 480 VO (ZF EL55) ZF 8HP DAILY FURGï¿½O 45-180 MANUAL | HI-MATIC",
+    "modelo": "DAILY FURGï¿½O 45-180 MANUAL | HI-MATIC",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT / F1C Max",
       "potencia": "180 cv",
       "torque": "380 Nm",
-      "transmissao": "Manual | Autom�tico (6 sincronizadas � frente e 1 � r� / 8 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "4.400",
       "cmt": "6.500"
     }
   },
   {
     "id": "zf_6s_480_vo_zf_el55_zf_8hp_daily_furgo_55_180_manual_hi_matic_180",
-    "nome": "ZF 6S 480 VO (ZF EL55) ZF 8HP DAILY FURG�O 55-180 MANUAL | HI-MATIC",
-    "modelo": "DAILY FURG�O 55-180 MANUAL | HI-MATIC",
+    "nome": "ZF 6S 480 VO (ZF EL55) ZF 8HP DAILY FURGï¿½O 55-180 MANUAL | HI-MATIC",
+    "modelo": "DAILY FURGï¿½O 55-180 MANUAL | HI-MATIC",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT / F1C Max",
       "potencia": "180 cv",
       "torque": "430 Nm",
-      "transmissao": "Manual | Autom�tico (6 sincronizadas � frente e 1 � r� / 8 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "5.300",
       "cmt": "8.000"
     }
   },
   {
-    "id": "ivecodaf_e_daily_42_136",
-    "nome": "IVECO/DAF E-DAILY 4.2",
+    "id": "_e_daily_42_136",
+    "nome": " E-DAILY 4.2",
     "modelo": "E-DAILY 4.2",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
@@ -561,15 +560,15 @@ export const VeiculosData: Veiculo[] = [
       "potencia": "136 cv",
       "torque": "300 Nm",
       "transmissao": "N/A (? marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "4.250",
       "cmt": "N/A"
     }
   },
   {
-    "id": "ivecodaf_e_daily_42_furgo_136",
-    "nome": "IVECO/DAF E-DAILY 4.2 FURG�O",
-    "modelo": "E-DAILY 4.2 FURG�O",
+    "id": "_e_daily_42_furgo_136",
+    "nome": " E-DAILY 4.2 FURGï¿½O",
+    "modelo": "E-DAILY 4.2 FURGï¿½O",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
@@ -577,14 +576,14 @@ export const VeiculosData: Veiculo[] = [
       "potencia": "136 cv",
       "torque": "300 Nm",
       "transmissao": "N/A (? marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "4.250",
       "cmt": "N/A"
     }
   },
   {
-    "id": "ivecodaf_e_daily_72_193",
-    "nome": "IVECO/DAF E-DAILY 7.2",
+    "id": "_e_daily_72_193",
+    "nome": " E-DAILY 7.2",
     "modelo": "E-DAILY 7.2",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
@@ -593,7 +592,7 @@ export const VeiculosData: Veiculo[] = [
       "potencia": "193 cv",
       "torque": "400 Nm",
       "transmissao": "N/A (? marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "7.200 | 7.200",
       "cmt": "N/A"
     }
@@ -605,11 +604,11 @@ export const VeiculosData: Veiculo[] = [
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
-      "motor": "FPT / Cursor 13, ciclo Otto, � g�s natural, biometano ou qualquer mistura de ambos",
+      "motor": "FPT / Cursor 13, ciclo Otto, ï¿½ gï¿½s natural, biometano ou qualquer mistura de ambos",
       "potencia": "460 cv",
       "torque": "2000 Nm",
-      "transmissao": "Automatizada (12 sincronizadas � frente e 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "27.200",
       "cmt": "53.000"
     }
@@ -624,24 +623,24 @@ export const VeiculosData: Veiculo[] = [
       "motor": "FPT / Cursor 13",
       "potencia": "480 cv",
       "torque": "2450 Nm",
-      "transmissao": "Automatizada (12 sincronizadas � frente e 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.200",
       "cmt": "60.000"
     }
   },
   {
     "id": "zf_traxon_12tx2620_td_s_way_480_4x2_suspenso_pneumtica_480",
-    "nome": "ZF TraXon 12TX2620 TD S-WAY 480 (4X2) SUSPENS�O PNEUM�TICA",
-    "modelo": "S-WAY 480 (4X2) SUSPENS�O PNEUM�TICA",
+    "nome": "ZF TraXon 12TX2620 TD S-WAY 480 (4X2) SUSPENSï¿½O PNEUMï¿½TICA",
+    "modelo": "S-WAY 480 (4X2) SUSPENSï¿½O PNEUMï¿½TICA",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT / Cursor 13",
       "potencia": "480 cv",
       "torque": "2450 Nm",
-      "transmissao": "Automatizada (12 sincronizadas � frente e 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "18.200",
       "cmt": "60.000"
     }
@@ -656,24 +655,24 @@ export const VeiculosData: Veiculo[] = [
       "motor": "FPT / Cursor 13",
       "potencia": "480 cv",
       "torque": "2450 Nm",
-      "transmissao": "Automatizada (12 sincronizadas � frente e 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.100",
       "cmt": "60.000"
     }
   },
   {
     "id": "zf_traxon_12tx2620_td_s_way_480_6x2_suspenso_pneumtica_480",
-    "nome": "ZF TraXon 12TX2620 TD S-WAY 480 (6X2) SUSPENS�O PNEUM�TICA",
-    "modelo": "S-WAY 480 (6X2) SUSPENS�O PNEUM�TICA",
+    "nome": "ZF TraXon 12TX2620 TD S-WAY 480 (6X2) SUSPENSï¿½O PNEUMï¿½TICA",
+    "modelo": "S-WAY 480 (6X2) SUSPENSï¿½O PNEUMï¿½TICA",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT / Cursor 13",
       "potencia": "480 cv",
       "torque": "2450 Nm",
-      "transmissao": "Automatizada (12 sincronizadas � frente e 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.200",
       "cmt": "60.000"
     }
@@ -688,8 +687,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "FPT / Cursor 13",
       "potencia": "540 cv",
       "torque": "2550 Nm",
-      "transmissao": "Automatizada (12 sincronizadas � frente e 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "29.100",
       "cmt": "80.000"
     }
@@ -704,8 +703,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "FPT / NEF 4",
       "potencia": "190 cv",
       "torque": "610 Nm",
-      "transmissao": "Manual | Mec�nica (6 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "10.600",
       "cmt": "13.000"
     }
@@ -720,8 +719,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "FPT / NEF 4",
       "potencia": "207 cv",
       "torque": "720 Nm",
-      "transmissao": "Manual | Mec�nica (6 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "15.400",
       "cmt": "27.000"
     }
@@ -736,8 +735,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "FPT / NEF 4",
       "potencia": "210 cv",
       "torque": "720 Nm",
-      "transmissao": "Manual | Mec�nica (6 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.000",
       "cmt": "33.000"
     }
@@ -752,8 +751,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "FPT / NEF 6",
       "potencia": "204 cv",
       "torque": "750 Nm",
-      "transmissao": "Manual | Mec�nica (6 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.000",
       "cmt": "N/A"
     }
@@ -768,8 +767,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "FPT / NEF 6",
       "potencia": "280 cv",
       "torque": "950 Nm",
-      "transmissao": "Manual | Mec�nica (6 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.000",
       "cmt": "33.000"
     }
@@ -784,8 +783,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "FPT / NEF 6",
       "potencia": "320 cv",
       "torque": "1100 Nm",
-      "transmissao": "Autoshift | Automatizado (10 sincronizadas � frente e 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Autoshift (10 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.000",
       "cmt": "33.000"
     }
@@ -800,8 +799,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "FPT / NEF 6",
       "potencia": "320 cv",
       "torque": "1100 Nm",
-      "transmissao": "Autoshift | Automatizado (10 sincronizadas � frente e 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Autoshift (10 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.000",
       "cmt": "33.000"
     }
@@ -816,8 +815,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "FPT / NEF 6",
       "potencia": "320 cv",
       "torque": "1100 Nm",
-      "transmissao": "Autoshift | Automatizado (10 sincronizadas � frente e 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Autoshift (10 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.000",
       "cmt": "36.000"
     }
@@ -832,8 +831,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "FPT / NEF 6",
       "potencia": "280 cv",
       "torque": "950 Nm",
-      "transmissao": "Manual | Mec�nica (6 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "26.000",
       "cmt": "33.000"
     }
@@ -848,8 +847,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "FPT / NEF 6",
       "potencia": "280 cv",
       "torque": "950 Nm",
-      "transmissao": "Manual | Mec�nica (6 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "29.000",
       "cmt": "35.000"
     }
@@ -864,8 +863,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "FPT / NEF 6",
       "potencia": "320 cv",
       "torque": "1100 Nm",
-      "transmissao": "Autoshift | Automatizado (10 sincronizadas � frente e 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Autoshift (10 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "24.390",
       "cmt": "36.000"
     }
@@ -880,8 +879,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "FPT / NEF 6",
       "potencia": "320 cv",
       "torque": "1100 Nm",
-      "transmissao": "Manual | Mec�nica (10 sincronizadas a frente + 3 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (10 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "26.690",
       "cmt": "44.000"
     }
@@ -896,8 +895,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "FPT / NEF 6",
       "potencia": "320 cv",
       "torque": "1100 Nm",
-      "transmissao": "Autoshift | Automatizado (10 sincronizadas � frente e 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Autoshift (10 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "31.200",
       "cmt": "35.000"
     }
@@ -912,8 +911,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "FPT / NEF 4",
       "potencia": "190 cv",
       "torque": "610 Nm",
-      "transmissao": "Manual | Mec�nica (6 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "8.600",
       "cmt": "11.000"
     }
@@ -928,8 +927,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 924 LA",
       "potencia": "163 cv",
       "torque": "610 Nm",
-      "transmissao": "Manual | Cabo | Automatizada (6 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "16.000",
       "cmt": "N/A"
     }
@@ -944,8 +943,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 924 LA",
       "potencia": "163 cv",
       "torque": "610 Nm",
-      "transmissao": "Manual | Cabo | Automatizada (6 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "23.000",
       "cmt": "N/A"
     }
@@ -960,8 +959,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 924 LA",
       "potencia": "163 cv",
       "torque": "610 Nm",
-      "transmissao": "Manual | Cabo | Automatizado (6 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "16.000",
       "cmt": "N/A"
     }
@@ -976,8 +975,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 460 LA",
       "potencia": "449 cv",
       "torque": "2200 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "20.100",
       "cmt": "62.000"
     }
@@ -992,8 +991,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 460 LA",
       "potencia": "449 cv",
       "torque": "2200 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "20.100",
       "cmt": "62.000"
     }
@@ -1008,8 +1007,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 460 LA",
       "potencia": "476 cv",
       "torque": "2300 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.100",
       "cmt": "62.000"
     }
@@ -1024,8 +1023,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 460 LA",
       "potencia": "476 cv",
       "torque": "2300 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "30.100",
       "cmt": "68.000 / 62.000"
     }
@@ -1040,8 +1039,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 471 LA",
       "potencia": "530 cv",
       "torque": "2600 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "27.100",
       "cmt": "62.000"
     }
@@ -1056,8 +1055,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 471 LA",
       "potencia": "530 cv",
       "torque": "2600 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "30.100",
       "cmt": "68.000 / 62.000"
     }
@@ -1072,8 +1071,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 460 LA",
       "potencia": "495 cv",
       "torque": "2400 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "27.100",
       "cmt": "80.000"
     }
@@ -1088,8 +1087,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 460 LA",
       "potencia": "495 cv",
       "torque": "2400 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "27.100",
       "cmt": "120.000 / 80.000"
     }
@@ -1104,8 +1103,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 471 LA",
       "potencia": "530 cv",
       "torque": "2600 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "27.100",
       "cmt": "80.000"
     }
@@ -1120,8 +1119,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 471 LA",
       "potencia": "530 cv",
       "torque": "2600 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "27.100",
       "cmt": "120.000 / 80.000"
     }
@@ -1136,8 +1135,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 460 LA",
       "potencia": "495 cv",
       "torque": "2400 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "33.500",
       "cmt": "150.000"
     }
@@ -1152,8 +1151,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 460 LA",
       "potencia": "495 cv",
       "torque": "2400 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "33.500",
       "cmt": "150.000"
     }
@@ -1168,8 +1167,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 460 LA",
       "potencia": "495 cv",
       "torque": "2400 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "33.500",
       "cmt": "150.000"
     }
@@ -1184,8 +1183,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 471 LA",
       "potencia": "530 cv",
       "torque": "2600 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "33.500",
       "cmt": "150.000"
     }
@@ -1200,8 +1199,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 460 LA",
       "potencia": "495 cv",
       "torque": "2400 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "41.000",
       "cmt": "150.000"
     }
@@ -1216,8 +1215,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 460 LA",
       "potencia": "495 cv",
       "torque": "2400 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "58.000",
       "cmt": "150.000"
     }
@@ -1232,8 +1231,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 924 LA",
       "potencia": "185 cv",
       "torque": "700 Nm",
-      "transmissao": "Manual | Automatizado (6 sincronizadas � frente e 1 � r� / 8 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "16.000 | 23.000",
       "cmt": "23.000"
     }
@@ -1248,8 +1247,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 924 LA",
       "potencia": "185 cv",
       "torque": "700 Nm",
-      "transmissao": "Manual | Automatizado (6 sincronizadas � frente e 1 � r� / 8 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.100 | 24.100",
       "cmt": "27.000"
     }
@@ -1264,8 +1263,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 924 LA",
       "potencia": "185 cv",
       "torque": "700 Nm",
-      "transmissao": "Automatizado | Manual (6 sincronizadas � frente e 1 � r� / 8 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizado (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.000",
       "cmt": "27.000"
     }
@@ -1280,8 +1279,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 924 LA",
       "potencia": "185 cv",
       "torque": "700 Nm",
-      "transmissao": "Manual | Automatizado (6 sincronizadas � frente e 1 � r� / 8 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.100",
       "cmt": "27.000"
     }
@@ -1296,8 +1295,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 926 LA",
       "potencia": "260 cv",
       "torque": "900 Nm",
-      "transmissao": "Manual | Automatizado (6 sincronizadas � frente e 1 � r� / 8 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.100",
       "cmt": "27.000"
     }
@@ -1312,8 +1311,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 926 LA",
       "potencia": "260 cv",
       "torque": "900 Nm",
-      "transmissao": "Manual | Automatizado (6 sincronizadas � frente e 1 � r� / 8 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.100",
       "cmt": "N/A"
     }
@@ -1328,8 +1327,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 926 LA",
       "potencia": "286 cv",
       "torque": "1100 Nm",
-      "transmissao": "Autom�tica (6 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automï¿½tica (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.100",
       "cmt": "N/A"
     }
@@ -1344,8 +1343,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 926 LA",
       "potencia": "321 cv",
       "torque": "1250 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.100",
       "cmt": "N/A"
     }
@@ -1360,8 +1359,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 926 LA",
       "potencia": "321 cv",
       "torque": "1250 Nm",
-      "transmissao": "Autom�tica (6 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automï¿½tica (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.100",
       "cmt": "N/A"
     }
@@ -1376,8 +1375,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 926 LA",
       "potencia": "321 cv",
       "torque": "1250 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.100",
       "cmt": "N/A"
     }
@@ -1392,8 +1391,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 926 LA",
       "potencia": "321 cv",
       "torque": "1250 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "18.000",
       "cmt": "45.100"
     }
@@ -1408,8 +1407,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 926 LA",
       "potencia": "286 cv",
       "torque": "1100 Nm",
-      "transmissao": "Automatizada (8 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (8 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "24.100",
       "cmt": "N/A"
     }
@@ -1424,8 +1423,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 926 LA",
       "potencia": "286 cv",
       "torque": "1100 Nm",
-      "transmissao": "Automatizada (8 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (8 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "24.100",
       "cmt": "N/A"
     }
@@ -1440,8 +1439,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 926 LA",
       "potencia": "321 cv",
       "torque": "1250 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "24.100",
       "cmt": "N/A"
     }
@@ -1456,8 +1455,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 926 LA",
       "potencia": "321 cv",
       "torque": "1250 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "24.100",
       "cmt": "N/A"
     }
@@ -1472,8 +1471,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 926 LA",
       "potencia": "286 cv",
       "torque": "1100 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "26.600",
       "cmt": "45.100"
     }
@@ -1488,8 +1487,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 926 LA",
       "potencia": "286 cv",
       "torque": "1100 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "26.600",
       "cmt": "45.100"
     }
@@ -1504,8 +1503,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 926 LA",
       "potencia": "286 cv",
       "torque": "1100 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "26.600",
       "cmt": "45.100"
     }
@@ -1520,8 +1519,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 926 LA",
       "potencia": "321 cv",
       "torque": "1250 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "30.200",
       "cmt": "N/A"
     }
@@ -1536,8 +1535,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 926 LA",
       "potencia": "321 cv",
       "torque": "1250 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "30.500",
       "cmt": "63.000"
     }
@@ -1552,8 +1551,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 926 LA",
       "potencia": "286 cv",
       "torque": "1100 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "32.700",
       "cmt": "45.100"
     }
@@ -1568,8 +1567,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 926 LA",
       "potencia": "286 cv",
       "torque": "1100 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "32.700",
       "cmt": "45.100"
     }
@@ -1584,8 +1583,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 926 LA",
       "potencia": "286 cv",
       "torque": "1100 Nm",
-      "transmissao": "Automatizada (12 velocidades � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "32.700",
       "cmt": "45.100"
     }
@@ -1600,8 +1599,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 924 LA",
       "potencia": "163 cv",
       "torque": "610 Nm",
-      "transmissao": "Manual | Automatizado (6 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "16.000",
       "cmt": "N/A"
     }
@@ -1616,8 +1615,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 924 LA",
       "potencia": "163 cv",
       "torque": "610 Nm",
-      "transmissao": "Manual | Automatizado (6 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "23.000",
       "cmt": "13.000"
     }
@@ -1632,8 +1631,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 924 LA",
       "potencia": "163 cv",
       "torque": "610 Nm",
-      "transmissao": "Manual (6 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "16.000",
       "cmt": "N/A"
     }
@@ -1648,40 +1647,40 @@ export const VeiculosData: Veiculo[] = [
       "motor": "DC13 162",
       "potencia": "375 cv",
       "torque": "1900 Nm",
-      "transmissao": "Autom�tica (14 velocidades a frente + 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automï¿½tica (14 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "26.100",
       "cmt": "78.000"
     }
   },
   {
     "id": "g25cm_g_460_a6x2na_gs_cng_carga_geral_466",
-    "nome": "G25CM G 460 A6x2NA (G�S � CNG) | Carga Geral",
-    "modelo": "G 460 A6x2NA (G�S � CNG) | Carga Geral",
+    "nome": "G25CM G 460 A6x2NA (Gï¿½S ï¿½ CNG) | Carga Geral",
+    "modelo": "G 460 A6x2NA (Gï¿½S ï¿½ CNG) | Carga Geral",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "OC13 104",
       "potencia": "466 cv",
       "torque": "2300 Nm",
-      "transmissao": "Autom�tica (14 velocidades a frente + 4 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automï¿½tica (14 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "26.100",
       "cmt": "78.000"
     }
   },
   {
     "id": "g25cm_g_460_a6x4nz_gs_cng_carga_geral_466",
-    "nome": "G25CM G 460 A6x4NZ (G�S � CNG) | Carga Geral",
-    "modelo": "G 460 A6x4NZ (G�S � CNG) | Carga Geral",
+    "nome": "G25CM G 460 A6x4NZ (Gï¿½S ï¿½ CNG) | Carga Geral",
+    "modelo": "G 460 A6x4NZ (Gï¿½S ï¿½ CNG) | Carga Geral",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "OC13 104",
       "potencia": "466 cv",
       "torque": "2300 Nm",
-      "transmissao": "Autom�tica (14 velocidades a frente + 4 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automï¿½tica (14 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.100",
       "cmt": "90.000"
     }
@@ -1696,8 +1695,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "DC13 176",
       "potencia": "426 cv",
       "torque": "2300 Nm",
-      "transmissao": "Autom�tica (14 velocidades a frente + 4 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automï¿½tica (14 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "20.100",
       "cmt": "66.000"
     }
@@ -1712,8 +1711,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "DC13 176",
       "potencia": "426 cv",
       "torque": "2300 Nm",
-      "transmissao": "Autom�tica (14 velocidades a frente + 4 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automï¿½tica (14 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "26.100",
       "cmt": "78.000"
     }
@@ -1728,8 +1727,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "DC13 164",
       "potencia": "456 cv",
       "torque": "2350 Nm",
-      "transmissao": "Autom�tica (14 velocidades a frente + 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automï¿½tica (14 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "26.100",
       "cmt": "78.000"
     }
@@ -1744,8 +1743,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "DC13 175",
       "potencia": "466 cv",
       "torque": "2500 Nm",
-      "transmissao": "Autom�tica (14 velocidades a frente + 4 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automï¿½tica (14 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "20.100",
       "cmt": "66.000"
     }
@@ -1760,8 +1759,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "DC13 175",
       "potencia": "466 cv",
       "torque": "2500 Nm",
-      "transmissao": "Autom�tica (14 velocidades a frente + 4 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automï¿½tica (14 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "26.100",
       "cmt": "78.000"
     }
@@ -1776,8 +1775,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "DC13 174",
       "potencia": "507 cv",
       "torque": "2650 Nm",
-      "transmissao": "Autom�tica (14 velocidades a frente + 4 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automï¿½tica (14 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.100",
       "cmt": "90.000"
     }
@@ -1792,8 +1791,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "DC13 174",
       "potencia": "507 cv",
       "torque": "2650 Nm",
-      "transmissao": "Autom�tica (14 velocidades a frente + 4 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automï¿½tica (14 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.100",
       "cmt": "90.000"
     }
@@ -1808,8 +1807,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "DC13 166",
       "potencia": "547 cv",
       "torque": "2700 Nm",
-      "transmissao": "Autom�tica (14 velocidades a frente + 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automï¿½tica (14 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.100",
       "cmt": "90.000"
     }
@@ -1824,8 +1823,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "DC13 173",
       "potencia": "568 cv",
       "torque": "2800 Nm",
-      "transmissao": "Autom�tica (14 velocidades a frente + 4 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automï¿½tica (14 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.100",
       "cmt": "90.000"
     }
@@ -1840,8 +1839,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "DC16 123",
       "potencia": "781 cv",
       "torque": "3700 Nm",
-      "transmissao": "Autom�tica (14 velocidades a frente + 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automï¿½tica (14 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "26.100",
       "cmt": "78.000"
     }
@@ -1856,8 +1855,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MAN | D0834LF08",
       "potencia": "205 cv",
       "torque": "750 Nm",
-      "transmissao": "Manual | Cabo (6 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "14.500",
       "cmt": "23.000"
     }
@@ -1872,8 +1871,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MAN | D0834LF08",
       "potencia": "205 cv",
       "torque": "750 Nm",
-      "transmissao": "Manual | Cabo (6 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "16.800",
       "cmt": "27.000"
     }
@@ -1888,8 +1887,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MAN | D0834LF08",
       "potencia": "205 cv",
       "torque": "750 Nm",
-      "transmissao": "Manual | Cabo | Autom�tica (6 sincronizadas � frente e 1 � r� | 8 � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.600",
       "cmt": "27.000"
     }
@@ -1904,8 +1903,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MAN | D0836LF18",
       "potencia": "255 cv",
       "torque": "950 Nm",
-      "transmissao": "Manual | Cabo | Autom�tica (6 sincronizadas � frente e 1 � r� | 8 � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.600",
       "cmt": "27.000"
     }
@@ -1920,8 +1919,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MAN | D0836LF17",
       "potencia": "315 cv",
       "torque": "1200 Nm",
-      "transmissao": "Manual | Cabo | Autom�tica (8 � frente (sincronizadas) e 1 super reduzida e 1 � r� | 12 � frente, 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (8 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.600",
       "cmt": "35.000"
     }
@@ -1936,8 +1935,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "Cummins L9",
       "potencia": "375 cv",
       "torque": "1700 Nm",
-      "transmissao": "Automatizada (12 � frente e 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.600",
       "cmt": "45.000"
     }
@@ -1952,8 +1951,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MAN | D2676LFAG",
       "potencia": "475 cv",
       "torque": "2400 Nm",
-      "transmissao": "Automatizada (12 � frente e 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "20.500",
       "cmt": "60.000"
     }
@@ -1968,8 +1967,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "Cummins L9",
       "potencia": "375 cv",
       "torque": "1700 Nm",
-      "transmissao": "Automatizada (12 � frente e 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.600",
       "cmt": "56.000"
     }
@@ -1984,8 +1983,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MAN | D2676LFAG",
       "potencia": "475 cv",
       "torque": "2400 Nm",
-      "transmissao": "Automatizada (12 � frente e 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.000",
       "cmt": "70.000"
     }
@@ -2000,8 +1999,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MAN | D0836LF18",
       "potencia": "260 cv",
       "torque": "950 Nm",
-      "transmissao": "Manual | Cabo (6 � frente (sincronizadas) e 1 � r�  | 9 marchas, 8 � frente (sincronizadas) e 1 super reduzida e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "25.600",
       "cmt": "35.000"
     }
@@ -2016,8 +2015,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MAN | D0836LF17",
       "potencia": "315 cv",
       "torque": "1200 Nm",
-      "transmissao": "Manual | Cabo | Autom�tica (8 � frente (sincronizadas) e 1 super reduzida, 1 � r� | 12 � frente e 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (8 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "25.600",
       "cmt": "35.000"
     }
@@ -2032,8 +2031,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MAN | D0836LF18",
       "potencia": "260 cv",
       "torque": "950 Nm",
-      "transmissao": "Manual | Cabo (9 marchas, 8 � frente (sincronizadas) e 1 super reduzida, 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (9 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "27.100",
       "cmt": "36.000"
     }
@@ -2048,8 +2047,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MAN | D0836LF17",
       "potencia": "315 cv",
       "torque": "1200 Nm",
-      "transmissao": "Manual | Cabo | Autom�tica (8 � frente (sincronizadas) e 1 super reduzida, 1 � r� | 12 � frente, 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (8 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "31.200",
       "cmt": "36.000"
     }
@@ -2064,8 +2063,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MAN | D0836LF17",
       "potencia": "315 cv",
       "torque": "1200 Nm",
-      "transmissao": "Manual | Automatizada (12 � frente, 2 � r� / 9 marchas, 8 � frente (sincronizadas) e 1 super reduzida, 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "30.600",
       "cmt": "42.000"
     }
@@ -2080,8 +2079,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "L9",
       "potencia": "375 cv",
       "torque": "1700 Nm",
-      "transmissao": "Automatizada (12 � frente, 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "32.700",
       "cmt": "70.000"
     }
@@ -2096,8 +2095,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MAN | D0836LF18",
       "potencia": "255 cv",
       "torque": "950 Nm",
-      "transmissao": "Manual | Cabo (9 marchas, 8 � frente (sincronizadas) e 1 super reduzida, 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (9 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "32.400",
       "cmt": "36.000"
     }
@@ -2112,8 +2111,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MAN | D2676LFAG",
       "potencia": "475 cv",
       "torque": "2400 Nm",
-      "transmissao": "Automatizada (12 � frente e 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "33.700",
       "cmt": "125.000"
     }
@@ -2128,8 +2127,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "Cummins | ISF 3.8l",
       "potencia": "175 cv",
       "torque": "600 Nm",
-      "transmissao": "Manual | Cabo | Automatizada (6 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "10.800",
       "cmt": "13.200"
     }
@@ -2144,8 +2143,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "Cummins | ISF 3.8l",
       "potencia": "175 cv",
       "torque": "600 Nm",
-      "transmissao": "Manual | Cabo (6 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "10.800",
       "cmt": "13.200"
     }
@@ -2160,8 +2159,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "Cummins | ISF 3.8l",
       "potencia": "175 cv",
       "torque": "600 Nm",
-      "transmissao": "Manual | Cabo (6 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "13.700",
       "cmt": "13.200"
     }
@@ -2176,8 +2175,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "FPT | F1C 3.0l",
       "potencia": "166 cv",
       "torque": "430 Nm",
-      "transmissao": "Manual | Cabo (6 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "6.350",
       "cmt": "6.900"
     }
@@ -2192,8 +2191,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "Cummins | ISF 3.8l",
       "potencia": "175 cv",
       "torque": "600 Nm",
-      "transmissao": "Manual | Cabo | Automatizada (6 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "9.200",
       "cmt": "11.500"
     }
@@ -2208,15 +2207,15 @@ export const VeiculosData: Veiculo[] = [
       "motor": "FPT | F1C 3.0l",
       "potencia": "156 cv",
       "torque": "360 Nm",
-      "transmissao": "Manual | Cabo (6 sincronizadas � frente e 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.600",
       "cmt": "5.000"
     }
   },
   {
-    "id": "ivecodaf_e_delivery_11_381",
-    "nome": "IVECO/DAF e-DELIVERY 11",
+    "id": "_e_delivery_11_381",
+    "nome": " e-DELIVERY 11",
     "modelo": "e-DELIVERY 11",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
@@ -2225,14 +2224,14 @@ export const VeiculosData: Veiculo[] = [
       "potencia": "381 cv",
       "torque": "2300 Nm",
       "transmissao": "N/A (? marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "10.700",
       "cmt": "15.000"
     }
   },
   {
-    "id": "ivecodaf_e_delivery_14_408",
-    "nome": "IVECO/DAF e-DELIVERY 14",
+    "id": "_e_delivery_14_408",
+    "nome": " e-DELIVERY 14",
     "modelo": "e-DELIVERY 14",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
@@ -2241,7 +2240,7 @@ export const VeiculosData: Veiculo[] = [
       "potencia": "408 cv",
       "torque": "2150 Nm",
       "transmissao": "N/A (? marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "14.300",
       "cmt": "15.000"
     }
@@ -2256,8 +2255,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MAN | D2676LFAG",
       "potencia": "475 cv",
       "torque": "2400 Nm",
-      "transmissao": "Automatizada (12 � frente, 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.000",
       "cmt": "70.000"
     }
@@ -2272,8 +2271,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MAN | D2676LFAD",
       "potencia": "525 cv",
       "torque": "2600 Nm",
-      "transmissao": "Automatizada (12 � frente, 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "29.000",
       "cmt": "80.000"
     }
@@ -2288,8 +2287,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K420",
       "potencia": "420 cv",
       "torque": "2100 Nm",
-      "transmissao": "Automatizada (12 � frente + 4  � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "20.500 | 20.500",
       "cmt": "60.000 | 70.000"
     }
@@ -2304,8 +2303,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K460",
       "potencia": "460 cv",
       "torque": "2300 Nm",
-      "transmissao": "Automatizada (12 � frente + 4  � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "20.500 | 20.500",
       "cmt": "60.000 | 70.000"
     }
@@ -2320,8 +2319,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K500",
       "potencia": "500 cv",
       "torque": "2500 Nm",
-      "transmissao": "Automatizada (12 � frente + 4  � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "20.500 | 20.500",
       "cmt": "60.000 | 70.000"
     }
@@ -2336,8 +2335,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K540",
       "potencia": "540 cv",
       "torque": "2600 Nm",
-      "transmissao": "Automatizada (12 � frente + 4  � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "20.500 | 20.500",
       "cmt": "60.000 | 70.000"
     }
@@ -2352,8 +2351,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K420",
       "potencia": "420 cv",
       "torque": "2100 Nm",
-      "transmissao": "Automatizada (12 � frente + 4  � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "27.500 | 27.500",
       "cmt": "60.000 | 70.000"
     }
@@ -2368,8 +2367,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K460",
       "potencia": "460 cv",
       "torque": "2300 Nm",
-      "transmissao": "Automatizada (12 � frente + 4  � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "27.500 | 27.500",
       "cmt": "60.000 | 70.000"
     }
@@ -2384,8 +2383,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K500",
       "potencia": "500 cv",
       "torque": "2500 Nm",
-      "transmissao": "Automatizada (12 � frente + 4  � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "27.500 | 27.500",
       "cmt": "60.000 | 70.000"
     }
@@ -2400,8 +2399,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K540",
       "potencia": "540 cv",
       "torque": "2600 Nm",
-      "transmissao": "Automatizada (12 � frente + 4  � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "27.500 | 27.500",
       "cmt": "60.000 | 70.000"
     }
@@ -2416,8 +2415,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K420",
       "potencia": "420 cv",
       "torque": "2100 Nm",
-      "transmissao": "Automatizada | Automatizada (12 � frente + 4 � r� | 14 (12 + 2 super-reduzidas) + 6 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.000 | 28.000",
       "cmt": "60.000 | 70.000"
     }
@@ -2432,8 +2431,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K460",
       "potencia": "460 cv",
       "torque": "2300 Nm",
-      "transmissao": "Automatizada | Automatizada (12 � frente + 4 � r� | 14 (12 + 2 super-reduzidas) + 6 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.000 | 28.000",
       "cmt": "60.000 | 70.000"
     }
@@ -2448,8 +2447,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K500",
       "potencia": "500 cv",
       "torque": "2500 Nm",
-      "transmissao": "Automatizada | Automatizada (12 � frente + 4 � r� | 14 (12 + 2 super-reduzidas) + 6 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.000 | 28.000",
       "cmt": "60.000 | 70.000"
     }
@@ -2464,8 +2463,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K540",
       "potencia": "540 cv",
       "torque": "2600 Nm",
-      "transmissao": "Automatizada | Automatizada (12 � frente + 4 � r� | 14 (12 + 2 super-reduzidas) + 6 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.000 | 28.000",
       "cmt": "60.000 | 70.000"
     }
@@ -2480,8 +2479,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K420",
       "potencia": "420 cv",
       "torque": "2100 Nm",
-      "transmissao": "Automatizada | Automatizada (12 � frente + 4 � r� | 14 (12 + 2 super-reduzidas) + 6 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.000",
       "cmt": "60.000"
     }
@@ -2496,8 +2495,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K460",
       "potencia": "460 cv",
       "torque": "2300 Nm",
-      "transmissao": "Automatizada | Automatizada (12 � frente + 4 � r� | 14 (12 + 2 super-reduzidas) + 6 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.000",
       "cmt": "60.000"
     }
@@ -2512,8 +2511,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K500",
       "potencia": "500 cv",
       "torque": "2500 Nm",
-      "transmissao": "Automatizada | Automatizada (12 � frente + 4 � r� | 14 (12 + 2 super-reduzidas) + 6 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.000",
       "cmt": "60.000"
     }
@@ -2528,8 +2527,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K540",
       "potencia": "540 cv",
       "torque": "2600 Nm",
-      "transmissao": "Automatizada | Automatizada (12 � frente + 4 � r� | 14 (12 + 2 super-reduzidas) + 6 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.000",
       "cmt": "60.000"
     }
@@ -2544,8 +2543,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K420",
       "potencia": "420 cv",
       "torque": "2100 Nm",
-      "transmissao": "Automatizada | Automatizada | Automatizada (Overdrive) (12  � frete e 4 � r� | 14 (12 + 2 super-reduzidas) e 6 � r� | 13 (12 + 1 super-reduzida) e 6 � r�  marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "27.500 |  33.500 | 35.000 | 36.000",
       "cmt": "80.000 | 100.000 / 130.000 | 100.000 / 130.000 | 100.000 / 130.000"
     }
@@ -2560,8 +2559,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K460",
       "potencia": "460 cv",
       "torque": "2300 Nm",
-      "transmissao": "Automatizada | Automatizada | Automatizada (Overdrive) (12  � frete e 4 � r� | 14 (12 + 2 super-reduzidas) e 6 � r� | 13 (12 + 1 super-reduzida) e 6 � r�  marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "27.500 |  33.500 | 35.000 | 36.000",
       "cmt": "80.000 | 100.000 / 130.000 | 100.000 / 130.000 | 100.000 / 130.000"
     }
@@ -2576,8 +2575,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K500",
       "potencia": "500 cv",
       "torque": "2500 Nm",
-      "transmissao": "Automatizada | Automatizada | Automatizada (Overdrive) (12  � frete e 4 � r� | 14 (12 + 2 super-reduzidas) e 6 � r� | 13 (12 + 1 super-reduzida) e 6 � r�  marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "27.500 |  33.500 | 35.000 | 36.000",
       "cmt": "80.000 | 100.000 / 130.000 | 100.000 / 130.000 | 100.000 / 130.000"
     }
@@ -2592,72 +2591,72 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K540",
       "potencia": "540 cv",
       "torque": "2600 Nm",
-      "transmissao": "Automatizada | Automatizada | Automatizada (Overdrive) (12  � frete e 4 � r� | 14 (12 + 2 super-reduzidas) e 6 � r� | 13 (12 + 1 super-reduzida) e 6 � r�  marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "27.500 |  33.500 | 35.000 | 36.000",
       "cmt": "80.000 | 100.000 / 130.000 | 100.000 / 130.000 | 100.000 / 130.000"
     }
   },
   {
     "id": "at2612f_at2612f_aso_ulc_super_reduzida_ato2612f_aso_c_super_reduzida_fh_420_6x4t_s_reduo_nos_cubos_420",
-    "nome": "AT2612F | AT2612F + ASO-ULC (Super reduzida) | ATO2612F + ASO-C (Super reduzida) FH 420 6x4T (s/ redu��o nos cubos)",
-    "modelo": "FH 420 6x4T (s/ redu��o nos cubos)",
+    "nome": "AT2612F | AT2612F + ASO-ULC (Super reduzida) | ATO2612F + ASO-C (Super reduzida) FH 420 6x4T (s/ reduï¿½ï¿½o nos cubos)",
+    "modelo": "FH 420 6x4T (s/ reduï¿½ï¿½o nos cubos)",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "D13K420",
       "potencia": "420 cv",
       "torque": "2100 Nm",
-      "transmissao": "Automatizada | Automatizada | Automatizada (Overdrive (12 � frente + 4 � r� | 14 (12 + 2 super-reduzidas) + 6 � r� | 13 (12 + 1 super-reduzida) + 6 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.500 | 33.500 / 42.000 | 41.000 / 42.000 | 48.000",
       "cmt": "100.000 | 100.000 / 130.000 | 100.000  / 150.000 | 150.000  / 225.000 "
     }
   },
   {
     "id": "at2612f_at2612f_aso_ulc_super_reduzida_ato2612f_aso_c_super_reduzida_fh_460_6x4t_s_reduo_nos_cubos_460",
-    "nome": "AT2612F | AT2612F + ASO-ULC (Super reduzida) | ATO2612F + ASO-C (Super reduzida) FH 460 6x4T (s/ redu��o nos cubos)",
-    "modelo": "FH 460 6x4T (s/ redu��o nos cubos)",
+    "nome": "AT2612F | AT2612F + ASO-ULC (Super reduzida) | ATO2612F + ASO-C (Super reduzida) FH 460 6x4T (s/ reduï¿½ï¿½o nos cubos)",
+    "modelo": "FH 460 6x4T (s/ reduï¿½ï¿½o nos cubos)",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "D13K460",
       "potencia": "460 cv",
       "torque": "2300 Nm",
-      "transmissao": "Automatizada | Automatizada | Automatizada (Overdrive (12 � frente + 4 � r� | 14 (12 + 2 super-reduzidas) + 6 � r� | 13 (12 + 1 super-reduzida) + 6 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.500 | 33.500 / 42.000 | 41.000 / 42.000 | 48.000",
       "cmt": "100.000 | 100.000 / 130.000 | 100.000  / 150.000 | 150.000  / 225.000 "
     }
   },
   {
     "id": "at2612f_at2612f_aso_ulc_super_reduzida_ato2612f_aso_c_super_reduzida_fh_500_6x4t_s_reduo_nos_cubos_500",
-    "nome": "AT2612F | AT2612F + ASO-ULC (Super reduzida) | ATO2612F + ASO-C (Super reduzida) FH 500 6x4T (s/ redu��o nos cubos)",
-    "modelo": "FH 500 6x4T (s/ redu��o nos cubos)",
+    "nome": "AT2612F | AT2612F + ASO-ULC (Super reduzida) | ATO2612F + ASO-C (Super reduzida) FH 500 6x4T (s/ reduï¿½ï¿½o nos cubos)",
+    "modelo": "FH 500 6x4T (s/ reduï¿½ï¿½o nos cubos)",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "D13K500",
       "potencia": "500 cv",
       "torque": "2500 Nm",
-      "transmissao": "Automatizada | Automatizada | Automatizada (Overdrive (12 � frente + 4 � r� | 14 (12 + 2 super-reduzidas) + 6 � r� | 13 (12 + 1 super-reduzida) + 6 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.500 | 33.500 / 42.000 | 41.000 / 42.000 | 48.000",
       "cmt": "100.000 | 100.000 / 130.000 | 100.000  / 150.000 | 150.000  / 225.000 "
     }
   },
   {
     "id": "at2612f_at2612f_aso_ulc_super_reduzida_ato2612f_aso_c_super_reduzida_fh_540_6x4t_s_reduo_nos_cubos_500",
-    "nome": "AT2612F | AT2612F + ASO-ULC (Super reduzida) | ATO2612F + ASO-C (Super reduzida) FH 540 6x4T (s/ redu��o nos cubos)",
-    "modelo": "FH 540 6x4T (s/ redu��o nos cubos)",
+    "nome": "AT2612F | AT2612F + ASO-ULC (Super reduzida) | ATO2612F + ASO-C (Super reduzida) FH 540 6x4T (s/ reduï¿½ï¿½o nos cubos)",
+    "modelo": "FH 540 6x4T (s/ reduï¿½ï¿½o nos cubos)",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "D13K540",
       "potencia": "500 cv",
       "torque": "2500 Nm",
-      "transmissao": "Automatizada | Automatizada | Automatizada (Overdrive (12 � frente + 4 � r� | 14 (12 + 2 super-reduzidas) + 6 � r� | 13 (12 + 1 super-reduzida) + 6 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.500 | 33.500 / 42.000 | 41.000 / 42.000 | 48.000",
       "cmt": "100.000 | 100.000 / 130.000 | 100.000  / 150.000 | 150.000  / 225.000 "
     }
@@ -2672,8 +2671,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K420",
       "potencia": "420 cv",
       "torque": "2100 Nm",
-      "transmissao": "Automatizada | Automatizada (12 � frente + 2 � r� | 14 (12 + 2 super-reduzidas) + 6 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "36.500",
       "cmt": "60.000"
     }
@@ -2688,8 +2687,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K460",
       "potencia": "460 cv",
       "torque": "2300 Nm",
-      "transmissao": "Automatizada | Automatizada (12 � frente + 2 � r� | 14 (12 + 2 super-reduzidas) + 6 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "36.500",
       "cmt": "60.000"
     }
@@ -2704,8 +2703,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K500",
       "potencia": "500 cv",
       "torque": "2500 Nm",
-      "transmissao": "Automatizada | Automatizada (12 � frente + 2 � r� | 14 (12 + 2 super-reduzidas) + 6 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "36.500",
       "cmt": "60.000"
     }
@@ -2720,8 +2719,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K540",
       "potencia": "500 cv",
       "torque": "2500 Nm",
-      "transmissao": "Automatizada | Automatizada (12 � frente + 2 � r� | 14 (12 + 2 super-reduzidas) + 6 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "36.500",
       "cmt": "60.000"
     }
@@ -2736,8 +2735,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K420",
       "potencia": "420 cv",
       "torque": "2100 Nm",
-      "transmissao": "Automatizada (12 � frente + 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "35.500 | 35.500",
       "cmt": "60.000 | 70.000"
     }
@@ -2752,8 +2751,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K460",
       "potencia": "460 cv",
       "torque": "2300 Nm",
-      "transmissao": "Automatizada (12 � frente + 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "35.500 | 35.500",
       "cmt": "60.000 | 70.000"
     }
@@ -2768,8 +2767,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K500",
       "potencia": "500 cv",
       "torque": "2500 Nm",
-      "transmissao": "Automatizada (12 � frente + 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "35.500 | 35.500",
       "cmt": "60.000 | 70.000"
     }
@@ -2784,8 +2783,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K540",
       "potencia": "500 cv",
       "torque": "2500 Nm",
-      "transmissao": "Automatizada (12 � frente + 2 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "35.500 | 35.500",
       "cmt": "60.000 | 70.000"
     }
@@ -2800,8 +2799,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K420",
       "potencia": "420 cv",
       "torque": "2100 Nm",
-      "transmissao": "Automatizada | Automatizada | Automatizada (Overdrive (12 � frente + 4 � r� | 14 (12 + 2 super-reduzidas) + 6 � r� | 13 (12 + 1 super-reduzida) + 6 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "44.000",
       "cmt": "100.000"
     }
@@ -2816,8 +2815,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K460",
       "potencia": "460 cv",
       "torque": "2300 Nm",
-      "transmissao": "Automatizada | Automatizada | Automatizada (Overdrive (12 � frente + 4 � r� | 14 (12 + 2 super-reduzidas) + 6 � r� | 13 (12 + 1 super-reduzida) + 6 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "44.000",
       "cmt": "100.000"
     }
@@ -2832,8 +2831,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K500",
       "potencia": "500 cv",
       "torque": "2500 Nm",
-      "transmissao": "Automatizada | Automatizada | Automatizada (Overdrive (12 � frente + 4 � r� | 14 (12 + 2 super-reduzidas) + 6 � r� | 13 (12 + 1 super-reduzida) + 6 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "44.000",
       "cmt": "100.000"
     }
@@ -2848,8 +2847,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K540",
       "potencia": "540 cv",
       "torque": "2600 Nm",
-      "transmissao": "Automatizada | Automatizada | Automatizada (Overdrive (12 � frente + 4 � r� | 14 (12 + 2 super-reduzidas) + 6 � r� | 13 (12 + 1 super-reduzida) + 6 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "44.000",
       "cmt": "100.000"
     }
@@ -2864,8 +2863,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "VOLVO D13K - 380",
       "potencia": "380 cv",
       "torque": "1815 Nm",
-      "transmissao": "Automatizada (12 � frente + 4 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "20.500 | 20.500",
       "cmt": "60.000 | 70.000"
     }
@@ -2880,8 +2879,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "VOLVO D13K - 380",
       "potencia": "380 cv",
       "torque": "1815 Nm",
-      "transmissao": "Automatizada (12 � frente + 4 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "20.500 | 20.500",
       "cmt": "60.000 | 70.000"
     }
@@ -2896,8 +2895,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "VOLVO D13K - 380",
       "potencia": "380 cv",
       "torque": "1815 Nm",
-      "transmissao": "Automatizada (12 � frente + 4 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "27.500 | 27.500 | 27.500",
       "cmt": "60.000 | 70.000 | 70.000"
     }
@@ -2912,8 +2911,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K380",
       "potencia": "380 cv",
       "torque": "1815 Nm",
-      "transmissao": "Automatizada | Automatizada | Automatizada (Overdrive (12 � frente + 4 � r� | 14 (12 + 2 super-reduzidas) + 6 � r� | 13 (12 + 1 super-reduzida) + 6 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "22.000 | 23.000",
       "cmt": "65.000 | 65.000"
     }
@@ -2928,8 +2927,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K380",
       "potencia": "380 cv",
       "torque": "1815 Nm",
-      "transmissao": "Automatizada | Automatizada | Automatizada (Overdrive) (12  � frete e 4 � r� | 14 (12 + 2 super-reduzidas) e 6 � r� | 13 (12 + 1 super-reduzida) e 6 � r�  marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "35.000 | 36.000 | 41.000 | 42.000",
       "cmt": "100.000 | 130.000 | 150.000"
     }
@@ -2944,8 +2943,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K420",
       "potencia": "420 cv",
       "torque": "2100 Nm",
-      "transmissao": "Automatizada | Automatizada | Automatizada (Overdrive) (12  � frete e 4 � r� | 14 (12 + 2 super-reduzidas) e 6 � r� | 13 (12 + 1 super-reduzida) e 6 � r�  marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "35.000 | 36.000 | 41.000 | 42.000",
       "cmt": "100.000 | 130.000 | 150.000"
     }
@@ -2960,8 +2959,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K460",
       "potencia": "460 cv",
       "torque": "2300 Nm",
-      "transmissao": "Automatizada | Automatizada | Automatizada (Overdrive) (12  � frete e 4 � r� | 14 (12 + 2 super-reduzidas) e 6 � r� | 13 (12 + 1 super-reduzida) e 6 � r�  marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "35.000 | 36.000 | 41.000 | 42.000",
       "cmt": "100.000 | 130.000 | 150.000"
     }
@@ -2976,8 +2975,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K500",
       "potencia": "500 cv",
       "torque": "2500 Nm",
-      "transmissao": "Automatizada | Automatizada | Automatizada (Overdrive) (12  � frete e 4 � r� | 14 (12 + 2 super-reduzidas) e 6 � r� | 13 (12 + 1 super-reduzida) e 6 � r�  marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "35.000 | 36.000 | 41.000 | 42.000",
       "cmt": "100.000 | 130.000 | 150.000"
     }
@@ -2992,8 +2991,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "D13K540",
       "potencia": "540 cv",
       "torque": "2600 Nm",
-      "transmissao": "Automatizada | Automatizada | Automatizada (Overdrive) (12  � frete e 4 � r� | 14 (12 + 2 super-reduzidas) e 6 � r� | 13 (12 + 1 super-reduzida) e 6 � r�  marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "35.000 | 36.000 | 41.000 | 42.000",
       "cmt": "100.000 | 130.000 | 150.000"
     }
@@ -3008,8 +3007,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "VOLVO D8K - 290",
       "potencia": "290 cv",
       "torque": "1050 Nm",
-      "transmissao": "Sincronizada | Automatizada (9 (8 + 1 super-reduzida) + 1 r� | 12 + 2 r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Sincronizada (9 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.500",
       "cmt": "36.000"
     }
@@ -3024,8 +3023,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "VOLVO D8K - 360",
       "potencia": "360 cv",
       "torque": "1400 Nm",
-      "transmissao": "Automatizada (12 + 2 r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.500",
       "cmt": "45.000"
     }
@@ -3040,8 +3039,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "VOLVO ZT1309",
       "potencia": "290 cv",
       "torque": "1050 Nm",
-      "transmissao": "Sincronizada (9 (8 + 1 super-reduzida) marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Sincronizada (9 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.500",
       "cmt": "35.000"
     }
@@ -3056,8 +3055,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "VOLVO D8K - 360",
       "potencia": "360 cv",
       "torque": "1400 Nm",
-      "transmissao": "Automatizada (12 + 2 r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.500",
       "cmt": "45.100"
     }
@@ -3072,8 +3071,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "VOLVO D8K - 290",
       "potencia": "290 cv",
       "torque": "1050 Nm",
-      "transmissao": "Sincronizada | Automatizada (9 (8 + 1 super-reduzida) + 1 r� | 12 + 2 r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Sincronizada (9 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "24.700",
       "cmt": "35.000"
     }
@@ -3088,8 +3087,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "VOLVO D8K - 360",
       "potencia": "360 cv",
       "torque": "1400 Nm",
-      "transmissao": "Automatizada (12 + 2 r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "24.700",
       "cmt": "45.000"
     }
@@ -3104,8 +3103,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "VOLVO D8K - 290",
       "potencia": "290 cv",
       "torque": "1050 Nm",
-      "transmissao": "Sincronizada (9 (8 + 1 super-reduzida) + 1 r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Sincronizada (9 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "24.700",
       "cmt": "35.000"
     }
@@ -3120,8 +3119,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "VOLVO D8K - 290",
       "potencia": "290 cv",
       "torque": "1050 Nm",
-      "transmissao": "Sincronizada | Automatizada (9 (8 + 1 super-reduzida) + 1 r� | 12 + 2 r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Sincronizada (9 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "31.400",
       "cmt": "35.000"
     }
@@ -3136,8 +3135,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "VOLVO D8K - 360",
       "potencia": "360 cv",
       "torque": "1400 Nm",
-      "transmissao": "Automatizada (12 + 2 r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "31.400",
       "cmt": "45.100"
     }
@@ -3152,8 +3151,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "VOLVO D8K - 290",
       "potencia": "290 cv",
       "torque": "1050 Nm",
-      "transmissao": "Sincronizada | Automatizada (9 (8 + 1 super-reduzida) + 1 r� | 12 + 2 r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Sincronizada (9 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "26.700",
       "cmt": "35.000 | 40.000"
     }
@@ -3168,8 +3167,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "VOLVO D8K - 360",
       "potencia": "360 cv",
       "torque": "1400 Nm",
-      "transmissao": "Automatizada (12 + 2 r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "26.700",
       "cmt": "57.000 | 63.000"
     }
@@ -3184,8 +3183,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "VOLVO D8K - 360",
       "potencia": "360 cv",
       "torque": "1400 Nm",
-      "transmissao": "Automatizada (12 + 2 r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "34.000",
       "cmt": "57.000 | 63.000"
     }
@@ -3200,8 +3199,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "VOLVO D8K - 290",
       "potencia": "290 cv",
       "torque": "1050 Nm",
-      "transmissao": "Sincronizada | Automatizada (9 (8 + 1 super-reduzida) + 1 r� | 12 + 2 r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Sincronizada (9 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "33.400",
       "cmt": "35.000 | 40.000"
     }
@@ -3216,8 +3215,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "VOLVO D8K - 360",
       "potencia": "360 cv",
       "torque": "1400 Nm",
-      "transmissao": "Automatizada (12 + 2 r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automatizada (12 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "33.400",
       "cmt": "57.000 | 63.000"
     }
@@ -3232,15 +3231,15 @@ export const VeiculosData: Veiculo[] = [
       "motor": "VOLVO D8K - 290",
       "potencia": "290 cv",
       "torque": "1050 Nm",
-      "transmissao": "Sincronizada (9 (8 + 1 super-reduzida) + 1 r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Sincronizada (9 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "33.400",
       "cmt": "35.000"
     }
   },
   {
-    "id": "ivecodaf_e_transit_chassi_extra_longo_425_269",
-    "nome": "IVECO/DAF E-Transit Chassi - Extra Longo 425",
+    "id": "_e_transit_chassi_extra_longo_425_269",
+    "nome": " E-Transit Chassi - Extra Longo 425",
     "modelo": "E-Transit Chassi - Extra Longo 425",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
@@ -3248,15 +3247,15 @@ export const VeiculosData: Veiculo[] = [
       "motor": "Motor 198kW BorgWarner",
       "potencia": "269 cv",
       "torque": "430 Nm",
-      "transmissao": "Autom�tica (1 velocidade marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automï¿½tica (1 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "4.250",
       "cmt": "N/A"
     }
   },
   {
-    "id": "ivecodaf_transit_l3h3_longo_teto_alto_165_165",
-    "nome": "IVECO/DAF Transit - L3H3 Longo Teto Alto - 165",
+    "id": "_transit_l3h3_longo_teto_alto_165_165",
+    "nome": " Transit - L3H3 Longo Teto Alto - 165",
     "modelo": "Transit - L3H3 Longo Teto Alto - 165",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
@@ -3264,15 +3263,15 @@ export const VeiculosData: Veiculo[] = [
       "motor": "Diesel 2.0 EcoBlue",
       "potencia": "165 cv",
       "torque": "390 Nm",
-      "transmissao": "Autom�tica (10 velocidades com conversor de torque marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automï¿½tica (10 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.500",
       "cmt": "N/A"
     }
   },
   {
-    "id": "ivecodaf_transit_l3h3_longo_teto_alto_170_170",
-    "nome": "IVECO/DAF Transit - L3H3 Longo Teto Alto - 170",
+    "id": "_transit_l3h3_longo_teto_alto_170_170",
+    "nome": " Transit - L3H3 Longo Teto Alto - 170",
     "modelo": "Transit - L3H3 Longo Teto Alto - 170",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
@@ -3280,15 +3279,15 @@ export const VeiculosData: Veiculo[] = [
       "motor": "Diesel 2.0 EcoBlue",
       "potencia": "170 cv",
       "torque": "390 Nm",
-      "transmissao": "Autom�tica (Manual de 6 velocidades marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automï¿½tica (Manual marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.500",
       "cmt": "N/A"
     }
   },
   {
-    "id": "ivecodaf_transit_l4h1_extra_longa_teto_baixo_rodado_duplo_165",
-    "nome": "IVECO/DAF Transit - L4H1 - Extra Longa - Teto Baixo - Rodado Duplo",
+    "id": "_transit_l4h1_extra_longa_teto_baixo_rodado_duplo_165",
+    "nome": " Transit - L4H1 - Extra Longa - Teto Baixo - Rodado Duplo",
     "modelo": "Transit - L4H1 - Extra Longa - Teto Baixo - Rodado Duplo",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
@@ -3296,8 +3295,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "Motor Diesel 2.0 EcoBlue",
       "potencia": "165 cv",
       "torque": "390 Nm",
-      "transmissao": "Manual | El�trica ( 6 velocidades marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual ( marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "4.700",
       "cmt": "N/A"
     }
@@ -3312,15 +3311,15 @@ export const VeiculosData: Veiculo[] = [
       "motor": " FPT / F1C Max ",
       "potencia": "180 cv",
       "torque": "430 Nm",
-      "transmissao": "Manual - Cabo | Autom�tico ( 8 sincronizadas � frente + 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Manual - Cabo ( marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.500",
       "cmt": "6.500"
     }
   },
   {
-    "id": "ivecodaf_e_sprinter_truck_420_150",
-    "nome": "IVECO/DAF E-Sprinter Truck 420",
+    "id": "_e_sprinter_truck_420_150",
+    "nome": " E-Sprinter Truck 420",
     "modelo": "E-Sprinter Truck 420",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
@@ -3328,40 +3327,40 @@ export const VeiculosData: Veiculo[] = [
       "motor": "420",
       "potencia": "150 cv",
       "torque": "400 Nm",
-      "transmissao": "Autom�tica ( Rela��o �nica marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Automï¿½tica ( marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "4.250",
       "cmt": "5.000"
     }
   },
   {
     "id": "zf_6s_480_sprinter_315_cdi_street_9m105m_150",
-    "nome": "ZF- 6S 480 Sprinter - 315 CDI Street (9m�/10,5m�)",
-    "modelo": "Sprinter - 315 CDI Street (9m�/10,5m�)",
+    "nome": "ZF- 6S 480 Sprinter - 315 CDI Street (9mï¿½/10,5mï¿½)",
+    "modelo": "Sprinter - 315 CDI Street (9mï¿½/10,5mï¿½)",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "OM 654 CDI | Turbo | Diesel ",
       "potencia": "150 cv",
       "torque": "340 Nm",
-      "transmissao": "Mec�nica | El�trica ( 6 marchas marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Mecï¿½nica ( marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.500",
       "cmt": "N/A"
     }
   },
   {
     "id": "zf_6s_480_sprinter_417_cdi_9m105m_170",
-    "nome": "ZF- 6S 480 Sprinter - 417 CDI  (9m�/10,5m�)",
-    "modelo": "Sprinter - 417 CDI  (9m�/10,5m�)",
+    "nome": "ZF- 6S 480 Sprinter - 417 CDI  (9mï¿½/10,5mï¿½)",
+    "modelo": "Sprinter - 417 CDI  (9mï¿½/10,5mï¿½)",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "OM 654 CDI | Turbo |",
       "potencia": "170 cv",
       "torque": "400 Nm",
-      "transmissao": "Mec�nica | El�trica ( 6 marchas marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Mecï¿½nica ( marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "4.430",
       "cmt": "N/A"
     }
@@ -3376,8 +3375,8 @@ export const VeiculosData: Veiculo[] = [
       "motor": "OM 654 CDI ",
       "potencia": "150 cv",
       "torque": "340 Nm",
-      "transmissao": "Mec�nica | El�trica ( 6 marchas marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Mecï¿½nica ( marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.500",
       "cmt": "N/A"
     }
@@ -3392,15 +3391,15 @@ export const VeiculosData: Veiculo[] = [
       "motor": "OM 654 CDI ",
       "potencia": "170 cv",
       "torque": "400 Nm",
-      "transmissao": "Mec�nica | El�trica ( 6 marchas marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Mecï¿½nica ( marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "4.100 | 5.000 | 5.000",
       "cmt": "N/A"
     }
   },
   {
-    "id": "ivecodaf_master_chassi_150",
-    "nome": "IVECO/DAF Master Chassi",
+    "id": "_master_chassi_150",
+    "nome": " Master Chassi",
     "modelo": "Master Chassi",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
@@ -3408,24 +3407,24 @@ export const VeiculosData: Veiculo[] = [
       "motor": "M9T GEN6 AdBlue",
       "potencia": "150 cv",
       "torque": "385 Nm",
-      "transmissao": "Mec�nico (PF6) (6 marchas � frente + 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Mecï¿½nico (PF6) (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.500",
       "cmt": "2.000"
     }
   },
   {
-    "id": "ivecodaf_master_furgo_150",
-    "nome": "IVECO/DAF Master Furg�o",
-    "modelo": "Master Furg�o",
+    "id": "_master_furgo_150",
+    "nome": " Master Furgï¿½o",
+    "modelo": "Master Furgï¿½o",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "M9T GEN6 AdBlue",
       "potencia": "150 cv",
       "torque": "385 Nm",
-      "transmissao": "Mec�nico (PF6) (6 marchas � frente + 1 � r� marchas)",
-      "pesoEmOrdemDeMarcha": "N/A - Conferir",
+      "transmissao": "Mecï¿½nico (PF6) (6 marchas)",
+      "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.500 | 3.500 | 3.500",
       "cmt": "2.000 | 2.000 | 2.000"
     }

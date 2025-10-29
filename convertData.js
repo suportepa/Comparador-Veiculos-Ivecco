@@ -1,63 +1,83 @@
-// convertData.js - VERSÃO FINAL E CORRIGIDA
+// convertData.js - VERSÃO FINAL CORRIGIDA
 const fs = require('fs');
 const path = require('path');
 const csv = require('csv-parser');
 
-const INPUT_CSV_FILE = 'dados_veiculos.csv';
+// =======================================================
+// === CONFIGURAÇÃO: NOME DO ARQUIVO CSV DE ENTRADA ===
+// =======================================================
+const INPUT_CSV_FILE = 'dados_veiculos.csv'; 
 const OUTPUT_TS_FILE = path.join('data', 'veiculos.ts');
 
-const slugify = (text) => text.toLowerCase().trim().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '_');
-const cleanValue = (value) => {
-    if (!value) return '';
-    // Pega o que estiver antes do primeiro pipe (|) ou espaço.
-    return String(value).split(/[\s|]/)[0].trim().replace(/\./g, ''); // Remove pontos de milhar
+/**
+ * Função para criar um ID limpo e único a partir do nome do veículo.
+ */
+const slugify = (text) => {
+    return text
+        .toLowerCase()
+        .trim()
+        .replace(/[^\w\s-]/g, '')
+        .replace(/[\s_-]+/g, '_');
 };
+
+/**
+ * Função para limpar e retornar o primeiro valor numérico de uma string.
+ */
+const cleanNumericValue = (value) => {
+    if (!value) return '';
+    // Pega o que estiver antes do primeiro espaço ou caractere especial (como "|")
+    const firstValue = value.toString().split(/[\s|]/)[0]; 
+    return firstValue.trim().replace(/\./g, ''); // Remove todos os pontos (milhar)
+};
+
 
 const VeiculosData = [];
 
+// Garante que a pasta 'data' exista
 if (!fs.existsSync('data')) {
     fs.mkdirSync('data');
 }
 
-fs.createReadStream(INPUT_CSV_FILE)
-    // USANDO PONTO E VÍRGULA COMO SEPARADOR
-    .pipe(csv({ separator: ';' }))
+// Implementa a codificação 'latin1' para corrigir acentos e o separador ';'
+fs.createReadStream(INPUT_CSV_FILE, { encoding: 'latin1' })
+    .pipe(csv({ separator: ';' })) 
     .on('data', (row) => {
-        // --- EXTRAÇÃO E LIMPEZA DOS DADOS ESSENCIAIS ---
-        
-        // Usamos row.modelo, row.cv, row.nm, e row.fabricante que parecem ter dados corretos
-        const potenciaCv = cleanValue(row.cv);
-        const torqueNm = cleanValue(row.nm);
+        // Limpeza dos dados de potência e torque
+        const potenciaCv = cleanNumericValue(row.cv);
+        const torqueNm = cleanNumericValue(row.nm);
         const modeloVeiculo = row.modelo;
-        const nomeMotor = row.fabricante; // A coluna 'fabricante' tem o nome do motor (Ex: PACCAR PX-7)
         
-        // VALIDAÇÃO: Se algum dos campos cruciais estiver vazio, a linha é ignorada.
-        if (!modeloVeiculo || !potenciaCv || !torqueNm || !nomeMotor) {
+        // CORREÇÃO: Usando 'row.fabricante' (minúsculo)
+        const fabricanteMotor = row.fabricante; 
+        
+        // Limpeza da Transmissão para pegar apenas o primeiro tipo (ex: "Manual")
+        const acionamentoLimpo = (row.acionamento || 'N/A').split('|')[0].trim();
+        // Limpeza do número de marchas para pegar apenas o primeiro número (ex: "9")
+        const nMarchasLimpo = (row.nMarchas || '?').split(' ')[0].trim();
+        
+        // Filtro de linha: só processa se tiver o modelo, CV, NM e Fabricante.
+        if (!modeloVeiculo || !potenciaCv || !torqueNm || !fabricanteMotor) {
             return; 
         }
-        
-        // A MARCA (DAF/IVECO) ESTAVA NA COLUNA 'marca', que parece estar vazia ou com valor errado no primeiro item.
-        // Vamos usar a primeira palavra do nome do veículo, se necessário, mas primeiro tentamos a coluna 'marca'.
-        const marca = row.marca && row.marca.length > 0 ? row.marca : 'IVECO/DAF'; 
-        
-        // --- MAPEAR PARA O FORMATO FINAL ---
+
+        // Mapeamento e transformação dos dados
         const veiculo = {
-            id: slugify(`${marca}_${modeloVeiculo}_${potenciaCv}`), 
-            nome: `${marca} ${modeloVeiculo}`, 
+            id: slugify(`${row.marca}_${modeloVeiculo}_${potenciaCv}`), 
+            nome: `${row.marca} ${modeloVeiculo}`, 
             modelo: modeloVeiculo, 
             imagem: row.imagem || "https://via.placeholder.com/300x200?text=Iveco", 
             resumoVantagem: row.resumoVantagem || "Ponto forte do veículo a ser adicionado.", 
             
             fichaTecnica: {
-                motor: nomeMotor, 
+                motor: fabricanteMotor, 
                 potencia: `${potenciaCv} cv`, 
                 torque: `${torqueNm} Nm`, 
                 
-                // Combinação das colunas de transmissão
-                transmissao: `${row.acionamento || 'N/A'} (${row.nMarchas || '?'} marchas)`, 
+                // Combinação das colunas 'acionamento' e 'nMarchas' após limpeza
+                transmissao: `${acionamentoLimpo} (${nMarchasLimpo} marchas)`, 
                 
-                // Mapeamento das colunas de peso
-                pesoEmOrdemDeMarcha: row.pesoEmOrdemDeMarcha || "N/A - Conferir", // Ajuste se seu cabeçalho tem outro nome
+                // Os campos abaixo usam os dados brutos (verifique no seu app se precisa de mais limpeza)
+                pesoEmOrdemDeMarcha: "N/A - Conferir Coluna", 
                 pbtTecnico: row.pbtTecnico || "N/A", 
                 cmt: row.cmt || "N/A", 
             }
@@ -66,13 +86,33 @@ fs.createReadStream(INPUT_CSV_FILE)
         VeiculosData.push(veiculo);
     })
     .on('end', () => {
+        // Estrutura do arquivo TypeScript de saída
         const tsContent = `
 // data/veiculos.ts - ARQUIVO GERADO AUTOMATICAMENTE (Total: ${VeiculosData.length} veículos)
 
-// ... (Resto do código de interface e export)
+export interface FichaTecnica {
+  motor: string;
+  potencia: string;
+  torque: string;
+  transmissao: string;
+  pesoEmOrdemDeMarcha: string;
+  pbtTecnico: string;
+  cmt: string; 
+}
+
+export interface Veiculo {
+  id: string;
+  nome: string;
+  modelo: string;
+  imagem: string;
+  resumoVantagem: string;
+  fichaTecnica: FichaTecnica;
+}
+
 export const VeiculosData: Veiculo[] = ${JSON.stringify(VeiculosData, null, 2)};
 `;
 
+        // Escreve o novo conteúdo no veiculos.ts
         fs.writeFileSync(OUTPUT_TS_FILE, tsContent);
         
         console.log('----------------------------------------------------');
