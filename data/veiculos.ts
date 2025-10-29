@@ -1,66 +1,102 @@
 // data/veiculos.ts
 
-// 1. Definição da interface (tipagem) para um veículo
 export interface FichaTecnica {
   motor: string;
   potencia: string;
   torque: string;
-  capacidadeCarga: string;
-  pbt: string;
-  // Adicione mais especificações conforme necessário
+  transmissao: string;
+  pesoEmOrdemDeMarcha: string;
+  pbtTecnico: string;
+  cmt: string; // Capacidade Máxima de Tração
 }
 
 export interface Veiculo {
   id: string;
   nome: string;
   modelo: string;
-  imagem: string; // URL da imagem ou require para um arquivo local
+  imagem: string;
+  resumoVantagem: string;
   fichaTecnica: FichaTecnica;
-  resumoVantagem: string; // O ponto forte que será usado na comparação
 }
 
-// 2. Mock Data (dados de exemplo)
+// Função utilitária para gerar IDs de forma consistente
+const slugify = (text: string) => {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s_-]+/g, '_');
+};
+
 export const VeiculosData: Veiculo[] = [
+  // --- INÍCIO DOS DADOS DAF FORMATADOS ---
+
   {
-    id: 'daily_35s14',
-    nome: 'Daily 35S14',
-    modelo: 'Chassi-cabine',
-    imagem: 'https://via.placeholder.com/300x200?text=Daily+35S14', 
+    id: slugify("CF FAC 8x2 PX-7"),
+    nome: "CF FAC 8x2 PX-7",
+    modelo: "Caminhão Rígido",
+    imagem: "https://via.placeholder.com/300x200?text=DAF+CF+FAC+8x2", // Placeholder
+    // ATENÇÃO: É VITAL QUE VOCÊ ADICIONE UM RESUMO AQUI para cada veículo.
+    resumoVantagem: "**Vantagem (A SER PREENCHIDA)**: Excelente capacidade de carga e manobrabilidade para serviços de distribuição e vocacionais.",
     fichaTecnica: {
-      motor: 'F1C Turbo Diesel',
-      potencia: '146 cv',
-      torque: '350 Nm',
-      capacidadeCarga: '1.500 kg',
-      pbt: '3.500 kg (VUC)',
+      motor: "PACCAR PX-7 (6 cil / 6,7L)",
+      potencia: "308 cv @ 2.200 rpm",
+      torque: "1.200 Nm @ 1.200 - 1.500 rpm",
+      transmissao: "ZF TRAXON (Manual / Automatizada) - 9 marchas",
+      pesoEmOrdemDeMarcha: "8.270 kg", // Total
+      pbtTecnico: "33.000 kg",
+      cmt: "35.000 kg",
     },
-    resumoVantagem: 'Melhor para **entregas urbanas e agilidade**. Seu tamanho compacto e categoria VUC garantem fácil acesso a áreas restritas e maior economia de combustível.',
   },
   {
-    id: 'tector_170e28',
-    nome: 'Tector 170E28',
-    modelo: 'Semipesado',
-    imagem: 'https://via.placeholder.com/300x200?text=Tector+170E28', 
+    id: slugify("CF FAD 8X4 MX-13"),
+    nome: "CF FAD 8X4 MX-13",
+    modelo: "Caminhão Rígido Pesado",
+    imagem: "https://via.placeholder.com/300x200?text=DAF+CF+FAD+8X4", // Placeholder
+    resumoVantagem: "**Vantagem (A SER PREENCHIDA)**: Alta potência e tração 8x4, ideal para aplicações fora-de-estrada e severas como mineração.",
     fichaTecnica: {
-      motor: 'NEF 6 (6.7 litros)',
-      potencia: '280 cv',
-      torque: '950 Nm',
-      capacidadeCarga: '10.500 kg',
-      pbt: '17.000 kg',
+      motor: "PACCAR MX 13 (6 cil / 10,8L)",
+      potencia: "480 cv @ 1.600 rpm",
+      torque: "2.350 / 2.500 Nm @ 900 - 1.365 rpm",
+      transmissao: "ZF TRAXON (Automatizada) - 12 marchas",
+      pesoEmOrdemDeMarcha: "12.170 kg", // Total
+      pbtTecnico: "58.000 kg",
+      cmt: "150.000 kg",
     },
-    resumoVantagem: 'Melhor para **transporte rodoviário de médias e longas distâncias**. Oferece quase o dobro de potência e torque, sendo superior para cargas maiores e subidas íngremes.',
   },
   {
-    id: 'hiway_480',
-    nome: 'Hi-Way 480',
-    modelo: 'Pesado Rodoviário',
-    imagem: 'https://via.placeholder.com/300x200?text=Hi-Way+480', 
+    id: slugify("CF FAS PX-7 192"),
+    nome: "CF FAS PX-7 192",
+    modelo: "Caminhão Semipesado",
+    imagem: "https://via.placeholder.com/300x200?text=DAF+CF+FAS+PX-7+192", // Placeholder
+    resumoVantagem: "**Vantagem (A SER PREENCHIDA)**: Eficiência e leveza para o transporte rodoviário de médias distâncias.",
     fichaTecnica: {
-      motor: 'Cursor 13 (12.9 litros)',
-      potencia: '480 cv',
-      torque: '2250 Nm',
-      capacidadeCarga: '25.000 kg',
-      pbt: '48.000 kg (CMT)',
+      motor: "PACCAR PX-7 (6 cil / 6,7L)",
+      potencia: "261 cv @ 2.300 rpm",
+      torque: "1.000 Nm @ 1.000 - 1.700 rpm",
+      transmissao: "ZF TRAXON (Manual / Automatizada) - 9 marchas",
+      pesoEmOrdemDeMarcha: "7.095 kg", // Total
+      pbtTecnico: "26.500 kg",
+      cmt: "35.000 kg",
     },
-    resumoVantagem: 'A melhor escolha para **altíssima performance e transporte de cargas volumosas/pesadas**. O motor mais potente da Iveco para enfrentar qualquer estrada.',
   },
+  {
+    id: slugify("DAILY 30-160"),
+    nome: "DAILY 30-160",
+    modelo: "Furgão/Chassi-Cabine Leve",
+    imagem: "https://via.placeholder.com/300x200?text=IVECO+DAILY+30-160", // Placeholder
+    // ATENÇÃO: Este é um Iveco. Você precisa preencher o resumo.
+    resumoVantagem: "**Vantagem IVECO (A SER PREENCHIDA)**: Ideal para entregas urbanas rápidas, combinando agilidade de van com robustez de caminhão.",
+    fichaTecnica: {
+      motor: "FPT / F1C Max (4 cil / 3.0L)",
+      potencia: "160 cv @ 3.500 rpm",
+      torque: "380 Nm @ 1.600 - 2.900 rpm",
+      transmissao: "ZF 6S 480 VO (Manual) - 6 marchas",
+      pesoEmOrdemDeMarcha: "2.100 kg (estimado)", // Baseado em modelos Iveco 3.5-160
+      pbtTecnico: "3.500 kg",
+      cmt: "N/A", // Não fornecido na tabela, preencha se tiver
+    },
+  },
+
+  // ... adicione mais veículos aqui.
 ];
