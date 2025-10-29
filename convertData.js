@@ -1,4 +1,4 @@
-// convertData.js - VERSÃO FINAL CORRIGIDA COM UTF-8
+// convertData.js - VERSÃO FINAL CORRIGIDA COM LIMPEZA DE CARACTERES
 const fs = require('fs');
 const path = require('path');
 const csv = require('csv-parser');
@@ -21,6 +21,29 @@ const slugify = (text) => {
 };
 
 /**
+ * Função para limpar caracteres estranhos que persistem após a conversão UTF-8.
+ * Ela substitui códigos de erro comuns (como os que representam frações ou acentos) por caracteres legíveis.
+ * @param {string} text - Texto do CSV.
+ * @returns {string} Texto com substituições forçadas.
+ */
+const cleanStrangeChars = (text) => {
+    if (!text) return '';
+    // Substituições comuns para códigos de erro (ajuste conforme necessário)
+    return text
+        // Tenta substituir o código feio (que pode ser um acento ou símbolo) por um espaço ou vazio
+        .replace(/ï¿½/g, '')  
+        .replace(/ï¿½ï¿½/g, '')
+        .replace(/\r?\n|\r/g, ' ') // Remove quebras de linha
+        // Frações (ex: 1/2) - pode ser que o código esteja representando um desses
+        .replace('½', ' 1/2') 
+        // Se a letra 'm' no seu print estava estranha, pode ser um 'm' com acento ou símbolo:
+        .replace('mï¿½ï¿½', 'm')
+        // Limpa múltiplos espaços após as substituições
+        .replace(/\s\s+/g, ' ')
+        .trim();
+};
+
+/**
  * Função para limpar e retornar o primeiro valor numérico de uma string.
  */
 const cleanNumericValue = (value) => {
@@ -38,22 +61,26 @@ if (!fs.existsSync('data')) {
     fs.mkdirSync('data');
 }
 
-// ATENÇÃO: Usando encoding: 'utf8'. Isso exige que o arquivo CSV TAMBÉM esteja salvo como UTF-8!
+// Usando encoding: 'utf8'. O CSV DEVE estar salvo como UTF-8.
 fs.createReadStream(INPUT_CSV_FILE, { encoding: 'utf8' })
     .pipe(csv({ separator: ';' })) 
     .on('data', (row) => {
-        // Limpeza dos dados de potência e torque
+        
+        // Aplica a limpeza de caracteres estranhos nas colunas relevantes
+        const modeloVeiculo = cleanStrangeChars(row.modelo);
+        const acionamento = cleanStrangeChars(row.acionamento);
+        const nMarchas = cleanStrangeChars(row.nMarchas);
+
+        // Limpeza dos dados de potência e torque (numérico)
         const potenciaCv = cleanNumericValue(row.cv);
         const torqueNm = cleanNumericValue(row.nm);
-        const modeloVeiculo = row.modelo;
         
         // Corrigido para 'fabricante' (minúsculo)
         const fabricanteMotor = row.fabricante; 
         
-        // Limpeza da Transmissão para pegar apenas o primeiro tipo (ex: "Manual")
-        const acionamentoLimpo = (row.acionamento || 'N/A').split('|')[0].trim();
-        // Limpeza do número de marchas para pegar apenas o primeiro número (ex: "9")
-        const nMarchasLimpo = (row.nMarchas || '?').split(' ')[0].trim();
+        // Limpeza da Transmissão (Texto)
+        const acionamentoLimpo = (acionamento || 'N/A').split('|')[0].trim();
+        const nMarchasLimpo = (nMarchas || '?').split(' ')[0].trim();
         
         // Filtro de linha: só processa se tiver o modelo, CV, NM e Fabricante.
         if (!modeloVeiculo || !potenciaCv || !torqueNm || !fabricanteMotor) {
@@ -66,7 +93,7 @@ fs.createReadStream(INPUT_CSV_FILE, { encoding: 'utf8' })
             nome: `${row.marca} ${modeloVeiculo}`, 
             modelo: modeloVeiculo, 
             imagem: row.imagem || "https://via.placeholder.com/300x200?text=Iveco", 
-            resumoVantagem: row.resumoVantagem || "Ponto forte do veículo a ser adicionado.", 
+            resumoVantagem: cleanStrangeChars(row.resumoVantagem) || "Ponto forte do veículo a ser adicionado.", 
             
             fichaTecnica: {
                 motor: fabricanteMotor, 
@@ -76,7 +103,7 @@ fs.createReadStream(INPUT_CSV_FILE, { encoding: 'utf8' })
                 // Combinação das colunas 'acionamento' e 'nMarchas' após limpeza
                 transmissao: `${acionamentoLimpo} (${nMarchasLimpo} marchas)`, 
                 
-                // Os campos abaixo usam os dados brutos (verifique no seu app se precisa de mais limpeza)
+                // Os campos abaixo usam os dados brutos (se precisar, aplique cleanStrangeChars aqui também)
                 pesoEmOrdemDeMarcha: "N/A - Conferir Coluna", 
                 pbtTecnico: row.pbtTecnico || "N/A", 
                 cmt: row.cmt || "N/A", 
@@ -112,7 +139,7 @@ export interface Veiculo {
 export const VeiculosData: Veiculo[] = ${JSON.stringify(VeiculosData, null, 2)};
 `;
 
-        // Escreve o novo conteúdo no veiculos.ts (que será UTF-8 por padrão)
+        // Escreve o novo conteúdo no veiculos.ts
         fs.writeFileSync(OUTPUT_TS_FILE, tsContent);
         
         console.log('----------------------------------------------------');

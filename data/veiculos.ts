@@ -311,8 +311,8 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "zf_traxon_xf_ftt_off_road_480_mx_13_480",
-    "nome": "ZF TRAXON XF FTT OFF-ROAD  - 480 - MX-13",
-    "modelo": "XF FTT OFF-ROAD  - 480 - MX-13",
+    "nome": "ZF TRAXON XF FTT OFF-ROAD - 480 - MX-13",
+    "modelo": "XF FTT OFF-ROAD - 480 - MX-13",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
@@ -327,8 +327,8 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "zf_traxon_xf_ftt_off_road_530_mx_13_530",
-    "nome": "ZF TRAXON XF FTT OFF-ROAD  - 530 - MX-13",
-    "modelo": "XF FTT OFF-ROAD  - 530 - MX-13",
+    "nome": "ZF TRAXON XF FTT OFF-ROAD - 530 - MX-13",
+    "modelo": "XF FTT OFF-ROAD - 530 - MX-13",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
@@ -439,8 +439,8 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "zf_6s_480_vo_zf_el55_daily_furgo_30_160_160",
-    "nome": "ZF 6S 480 VO (ZF EL55) DAILY FURGï¿½O 30-160",
-    "modelo": "DAILY FURGï¿½O 30-160",
+    "nome": "ZF 6S 480 VO (ZF EL55) DAILY FURG�O 30-160",
+    "modelo": "DAILY FURG�O 30-160",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
@@ -455,8 +455,8 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "zf_6s_480_vo_zf_el55_daily_furgo_30_160_predisp_ambulncia_160",
-    "nome": "ZF 6S 480 VO (ZF EL55) DAILY FURGï¿½O 30-160 PREDISP. AMBULï¿½NCIA",
-    "modelo": "DAILY FURGï¿½O 30-160 PREDISP. AMBULï¿½NCIA",
+    "nome": "ZF 6S 480 VO (ZF EL55) DAILY FURG�O 30-160 PREDISP. AMBUL�NCIA",
+    "modelo": "DAILY FURG�O 30-160 PREDISP. AMBUL�NCIA",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
@@ -471,8 +471,8 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "zf_6s_480_vo_zf_el55_zf_8hp_daily_furgo_45_160_hi_matic_predisp_ambulncia_160",
-    "nome": "ZF 6S 480 VO (ZF EL55) ZF 8HP DAILY FURGï¿½O 45-160 HI-MATIC PREDISP. AMBULï¿½NCIA",
-    "modelo": "DAILY FURGï¿½O 45-160 HI-MATIC PREDISP. AMBULï¿½NCIA",
+    "nome": "ZF 6S 480 VO (ZF EL55) ZF 8HP DAILY FURG�O 45-160 HI-MATIC PREDISP. AMBUL�NCIA",
+    "modelo": "DAILY FURG�O 45-160 HI-MATIC PREDISP. AMBUL�NCIA",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
@@ -487,8 +487,8 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "zf_6s_480_vo_zf_el55_zf_8hp_daily_furgo_45_160_manual_hi_matic_160",
-    "nome": "ZF 6S 480 VO (ZF EL55) ZF 8HP DAILY FURGï¿½O 45-160 MANUAL | HI-MATIC",
-    "modelo": "DAILY FURGï¿½O 45-160 MANUAL | HI-MATIC",
+    "nome": "ZF 6S 480 VO (ZF EL55) ZF 8HP DAILY FURG�O 45-160 MANUAL | HI-MATIC",
+    "modelo": "DAILY FURG�O 45-160 MANUAL | HI-MATIC",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
@@ -503,8 +503,8 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "zf_6s_480_vo_zf_el55_zf_8hp_daily_furgo_45_180_hi_matic_predisp_ambulncia_180",
-    "nome": "ZF 6S 480 VO (ZF EL55) ZF 8HP DAILY FURGï¿½O 45-180 HI-MATIC PREDISP. AMBULï¿½NCIA",
-    "modelo": "DAILY FURGï¿½O 45-180 HI-MATIC PREDISP. AMBULï¿½NCIA",
+    "nome": "ZF 6S 480 VO (ZF EL55) ZF 8HP DAILY FURG�O 45-180 HI-MATIC PREDISP. AMBUL�NCIA",
+    "modelo": "DAILY FURG�O 45-180 HI-MATIC PREDISP. AMBUL�NCIA",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
@@ -519,8 +519,8 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "zf_6s_480_vo_zf_el55_zf_8hp_daily_furgo_45_180_manual_hi_matic_180",
-    "nome": "ZF 6S 480 VO (ZF EL55) ZF 8HP DAILY FURGï¿½O 45-180 MANUAL | HI-MATIC",
-    "modelo": "DAILY FURGï¿½O 45-180 MANUAL | HI-MATIC",
+    "nome": "ZF 6S 480 VO (ZF EL55) ZF 8HP DAILY FURG�O 45-180 MANUAL | HI-MATIC",
+    "modelo": "DAILY FURG�O 45-180 MANUAL | HI-MATIC",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
@@ -535,8 +535,8 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "zf_6s_480_vo_zf_el55_zf_8hp_daily_furgo_55_180_manual_hi_matic_180",
-    "nome": "ZF 6S 480 VO (ZF EL55) ZF 8HP DAILY FURGï¿½O 55-180 MANUAL | HI-MATIC",
-    "modelo": "DAILY FURGï¿½O 55-180 MANUAL | HI-MATIC",
+    "nome": "ZF 6S 480 VO (ZF EL55) ZF 8HP DAILY FURG�O 55-180 MANUAL | HI-MATIC",
+    "modelo": "DAILY FURG�O 55-180 MANUAL | HI-MATIC",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
@@ -567,8 +567,8 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "_e_daily_42_furgo_136",
-    "nome": " E-DAILY 4.2 FURGï¿½O",
-    "modelo": "E-DAILY 4.2 FURGï¿½O",
+    "nome": " E-DAILY 4.2 FURG�O",
+    "modelo": "E-DAILY 4.2 FURG�O",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
@@ -604,7 +604,7 @@ export const VeiculosData: Veiculo[] = [
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
-      "motor": "FPT / Cursor 13, ciclo Otto, ï¿½ gï¿½s natural, biometano ou qualquer mistura de ambos",
+      "motor": "FPT / Cursor 13, ciclo Otto, � g�s natural, biometano ou qualquer mistura de ambos",
       "potencia": "460 cv",
       "torque": "2000 Nm",
       "transmissao": "Automatizada (12 marchas)",
@@ -631,8 +631,8 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "zf_traxon_12tx2620_td_s_way_480_4x2_suspenso_pneumtica_480",
-    "nome": "ZF TraXon 12TX2620 TD S-WAY 480 (4X2) SUSPENSï¿½O PNEUMï¿½TICA",
-    "modelo": "S-WAY 480 (4X2) SUSPENSï¿½O PNEUMï¿½TICA",
+    "nome": "ZF TraXon 12TX2620 TD S-WAY 480 (4X2) SUSPENS�O PNEUM�TICA",
+    "modelo": "S-WAY 480 (4X2) SUSPENS�O PNEUM�TICA",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
@@ -663,8 +663,8 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "zf_traxon_12tx2620_td_s_way_480_6x2_suspenso_pneumtica_480",
-    "nome": "ZF TraXon 12TX2620 TD S-WAY 480 (6X2) SUSPENSï¿½O PNEUMï¿½TICA",
-    "modelo": "S-WAY 480 (6X2) SUSPENSï¿½O PNEUMï¿½TICA",
+    "nome": "ZF TraXon 12TX2620 TD S-WAY 480 (6X2) SUSPENS�O PNEUM�TICA",
+    "modelo": "S-WAY 480 (6X2) SUSPENS�O PNEUM�TICA",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
@@ -711,8 +711,8 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "eaton_5406_a_tector_15_210_4x2_my24_207",
-    "nome": "Eaton 5406 A TECTOR 15-210 (4X2) MY24 ",
-    "modelo": "TECTOR 15-210 (4X2) MY24 ",
+    "nome": "Eaton 5406 A TECTOR 15-210 (4X2) MY24",
+    "modelo": "TECTOR 15-210 (4X2) MY24",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
@@ -1327,7 +1327,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 926 LA",
       "potencia": "286 cv",
       "torque": "1100 Nm",
-      "transmissao": "Automï¿½tica (6 marchas)",
+      "transmissao": "Autom�tica (6 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.100",
       "cmt": "N/A"
@@ -1359,7 +1359,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "MB OM 926 LA",
       "potencia": "321 cv",
       "torque": "1250 Nm",
-      "transmissao": "Automï¿½tica (6 marchas)",
+      "transmissao": "Autom�tica (6 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "17.100",
       "cmt": "N/A"
@@ -1647,7 +1647,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "DC13 162",
       "potencia": "375 cv",
       "torque": "1900 Nm",
-      "transmissao": "Automï¿½tica (14 marchas)",
+      "transmissao": "Autom�tica (14 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "26.100",
       "cmt": "78.000"
@@ -1655,15 +1655,15 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "g25cm_g_460_a6x2na_gs_cng_carga_geral_466",
-    "nome": "G25CM G 460 A6x2NA (Gï¿½S ï¿½ CNG) | Carga Geral",
-    "modelo": "G 460 A6x2NA (Gï¿½S ï¿½ CNG) | Carga Geral",
+    "nome": "G25CM G 460 A6x2NA (G�S � CNG) | Carga Geral",
+    "modelo": "G 460 A6x2NA (G�S � CNG) | Carga Geral",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "OC13 104",
       "potencia": "466 cv",
       "torque": "2300 Nm",
-      "transmissao": "Automï¿½tica (14 marchas)",
+      "transmissao": "Autom�tica (14 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "26.100",
       "cmt": "78.000"
@@ -1671,15 +1671,15 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "g25cm_g_460_a6x4nz_gs_cng_carga_geral_466",
-    "nome": "G25CM G 460 A6x4NZ (Gï¿½S ï¿½ CNG) | Carga Geral",
-    "modelo": "G 460 A6x4NZ (Gï¿½S ï¿½ CNG) | Carga Geral",
+    "nome": "G25CM G 460 A6x4NZ (G�S � CNG) | Carga Geral",
+    "modelo": "G 460 A6x4NZ (G�S � CNG) | Carga Geral",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "OC13 104",
       "potencia": "466 cv",
       "torque": "2300 Nm",
-      "transmissao": "Automï¿½tica (14 marchas)",
+      "transmissao": "Autom�tica (14 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.100",
       "cmt": "90.000"
@@ -1695,7 +1695,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "DC13 176",
       "potencia": "426 cv",
       "torque": "2300 Nm",
-      "transmissao": "Automï¿½tica (14 marchas)",
+      "transmissao": "Autom�tica (14 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "20.100",
       "cmt": "66.000"
@@ -1711,7 +1711,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "DC13 176",
       "potencia": "426 cv",
       "torque": "2300 Nm",
-      "transmissao": "Automï¿½tica (14 marchas)",
+      "transmissao": "Autom�tica (14 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "26.100",
       "cmt": "78.000"
@@ -1727,7 +1727,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "DC13 164",
       "potencia": "456 cv",
       "torque": "2350 Nm",
-      "transmissao": "Automï¿½tica (14 marchas)",
+      "transmissao": "Autom�tica (14 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "26.100",
       "cmt": "78.000"
@@ -1743,7 +1743,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "DC13 175",
       "potencia": "466 cv",
       "torque": "2500 Nm",
-      "transmissao": "Automï¿½tica (14 marchas)",
+      "transmissao": "Autom�tica (14 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "20.100",
       "cmt": "66.000"
@@ -1759,7 +1759,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "DC13 175",
       "potencia": "466 cv",
       "torque": "2500 Nm",
-      "transmissao": "Automï¿½tica (14 marchas)",
+      "transmissao": "Autom�tica (14 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "26.100",
       "cmt": "78.000"
@@ -1775,7 +1775,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "DC13 174",
       "potencia": "507 cv",
       "torque": "2650 Nm",
-      "transmissao": "Automï¿½tica (14 marchas)",
+      "transmissao": "Autom�tica (14 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.100",
       "cmt": "90.000"
@@ -1791,7 +1791,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "DC13 174",
       "potencia": "507 cv",
       "torque": "2650 Nm",
-      "transmissao": "Automï¿½tica (14 marchas)",
+      "transmissao": "Autom�tica (14 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.100",
       "cmt": "90.000"
@@ -1807,7 +1807,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "DC13 166",
       "potencia": "547 cv",
       "torque": "2700 Nm",
-      "transmissao": "Automï¿½tica (14 marchas)",
+      "transmissao": "Autom�tica (14 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.100",
       "cmt": "90.000"
@@ -1823,7 +1823,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "DC13 173",
       "potencia": "568 cv",
       "torque": "2800 Nm",
-      "transmissao": "Automï¿½tica (14 marchas)",
+      "transmissao": "Autom�tica (14 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.100",
       "cmt": "90.000"
@@ -1839,7 +1839,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "DC16 123",
       "potencia": "781 cv",
       "torque": "3700 Nm",
-      "transmissao": "Automï¿½tica (14 marchas)",
+      "transmissao": "Autom�tica (14 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "26.100",
       "cmt": "78.000"
@@ -2599,8 +2599,8 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "at2612f_at2612f_aso_ulc_super_reduzida_ato2612f_aso_c_super_reduzida_fh_420_6x4t_s_reduo_nos_cubos_420",
-    "nome": "AT2612F | AT2612F + ASO-ULC (Super reduzida) | ATO2612F + ASO-C (Super reduzida) FH 420 6x4T (s/ reduï¿½ï¿½o nos cubos)",
-    "modelo": "FH 420 6x4T (s/ reduï¿½ï¿½o nos cubos)",
+    "nome": "AT2612F | AT2612F + ASO-ULC (Super reduzida) | ATO2612F + ASO-C (Super reduzida) FH 420 6x4T (s/ redu��o nos cubos)",
+    "modelo": "FH 420 6x4T (s/ redu��o nos cubos)",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
@@ -2615,8 +2615,8 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "at2612f_at2612f_aso_ulc_super_reduzida_ato2612f_aso_c_super_reduzida_fh_460_6x4t_s_reduo_nos_cubos_460",
-    "nome": "AT2612F | AT2612F + ASO-ULC (Super reduzida) | ATO2612F + ASO-C (Super reduzida) FH 460 6x4T (s/ reduï¿½ï¿½o nos cubos)",
-    "modelo": "FH 460 6x4T (s/ reduï¿½ï¿½o nos cubos)",
+    "nome": "AT2612F | AT2612F + ASO-ULC (Super reduzida) | ATO2612F + ASO-C (Super reduzida) FH 460 6x4T (s/ redu��o nos cubos)",
+    "modelo": "FH 460 6x4T (s/ redu��o nos cubos)",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
@@ -2631,8 +2631,8 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "at2612f_at2612f_aso_ulc_super_reduzida_ato2612f_aso_c_super_reduzida_fh_500_6x4t_s_reduo_nos_cubos_500",
-    "nome": "AT2612F | AT2612F + ASO-ULC (Super reduzida) | ATO2612F + ASO-C (Super reduzida) FH 500 6x4T (s/ reduï¿½ï¿½o nos cubos)",
-    "modelo": "FH 500 6x4T (s/ reduï¿½ï¿½o nos cubos)",
+    "nome": "AT2612F | AT2612F + ASO-ULC (Super reduzida) | ATO2612F + ASO-C (Super reduzida) FH 500 6x4T (s/ redu��o nos cubos)",
+    "modelo": "FH 500 6x4T (s/ redu��o nos cubos)",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
@@ -2647,8 +2647,8 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "at2612f_at2612f_aso_ulc_super_reduzida_ato2612f_aso_c_super_reduzida_fh_540_6x4t_s_reduo_nos_cubos_500",
-    "nome": "AT2612F | AT2612F + ASO-ULC (Super reduzida) | ATO2612F + ASO-C (Super reduzida) FH 540 6x4T (s/ reduï¿½ï¿½o nos cubos)",
-    "modelo": "FH 540 6x4T (s/ reduï¿½ï¿½o nos cubos)",
+    "nome": "AT2612F | AT2612F + ASO-ULC (Super reduzida) | ATO2612F + ASO-C (Super reduzida) FH 540 6x4T (s/ redu��o nos cubos)",
+    "modelo": "FH 540 6x4T (s/ redu��o nos cubos)",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
@@ -3247,7 +3247,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "Motor 198kW BorgWarner",
       "potencia": "269 cv",
       "torque": "430 Nm",
-      "transmissao": "Automï¿½tica (1 marchas)",
+      "transmissao": "Autom�tica (1 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "4.250",
       "cmt": "N/A"
@@ -3263,7 +3263,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "Diesel 2.0 EcoBlue",
       "potencia": "165 cv",
       "torque": "390 Nm",
-      "transmissao": "Automï¿½tica (10 marchas)",
+      "transmissao": "Autom�tica (10 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.500",
       "cmt": "N/A"
@@ -3279,7 +3279,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "Diesel 2.0 EcoBlue",
       "potencia": "170 cv",
       "torque": "390 Nm",
-      "transmissao": "Automï¿½tica (Manual marchas)",
+      "transmissao": "Autom�tica (Manual marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.500",
       "cmt": "N/A"
@@ -3295,7 +3295,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "Motor Diesel 2.0 EcoBlue",
       "potencia": "165 cv",
       "torque": "390 Nm",
-      "transmissao": "Manual ( marchas)",
+      "transmissao": "Manual (6 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "4.700",
       "cmt": "N/A"
@@ -3311,7 +3311,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": " FPT / F1C Max ",
       "potencia": "180 cv",
       "torque": "430 Nm",
-      "transmissao": "Manual - Cabo ( marchas)",
+      "transmissao": "Manual - Cabo (8 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.500",
       "cmt": "6.500"
@@ -3327,7 +3327,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "420",
       "potencia": "150 cv",
       "torque": "400 Nm",
-      "transmissao": "Automï¿½tica ( marchas)",
+      "transmissao": "Autom�tica (Rela��o marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "4.250",
       "cmt": "5.000"
@@ -3335,15 +3335,15 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "zf_6s_480_sprinter_315_cdi_street_9m105m_150",
-    "nome": "ZF- 6S 480 Sprinter - 315 CDI Street (9mï¿½/10,5mï¿½)",
-    "modelo": "Sprinter - 315 CDI Street (9mï¿½/10,5mï¿½)",
+    "nome": "ZF- 6S 480 Sprinter - 315 CDI Street (9m�/10,5m�)",
+    "modelo": "Sprinter - 315 CDI Street (9m�/10,5m�)",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "OM 654 CDI | Turbo | Diesel ",
       "potencia": "150 cv",
       "torque": "340 Nm",
-      "transmissao": "Mecï¿½nica ( marchas)",
+      "transmissao": "Mec�nica (6 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.500",
       "cmt": "N/A"
@@ -3351,15 +3351,15 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "zf_6s_480_sprinter_417_cdi_9m105m_170",
-    "nome": "ZF- 6S 480 Sprinter - 417 CDI  (9mï¿½/10,5mï¿½)",
-    "modelo": "Sprinter - 417 CDI  (9mï¿½/10,5mï¿½)",
+    "nome": "ZF- 6S 480 Sprinter - 417 CDI (9m�/10,5m�)",
+    "modelo": "Sprinter - 417 CDI (9m�/10,5m�)",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "OM 654 CDI | Turbo |",
       "potencia": "170 cv",
       "torque": "400 Nm",
-      "transmissao": "Mecï¿½nica ( marchas)",
+      "transmissao": "Mec�nica (6 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "4.430",
       "cmt": "N/A"
@@ -3367,15 +3367,15 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "zf_6s_480_sprinter_truck_315_cdi_street_150",
-    "nome": "ZF- 6S 480 Sprinter Truck - 315 CDI Street ",
-    "modelo": "Sprinter Truck - 315 CDI Street ",
+    "nome": "ZF- 6S 480 Sprinter Truck - 315 CDI Street",
+    "modelo": "Sprinter Truck - 315 CDI Street",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "OM 654 CDI ",
       "potencia": "150 cv",
       "torque": "340 Nm",
-      "transmissao": "Mecï¿½nica ( marchas)",
+      "transmissao": "Mec�nica (6 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.500",
       "cmt": "N/A"
@@ -3391,7 +3391,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "OM 654 CDI ",
       "potencia": "170 cv",
       "torque": "400 Nm",
-      "transmissao": "Mecï¿½nica ( marchas)",
+      "transmissao": "Mec�nica (6 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "4.100 | 5.000 | 5.000",
       "cmt": "N/A"
@@ -3407,7 +3407,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "M9T GEN6 AdBlue",
       "potencia": "150 cv",
       "torque": "385 Nm",
-      "transmissao": "Mecï¿½nico (PF6) (6 marchas)",
+      "transmissao": "Mec�nico (PF6) (6 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.500",
       "cmt": "2.000"
@@ -3415,15 +3415,15 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "_master_furgo_150",
-    "nome": " Master Furgï¿½o",
-    "modelo": "Master Furgï¿½o",
+    "nome": " Master Furg�o",
+    "modelo": "Master Furg�o",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "M9T GEN6 AdBlue",
       "potencia": "150 cv",
       "torque": "385 Nm",
-      "transmissao": "Mecï¿½nico (PF6) (6 marchas)",
+      "transmissao": "Mec�nico (PF6) (6 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.500 | 3.500 | 3.500",
       "cmt": "2.000 | 2.000 | 2.000"
