@@ -1,4 +1,4 @@
-// convertData.js - VERSÃO FINAL CORRIGIDA
+// convertData.js - VERSÃO FINAL CORRIGIDA COM UTF-8
 const fs = require('fs');
 const path = require('path');
 const csv = require('csv-parser');
@@ -38,8 +38,8 @@ if (!fs.existsSync('data')) {
     fs.mkdirSync('data');
 }
 
-// Implementa a codificação 'latin1' para corrigir acentos e o separador ';'
-fs.createReadStream(INPUT_CSV_FILE, { encoding: 'latin1' })
+// ATENÇÃO: Usando encoding: 'utf8'. Isso exige que o arquivo CSV TAMBÉM esteja salvo como UTF-8!
+fs.createReadStream(INPUT_CSV_FILE, { encoding: 'utf8' })
     .pipe(csv({ separator: ';' })) 
     .on('data', (row) => {
         // Limpeza dos dados de potência e torque
@@ -47,7 +47,7 @@ fs.createReadStream(INPUT_CSV_FILE, { encoding: 'latin1' })
         const torqueNm = cleanNumericValue(row.nm);
         const modeloVeiculo = row.modelo;
         
-        // CORREÇÃO: Usando 'row.fabricante' (minúsculo)
+        // Corrigido para 'fabricante' (minúsculo)
         const fabricanteMotor = row.fabricante; 
         
         // Limpeza da Transmissão para pegar apenas o primeiro tipo (ex: "Manual")
@@ -112,7 +112,7 @@ export interface Veiculo {
 export const VeiculosData: Veiculo[] = ${JSON.stringify(VeiculosData, null, 2)};
 `;
 
-        // Escreve o novo conteúdo no veiculos.ts
+        // Escreve o novo conteúdo no veiculos.ts (que será UTF-8 por padrão)
         fs.writeFileSync(OUTPUT_TS_FILE, tsContent);
         
         console.log('----------------------------------------------------');
