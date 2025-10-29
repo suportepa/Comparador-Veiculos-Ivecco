@@ -1,5 +1,5 @@
 
-// data/veiculos.ts - ARQUIVO GERADO AUTOMATICAMENTE
+// data/veiculos.ts - ARQUIVO GERADO AUTOMATICAMENTE (Total: 0 veículos)
 
 export interface FichaTecnica {
   motor: string;
