@@ -1,5 +1,32 @@
+// veiculos.ts (Localizado em COMP.../data/)
 
-// data/veiculos.ts - ARQUIVO GERADO AUTOMATICAMENTE (Total: 213 veículos)
+// 1. Definição de Interfaces (Mantenho para tipagem correta)
+interface FichaTecnica {
+  motor: string;
+  potencia: string;
+  torque: string;
+  transmissao: string;
+  pesoEmOrdemDeMarcha: string;
+  pbtTecnico: string;
+  cmt: string;
+}
+
+interface Veiculo {
+  id: string;
+  nome: string;
+  modelo: string;
+  // Tipo 'number' é o ID que o Metro Bundler atribui à imagem local
+  imagem: number; 
+  resumoVantagem: string;
+  fichaTecnica: FichaTecnica;
+}
+
+// 2. Importe TODAS as suas imagens usando require() com o caminho corrigido
+// O CAMINHO CORRETO É: '../assets/imagens/v1.png'
+const imagem_v1 = require('../assets/imagens/v1.png');
+// const imagem_v2 = require('../assets/imagens/v2.png'); 
+// ... continue importando as outras 300 imagens ...
+
 
 export interface FichaTecnica {
   motor: string;
