@@ -1823,7 +1823,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "DC13 173",
       "potencia": "568 cv",
       "torque": "2800 Nm",
-      "transmissao": "Autom�tica (14 marchas)",
+      "transmissao": "Automática (14 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "28.100",
       "cmt": "90.000"
@@ -1839,7 +1839,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "DC16 123",
       "potencia": "781 cv",
       "torque": "3700 Nm",
-      "transmissao": "Autom�tica (14 marchas)",
+      "transmissao": "Automática (14 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "26.100",
       "cmt": "78.000"
@@ -2599,8 +2599,8 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "at2612f_at2612f_aso_ulc_super_reduzida_ato2612f_aso_c_super_reduzida_fh_420_6x4t_s_reduo_nos_cubos_420",
-    "nome": "AT2612F | AT2612F + ASO-ULC (Super reduzida) | ATO2612F + ASO-C (Super reduzida) FH 420 6x4T (s/ redu��o nos cubos)",
-    "modelo": "FH 420 6x4T (s/ redu��o nos cubos)",
+    "nome": "AT2612F | AT2612F + ASO-ULC (Super reduzida) | ATO2612F + ASO-C (Super reduzida) FH 420 6x4T (s/ redução nos cubos)",
+    "modelo": "FH 420 6x4T (s/ redução nos cubos)",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
@@ -2615,8 +2615,8 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "at2612f_at2612f_aso_ulc_super_reduzida_ato2612f_aso_c_super_reduzida_fh_460_6x4t_s_reduo_nos_cubos_460",
-    "nome": "AT2612F | AT2612F + ASO-ULC (Super reduzida) | ATO2612F + ASO-C (Super reduzida) FH 460 6x4T (s/ redu��o nos cubos)",
-    "modelo": "FH 460 6x4T (s/ redu��o nos cubos)",
+    "nome": "AT2612F | AT2612F + ASO-ULC (Super reduzida) | ATO2612F + ASO-C (Super reduzida) FH 460 6x4T (s/ redução nos cubos)",
+    "modelo": "FH 460 6x4T (s/ redução nos cubos)",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
@@ -2631,8 +2631,8 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "at2612f_at2612f_aso_ulc_super_reduzida_ato2612f_aso_c_super_reduzida_fh_500_6x4t_s_reduo_nos_cubos_500",
-    "nome": "AT2612F | AT2612F + ASO-ULC (Super reduzida) | ATO2612F + ASO-C (Super reduzida) FH 500 6x4T (s/ redu��o nos cubos)",
-    "modelo": "FH 500 6x4T (s/ redu��o nos cubos)",
+    "nome": "AT2612F | AT2612F + ASO-ULC (Super reduzida) | ATO2612F + ASO-C (Super reduzida) FH 500 6x4T (s/ redução nos cubos)",
+    "modelo": "FH 500 6x4T (s/ redução nos cubos)",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
@@ -2647,8 +2647,8 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "at2612f_at2612f_aso_ulc_super_reduzida_ato2612f_aso_c_super_reduzida_fh_540_6x4t_s_reduo_nos_cubos_500",
-    "nome": "AT2612F | AT2612F + ASO-ULC (Super reduzida) | ATO2612F + ASO-C (Super reduzida) FH 540 6x4T (s/ redu��o nos cubos)",
-    "modelo": "FH 540 6x4T (s/ redu��o nos cubos)",
+    "nome": "AT2612F | AT2612F + ASO-ULC (Super reduzida) | ATO2612F + ASO-C (Super reduzida) FH 540 6x4T (s/ redução nos cubos)",
+    "modelo": "FH 540 6x4T (s/ redução nos cubos)",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
@@ -3247,7 +3247,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "Motor 198kW BorgWarner",
       "potencia": "269 cv",
       "torque": "430 Nm",
-      "transmissao": "Autom�tica (1 marchas)",
+      "transmissao": "Automática (1 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "4.250",
       "cmt": "N/A"
@@ -3263,7 +3263,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "Diesel 2.0 EcoBlue",
       "potencia": "165 cv",
       "torque": "390 Nm",
-      "transmissao": "Autom�tica (10 marchas)",
+      "transmissao": "Automática (10 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.500",
       "cmt": "N/A"
@@ -3279,7 +3279,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "Diesel 2.0 EcoBlue",
       "potencia": "170 cv",
       "torque": "390 Nm",
-      "transmissao": "Autom�tica (Manual marchas)",
+      "transmissao": "Automática (Manual marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.500",
       "cmt": "N/A"
@@ -3327,7 +3327,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "420",
       "potencia": "150 cv",
       "torque": "400 Nm",
-      "transmissao": "Autom�tica (Rela��o marchas)",
+      "transmissao": "Automática (Relação marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "4.250",
       "cmt": "5.000"
@@ -3335,15 +3335,15 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "zf_6s_480_sprinter_315_cdi_street_9m105m_150",
-    "nome": "ZF- 6S 480 Sprinter - 315 CDI Street (9m�/10,5m�)",
-    "modelo": "Sprinter - 315 CDI Street (9m�/10,5m�)",
+    "nome": "ZF- 6S 480 Sprinter - 315 CDI Street (9m/10,5m)",
+    "modelo": "Sprinter - 315 CDI Street (9m/10,5m)",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "OM 654 CDI | Turbo | Diesel ",
       "potencia": "150 cv",
       "torque": "340 Nm",
-      "transmissao": "Mec�nica (6 marchas)",
+      "transmissao": "Mecânica (6 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.500",
       "cmt": "N/A"
@@ -3351,15 +3351,15 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "zf_6s_480_sprinter_417_cdi_9m105m_170",
-    "nome": "ZF- 6S 480 Sprinter - 417 CDI (9m�/10,5m�)",
-    "modelo": "Sprinter - 417 CDI (9m�/10,5m�)",
+    "nome": "ZF- 6S 480 Sprinter - 417 CDI (9m/10,5m)",
+    "modelo": "Sprinter - 417 CDI (9m/10,5m)",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "OM 654 CDI | Turbo |",
       "potencia": "170 cv",
       "torque": "400 Nm",
-      "transmissao": "Mec�nica (6 marchas)",
+      "transmissao": "Mecânica (6 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "4.430",
       "cmt": "N/A"
@@ -3375,7 +3375,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "OM 654 CDI ",
       "potencia": "150 cv",
       "torque": "340 Nm",
-      "transmissao": "Mec�nica (6 marchas)",
+      "transmissao": "Mecânica (6 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.500",
       "cmt": "N/A"
@@ -3391,7 +3391,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "OM 654 CDI ",
       "potencia": "170 cv",
       "torque": "400 Nm",
-      "transmissao": "Mec�nica (6 marchas)",
+      "transmissao": "Mecânica (6 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "4.100 | 5.000 | 5.000",
       "cmt": "N/A"
@@ -3407,7 +3407,7 @@ export const VeiculosData: Veiculo[] = [
       "motor": "M9T GEN6 AdBlue",
       "potencia": "150 cv",
       "torque": "385 Nm",
-      "transmissao": "Mec�nico (PF6) (6 marchas)",
+      "transmissao": "Mecânico (PF6) (6 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.500",
       "cmt": "2.000"
@@ -3415,15 +3415,15 @@ export const VeiculosData: Veiculo[] = [
   },
   {
     "id": "_master_furgo_150",
-    "nome": " Master Furg�o",
-    "modelo": "Master Furg�o",
+    "nome": " Master Furgão",
+    "modelo": "Master Furgão",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "M9T GEN6 AdBlue",
       "potencia": "150 cv",
       "torque": "385 Nm",
-      "transmissao": "Mec�nico (PF6) (6 marchas)",
+      "transmissao": "Mecânico (PF6) (6 marchas)",
       "pesoEmOrdemDeMarcha": "N/A - Conferir Coluna",
       "pbtTecnico": "3.500 | 3.500 | 3.500",
       "cmt": "2.000 | 2.000 | 2.000"
