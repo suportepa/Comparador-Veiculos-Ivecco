@@ -8,25 +8,18 @@ import {
   Image,
   TouchableOpacity,
   Dimensions,
+  TextInput,
 } from 'react-native';
 
-// --- CAMINHO CORRIGIDO: Voltamos duas pastas (app e (tabs)) para acessar 'data' ---
 import { VeiculosData, Veiculo, FichaTecnica } from '../../data/veiculos';
 
-// Largura da tela para ajudar na responsividade
 const { width } = Dimensions.get('window');
 
-// --- 1. Componente para Exibir a Ficha Técnica ---
-interface ComparacaoProps {
-  veiculo1: Veiculo;
-  veiculo2: Veiculo;
-}
-
-// 1.1. Componente VencedorText (Corrigido para aceitar 'children')
+// --- 1. Componente VencedorText ---
 interface VencedorTextProps {
   vencedor: 'vencedor1' | 'vencedor2' | 'neutral';
   isVeiculo1: boolean;
-  children: React.ReactNode; // Adicionando a tipagem de children
+  children: React.ReactNode;
 }
 
 const VencedorText: React.FC<VencedorTextProps> = ({ vencedor, isVeiculo1, children }) => {
@@ -41,20 +34,21 @@ const VencedorText: React.FC<VencedorTextProps> = ({ vencedor, isVeiculo1, child
   return <Text style={[styles.specValue, style]}>{children}</Text>;
 };
 
-// 1.2. Lógica de Comparação e Container
+// --- 2. Componente de Comparação ---
+interface ComparacaoProps {
+  veiculo1: Veiculo;
+  veiculo2: Veiculo;
+}
 
 const ComparacaoContainer: React.FC<ComparacaoProps> = ({ veiculo1, veiculo2 }) => {
-  // Garantimos que as chaves da ficha técnica são strings para usar em Object.keys
   const specsKeys = Object.keys(veiculo1.fichaTecnica) as (keyof FichaTecnica)[];
 
   const getVencedor = (key: keyof FichaTecnica) => {
     const val1 = veiculo1.fichaTecnica[key];
     const val2 = veiculo2.fichaTecnica[key];
 
-    // O TS não consegue inferir que val1/val2 são strings em tempo de execução
     if (typeof val1 !== 'string' || typeof val2 !== 'string') return 'neutral';
     
-    // Tenta extrair apenas números para uma comparação numérica (CORRIGIDO: garante que val1 e val2 são strings)
     const num1 = parseFloat(val1.replace(/[^\d.]/g, ''));
     const num2 = parseFloat(val2.replace(/[^\d.]/g, ''));
 
@@ -65,12 +59,10 @@ const ComparacaoContainer: React.FC<ComparacaoProps> = ({ veiculo1, veiculo2 }) 
     return num1 > num2 ? 'vencedor1' : 'vencedor2';
   };
 
-  // 1.3. Componente de Resumo
   const ResumeComponent: React.FC<{ veiculo: Veiculo }> = ({ veiculo }) => (
     <View style={styles.resumeBox}>
       <Text style={styles.resumeTitle}>Resumo da Vantagem</Text>
       <Text style={styles.resumeText}>
-        {/* CORRIGIDO: Tipagem da função de replace para evitar 'any' */}
         {veiculo.resumoVantagem.replace(/\*\*(.*?)\*\*/g, (match: string, p1: string) => p1.toUpperCase())}
       </Text>
     </View>
@@ -80,7 +72,6 @@ const ComparacaoContainer: React.FC<ComparacaoProps> = ({ veiculo1, veiculo2 }) 
     <View style={styles.comparisonContainer}>
       <Text style={styles.sectionTitle}>Ficha Técnica Comparada</Text>
 
-      {/* Tabela de Comparação */}
       <View style={styles.table}>
         <View style={styles.headerRow}>
           <Text style={styles.headerText}>{veiculo1.nome}</Text>
@@ -93,8 +84,7 @@ const ComparacaoContainer: React.FC<ComparacaoProps> = ({ veiculo1, veiculo2 }) 
           const keyLabel = key.replace(/([A-Z])/g, ' $1').toUpperCase();
 
           return (
-            // CORRIGIDO: Key agora é uma string, resolvendo o erro 2769
-            <View key={key} style={styles.dataRow}> 
+            <View key={key} style={styles.dataRow}>
               <VencedorText vencedor={vencedor} isVeiculo1={true}>
                 {veiculo1.fichaTecnica[key]}
               </VencedorText>
@@ -109,7 +99,6 @@ const ComparacaoContainer: React.FC<ComparacaoProps> = ({ veiculo1, veiculo2 }) 
         })}
       </View>
 
-      {/* Resumos */}
       <View style={styles.resumoRow}>
         <View style={styles.resumoCol}>
           <ResumeComponent veiculo={veiculo1} />
@@ -122,35 +111,73 @@ const ComparacaoContainer: React.FC<ComparacaoProps> = ({ veiculo1, veiculo2 }) 
   );
 };
 
-
-// --- 2. Componente de Seleção (Picker Simples) ---
-interface SelectorProps {
+// --- 3. NOVO: Componente de Barra de Pesquisa ---
+interface SearchBarProps {
   veiculo: Veiculo;
   onSelect: (veiculo: Veiculo) => void;
   title: string;
 }
 
-const VehicleSelector: React.FC<SelectorProps> = ({ veiculo, onSelect, title }) => (
-  <View style={styles.selectorWrapper}>
-    <Text style={styles.selectorTitle}>{title}</Text>
-    <View style={styles.pickerContainer}>
-      {/* CORRIGIDO: Tipagem do parâmetro 'item' no map */}
-      {VeiculosData.map((item: Veiculo) => (
-        <TouchableOpacity
-          key={item.id}
-          style={[styles.pickerItem, item.id === veiculo.id && styles.selectedItem]}
-          onPress={() => onSelect(item)}
-        >
-          <Text style={styles.pickerText}>{item.nome}</Text>
-        </TouchableOpacity>
-      ))}
+const VehicleSearchBar: React.FC<SearchBarProps> = ({ veiculo, onSelect, title }) => {
+  const [searchText, setSearchText] = useState('');
+  const [showResults, setShowResults] = useState(false);
+
+  // Filtra veículos baseado no texto digitado
+  const filteredVeiculos = VeiculosData.filter((v: Veiculo) =>
+    v.nome.toLowerCase().includes(searchText.toLowerCase())
+  );
+
+  const handleSelect = (selectedVeiculo: Veiculo) => {
+    onSelect(selectedVeiculo);
+    setSearchText('');
+    setShowResults(false);
+  };
+
+  return (
+    <View style={styles.searchWrapper}>
+      <Text style={styles.selectorTitle}>{title}</Text>
+      
+      {/* Veículo Selecionado */}
+      <View style={styles.selectedVehicleBox}>
+        <Text style={styles.selectedVehicleName}>{veiculo.nome}</Text>
+      </View>
+
+      {/* Barra de Pesquisa */}
+      <TextInput
+        style={styles.searchInput}
+        placeholder="Buscar outro veículo..."
+        value={searchText}
+        onChangeText={(text) => {
+          setSearchText(text);
+          setShowResults(text.length > 0);
+        }}
+        onFocus={() => setShowResults(searchText.length > 0)}
+      />
+
+      {/* Resultados da Pesquisa */}
+      {showResults && (
+        <View style={styles.searchResults}>
+          {filteredVeiculos.length > 0 ? (
+            filteredVeiculos.map((item: Veiculo) => (
+              <TouchableOpacity
+                key={item.id}
+                style={styles.resultItem}
+                onPress={() => handleSelect(item)}
+              >
+                <Text style={styles.resultText}>{item.nome}</Text>
+              </TouchableOpacity>
+            ))
+          ) : (
+            <Text style={styles.noResultsText}>Nenhum veículo encontrado</Text>
+          )}
+        </View>
+      )}
     </View>
-  </View>
-);
+  );
+};
 
-
-// --- 3. Componente Principal App ---
-export default function Index() { // Mudado para 'Index' para seguir a convenção do Expo Router
+// --- 4. Componente Principal ---
+export default function Index() {
   const [veiculoA, setVeiculoA] = useState<Veiculo>(VeiculosData[0]);
   const [veiculoB, setVeiculoB] = useState<Veiculo>(VeiculosData[1]);
 
@@ -160,14 +187,14 @@ export default function Index() { // Mudado para 'Index' para seguir a convenç�
 
         <Text style={styles.mainTitle}>IVECO Comparador de Veículos</Text>
 
-        {/* Seleção */}
+        {/* Seleção com Barra de Pesquisa */}
         <View style={styles.selectionArea}>
-          <VehicleSelector
+          <VehicleSearchBar
             veiculo={veiculoA}
             onSelect={setVeiculoA}
             title="VEÍCULO A"
           />
-          <VehicleSelector
+          <VehicleSearchBar
             veiculo={veiculoB}
             onSelect={setVeiculoB}
             title="VEÍCULO B"
@@ -197,7 +224,7 @@ export default function Index() { // Mudado para 'Index' para seguir a convenç�
   );
 }
 
-// --- 4. Estilos (mantidos, mas com ajustes na ordem para clareza) ---
+// --- 5. Estilos ---
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
@@ -211,10 +238,10 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
-    color: '#004A99', // Azul Iveco
+    color: '#004A99',
   },
 
-  // Seleção
+  // Área de Seleção
   selectionArea: {
     flexDirection: 'row',
     justifyContent: 'space-around',
@@ -222,37 +249,70 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     paddingHorizontal: 5,
   },
-  selectorWrapper: {
-    alignItems: 'center',
-    width: '45%',
-  },
   selectorTitle: {
     fontSize: 16,
     fontWeight: '600',
     marginBottom: 8,
     color: '#333',
+    textAlign: 'center',
   },
-  pickerContainer: {
-    flexDirection: 'column',
-    width: '100%',
-    borderColor: '#ccc',
-    borderWidth: 1,
+
+  // NOVO: Estilos da Barra de Pesquisa
+  searchWrapper: {
+    width: '45%',
+    position: 'relative',
+  },
+  selectedVehicleBox: {
+    backgroundColor: '#004A99',
+    padding: 12,
     borderRadius: 8,
-    overflow: 'hidden',
+    marginBottom: 10,
+    alignItems: 'center',
   },
-  pickerItem: {
+  selectedVehicleName: {
+    color: '#fff',
+    fontSize: 14,
+    fontWeight: 'bold',
+  },
+  searchInput: {
+    backgroundColor: '#fff',
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 8,
     padding: 10,
+    fontSize: 14,
+  },
+  searchResults: {
+    position: 'absolute',
+    top: 110,
+    left: 0,
+    right: 0,
+    backgroundColor: '#fff',
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 8,
+    maxHeight: 200,
+    zIndex: 1000,
+    elevation: 5,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+  },
+  resultItem: {
+    padding: 12,
     borderBottomWidth: 1,
     borderBottomColor: '#eee',
-    backgroundColor: '#fff',
   },
-  selectedItem: {
-    backgroundColor: '#E0F7FA', // Azul claro para seleção
-    borderLeftWidth: 4,
-    borderLeftColor: '#004A99',
-  },
-  pickerText: {
+  resultText: {
     fontSize: 14,
+    color: '#333',
+  },
+  noResultsText: {
+    padding: 12,
+    textAlign: 'center',
+    color: '#999',
+    fontStyle: 'italic',
   },
 
   // Fotos
@@ -264,7 +324,7 @@ const styles = StyleSheet.create({
     marginBottom: 25,
   },
   vehicleImage: {
-    width: width * 0.40, // 40% da largura da tela
+    width: width * 0.40,
     height: 120,
     borderRadius: 8,
     borderWidth: 1,
@@ -276,7 +336,7 @@ const styles = StyleSheet.create({
     color: '#004A99',
   },
 
-  // Comparação (Tabela)
+  // Comparação
   comparisonContainer: {
     width: '100%',
     padding: 10,
@@ -335,18 +395,17 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '400',
   },
-  // Feedback Visual da Comparação
   vencedorText: {
     fontWeight: 'bold',
-    color: '#28A745', // Verde para o vencedor
+    color: '#28A745',
   },
   perdedorText: {
     fontWeight: '400',
-    color: '#DC3545', // Vermelho claro para o perdedor
+    color: '#DC3545',
     opacity: 0.7,
   },
 
-  // Resumo de Vantagens
+  // Resumo
   resumoRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -360,8 +419,8 @@ const styles = StyleSheet.create({
     padding: 12,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: '#004A99', // Borda Azul Iveco
-    minHeight: 120, // Garante que as caixas tenham altura similar
+    borderColor: '#004A99',
+    minHeight: 120,
   },
   resumeTitle: {
     fontSize: 16,
