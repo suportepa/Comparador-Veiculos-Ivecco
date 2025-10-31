@@ -240,7 +240,7 @@ const VehicleSearchBar: React.FC<SearchBarProps> = ({ veiculo, onSelect, title }
         onFocus={() => setShowResults(searchText.length > 0)}
       />
       {showResults && (
-        <View style={styles.searchResults}>
+        <ScrollView style={styles.searchResults} nestedScrollEnabled={true}>
           {filteredVeiculos.length > 0 ? (
             filteredVeiculos.map((item: Veiculo) => (
               <TouchableOpacity
@@ -254,7 +254,7 @@ const VehicleSearchBar: React.FC<SearchBarProps> = ({ veiculo, onSelect, title }
           ) : (
             <Text style={styles.noResultsText}>Nenhum veículo encontrado</Text>
           )}
-        </View>
+        </ScrollView>
       )}
     </View>
   );
