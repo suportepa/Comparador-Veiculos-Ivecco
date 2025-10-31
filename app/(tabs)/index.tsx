@@ -146,7 +146,7 @@ const ComparacaoContainer: React.FC<ComparacaoProps> = ({ veiculo1, veiculo2 }) 
       {/* Placar Visual */}
       <View style={styles.placarContainer}>
         <View style={styles.placarItem}>
-          <Text style={styles.placarNome}>{veiculo1.nome}</Text>
+          <Text style={styles.placarNome} numberOfLines={2}>{veiculo1.nome}</Text>
           <Text style={styles.placarPontos}>{pontosVeiculo1} pts</Text>
         </View>
         <View style={styles.barraContainer}>
@@ -154,7 +154,7 @@ const ComparacaoContainer: React.FC<ComparacaoProps> = ({ veiculo1, veiculo2 }) 
           <View style={[styles.barraVeiculo2, { width: `${porcentagemV2}%` }]} />
         </View>
         <View style={styles.placarItem}>
-          <Text style={styles.placarNome}>{veiculo2.nome}</Text>
+          <Text style={styles.placarNome} numberOfLines={2}>{veiculo2.nome}</Text>
           <Text style={styles.placarPontos}>{pontosVeiculo2} pts</Text>
         </View>
       </View>
@@ -162,9 +162,9 @@ const ComparacaoContainer: React.FC<ComparacaoProps> = ({ veiculo1, veiculo2 }) 
       {/* Tabela */}
       <View style={styles.table}>
         <View style={styles.headerRow}>
-          <Text style={styles.headerText}>{veiculo1.nome}</Text>
+          <Text style={styles.headerText} numberOfLines={2}>{veiculo1.nome}</Text>
           <Text style={styles.headerText}>Especificação</Text>
-          <Text style={styles.headerText}>{veiculo2.nome}</Text>
+          <Text style={styles.headerText} numberOfLines={2}>{veiculo2.nome}</Text>
         </View>
 
         {specsConfig.map(({ key, label, peso }) => {
@@ -175,7 +175,7 @@ const ComparacaoContainer: React.FC<ComparacaoProps> = ({ veiculo1, veiculo2 }) 
                 {veiculo1.fichaTecnica[key]}
               </VencedorText>
               <View style={styles.specLabelContainer}>
-                <Text style={styles.specLabel}>{label}</Text>
+                <Text style={styles.specLabel} numberOfLines={2}>{label}</Text>
                 <Text style={styles.pesoLabel}>peso: {peso}</Text>
               </View>
               <VencedorText vencedor={vencedor} isVeiculo1={false}>
@@ -188,16 +188,6 @@ const ComparacaoContainer: React.FC<ComparacaoProps> = ({ veiculo1, veiculo2 }) 
 
       {/* Conclusão */}
       <ConclusaoComponent />
-
-      {/* Resumos */}
-      <View style={styles.resumoRow}>
-        <View style={styles.resumoCol}>
-          <ResumeComponent veiculo={veiculo1} />
-        </View>
-        <View style={styles.resumoCol}>
-          <ResumeComponent veiculo={veiculo2} />
-        </View>
-      </View>
     </View>
   );
 };
@@ -299,7 +289,7 @@ const styles = StyleSheet.create({
   selectedVehicleName: { color: '#fff', fontSize: 14, fontWeight: 'bold' },
   searchInput: { backgroundColor: '#fff', borderWidth: 1, borderColor: '#ccc', borderRadius: 8, padding: 10, fontSize: 14 },
   searchResults: { position: 'absolute', top: 110, left: 0, right: 0, backgroundColor: '#fff', borderWidth: 1, borderColor: '#ccc', borderRadius: 8, maxHeight: 200, zIndex: 1000, elevation: 5, shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.2, shadowRadius: 4 },
-  resultItem: { padding: 12, borderBottomWidth: 1, borderBottomColor: '#eee' },
+  resultItem: { padding: 12, borderBottomWidth: 1, borderBottomColor: '#eee', backgroundColor: '#fff' },
   resultText: { fontSize: 14, color: '#333' },
   noResultsText: { padding: 12, textAlign: 'center', color: '#999', fontStyle: 'italic' },
   imageRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '100%', marginBottom: 25 },
