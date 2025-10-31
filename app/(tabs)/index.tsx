@@ -41,13 +41,25 @@ interface ComparacaoProps {
 }
 
 const ComparacaoContainer: React.FC<ComparacaoProps> = ({ veiculo1, veiculo2 }) => {
-  const specsKeys = Object.keys(veiculo1.fichaTecnica) as (keyof FichaTecnica)[];
+  // Define a ordem e os rótulos dos campos da ficha técnica
+  const specsConfig: { key: keyof FichaTecnica; label: string }[] = [
+    { key: 'motor', label: 'MOTOR' },
+    { key: 'potencia', label: 'POTÊNCIA' },
+    { key: 'torque', label: 'TORQUE' },
+    { key: 'transmissao', label: 'TRANSMISSÃO' },
+    { key: 'pesoEmOrdemDeMarcha', label: 'PESO EM ORDEM DE MARCHA' },
+    { key: 'pbtTecnico', label: 'PBT TÉCNICO' },
+    { key: 'cmt', label: 'CMT' },
+  ];
 
   const getVencedor = (key: keyof FichaTecnica) => {
     const val1 = veiculo1.fichaTecnica[key];
     const val2 = veiculo2.fichaTecnica[key];
 
     if (typeof val1 !== 'string' || typeof val2 !== 'string') return 'neutral';
+    
+    // Ignora comparação para campos N/A ou vazios
+    if (val1.includes('N/A') || val2.includes('N/A')) return 'neutral';
     
     const num1 = parseFloat(val1.replace(/[^\d.]/g, ''));
     const num2 = parseFloat(val2.replace(/[^\d.]/g, ''));
@@ -79,9 +91,8 @@ const ComparacaoContainer: React.FC<ComparacaoProps> = ({ veiculo1, veiculo2 }) 
           <Text style={styles.headerText}>{veiculo2.nome}</Text>
         </View>
 
-        {specsKeys.map((key) => {
+        {specsConfig.map(({ key, label }) => {
           const vencedor = getVencedor(key);
-          const keyLabel = key.replace(/([A-Z])/g, ' $1').toUpperCase();
 
           return (
             <View key={key} style={styles.dataRow}>
@@ -89,7 +100,7 @@ const ComparacaoContainer: React.FC<ComparacaoProps> = ({ veiculo1, veiculo2 }) 
                 {veiculo1.fichaTecnica[key]}
               </VencedorText>
 
-              <Text style={styles.specLabel}>{keyLabel}</Text>
+              <Text style={styles.specLabel}>{label}</Text>
 
               <VencedorText vencedor={vencedor} isVeiculo1={false}>
                 {veiculo2.fichaTecnica[key]}
@@ -111,7 +122,7 @@ const ComparacaoContainer: React.FC<ComparacaoProps> = ({ veiculo1, veiculo2 }) 
   );
 };
 
-// --- 3. NOVO: Componente de Barra de Pesquisa ---
+// --- 3. Componente de Barra de Pesquisa ---
 interface SearchBarProps {
   veiculo: Veiculo;
   onSelect: (veiculo: Veiculo) => void;
@@ -257,7 +268,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 
-  // NOVO: Estilos da Barra de Pesquisa
+  // Estilos da Barra de Pesquisa
   searchWrapper: {
     width: '45%',
     position: 'relative',
