@@ -1,4 +1,4 @@
-// convertData.js - VERSÃO FINAL CORRIGIDA COM LIMPEZA DE CARACTERES
+// convertData.js - VERSÃO COM LEITURA MAIS ROBUSTA E SEM FILTRO
 const fs = require('fs');
 const path = require('path');
 const csv = require('csv-parser');
@@ -13,6 +13,7 @@ const OUTPUT_TS_FILE = path.join('data', 'veiculos.ts');
  * Função para criar um ID limpo e único a partir do nome do veículo.
  */
 const slugify = (text) => {
+    if (!text) return 'id-vazio'; // Garante um ID de fallback
     return text
         .toLowerCase()
         .trim()
@@ -22,23 +23,17 @@ const slugify = (text) => {
 
 /**
  * Função para limpar caracteres estranhos que persistem após a conversão UTF-8.
- * Ela substitui códigos de erro comuns (como os que representam frações ou acentos) por caracteres legíveis.
  * @param {string} text - Texto do CSV.
  * @returns {string} Texto com substituições forçadas.
  */
 const cleanStrangeChars = (text) => {
     if (!text) return '';
-    // Substituições comuns para códigos de erro (ajuste conforme necessário)
     return text
-        // Tenta substituir o código feio (que pode ser um acento ou símbolo) por um espaço ou vazio
         .replace(/ï¿½/g, '')  
         .replace(/ï¿½ï¿½/g, '')
-        .replace(/\r?\n|\r/g, ' ') // Remove quebras de linha
-        // Frações (ex: 1/2) - pode ser que o código esteja representando um desses
+        .replace(/\r?\n|\r/g, ' ') 
         .replace('½', ' 1/2') 
-        // Se a letra 'm' no seu print estava estranha, pode ser um 'm' com acento ou símbolo:
         .replace('mï¿½ï¿½', 'm')
-        // Limpa múltiplos espaços após as substituições
         .replace(/\s\s+/g, ' ')
         .trim();
 };
@@ -48,9 +43,8 @@ const cleanStrangeChars = (text) => {
  */
 const cleanNumericValue = (value) => {
     if (!value) return '';
-    // Pega o que estiver antes do primeiro espaço ou caractere especial (como "|")
     const firstValue = value.toString().split(/[\s|]/)[0]; 
-    return firstValue.trim().replace(/\./g, ''); // Remove todos os pontos (milhar)
+    return firstValue.trim().replace(/\./g, ''); 
 };
 
 
@@ -61,8 +55,8 @@ if (!fs.existsSync('data')) {
     fs.mkdirSync('data');
 }
 
-// Usando encoding: 'utf8'. O CSV DEVE estar salvo como UTF-8.
-fs.createReadStream(INPUT_CSV_FILE, { encoding: 'utf8' })
+// ATENÇÃO: Mudança na codificação (Tentativa de latin1/ISO-8859-1)
+fs.createReadStream(INPUT_CSV_FILE, { encoding: 'latin1' }) 
     .pipe(csv({ separator: ';' })) 
     .on('data', (row) => {
         
@@ -70,45 +64,58 @@ fs.createReadStream(INPUT_CSV_FILE, { encoding: 'utf8' })
         const modeloVeiculo = cleanStrangeChars(row.modelo);
         const acionamento = cleanStrangeChars(row.acionamento);
         const nMarchas = cleanStrangeChars(row.nMarchas);
-
+        const cilindradaLimpa = cleanStrangeChars(row.cilindrada);
+        const injecaoLimpa = cleanStrangeChars(row.injecao);
+        const faixaTorqueLimpa = cleanStrangeChars(row.faixaTorque);
+        
         // Limpeza dos dados de potência e torque (numérico)
+        // Se a limpeza falhar, teremos N/A, mas a linha não será descartada
         const potenciaCv = cleanNumericValue(row.cv);
         const torqueNm = cleanNumericValue(row.nm);
         
-        // Corrigido para 'fabricante' (minúsculo)
         const fabricanteMotor = row.fabricante; 
         
         // Limpeza da Transmissão (Texto)
         const acionamentoLimpo = (acionamento || 'N/A').split('|')[0].trim();
         const nMarchasLimpo = (nMarchas || '?').split(' ')[0].trim();
         
-        // Filtro de linha: só processa se tiver o modelo, CV, NM e Fabricante.
-        if (!modeloVeiculo || !potenciaCv || !torqueNm || !fabricanteMotor) {
-            return; 
-        }
+        // 🛑 REMOÇÃO DO FILTRO: Não descarta linhas vazias, apenas usa N/A
+        // if (!modeloVeiculo || !potenciaCv || !torqueNm || !fabricanteMotor) {
+        //     return; 
+        // }
 
         // Mapeamento e transformação dos dados
         const veiculo = {
+            // Garante que o ID não falhe se o modelo/CV estiver vazio
             id: slugify(`${row.marca}_${modeloVeiculo}_${potenciaCv}`), 
-            nome: `${row.marca} ${modeloVeiculo}`, 
-            modelo: modeloVeiculo, 
-            imagem: row.imagem || "https://via.placeholder.com/300x200?text=Iveco", 
+            nome: `${row.marca || 'N/A'} ${modeloVeiculo || 'N/A'}`, 
+            modelo: modeloVeiculo || 'N/A', 
+            imagem: row.imagem || "https://via.placeholder.com/300x200?text=Veiculo", 
             resumoVantagem: cleanStrangeChars(row.resumoVantagem) || "Ponto forte do veículo a ser adicionado.", 
             
             fichaTecnica: {
-                motor: fabricanteMotor, 
-                potencia: `${potenciaCv} cv`, 
-                torque: `${torqueNm} Nm`, 
+                // Características do Motor
+                motor: fabricanteMotor || "N/A", 
+                injecao: injecaoLimpa || "N/A", 
+                cilindrada: cilindradaLimpa || "N/A", 
+                potencia: potenciaCv ? `${potenciaCv} cv` : "N/A", // Se o valor numérico falhar, usa N/A
+                torque: torqueNm ? `${torqueNm} Nm` : "N/A", // Se o valor numérico falhar, usa N/A
+                faixaTorque: faixaTorqueLimpa || "N/A", 
+                padraoEmissao: cleanStrangeChars(row.padraoEmissao) || "N/A", 
                 
-                // Combinação das colunas 'acionamento' e 'nMarchas' após limpeza
+                // Transmissão
                 transmissao: `${acionamentoLimpo} (${nMarchasLimpo} marchas)`, 
                 
-                // **AJUSTE 1: Usa a coluna 'total' (Peso em Ordem de Marcha)**
+                // Pesos
                 pesoEmOrdemDeMarcha: row.total || "N/A", 
                 pbtTecnico: row.pbtTecnico || "N/A", 
-                // **AJUSTE 2: Adiciona o campo pbtCombinado usando a coluna 'pbtc'**
-                pbtCombinado: row.pbtc || "N/A", 
+                pbtCombinado: row.cmt || "N/A", 
                 cmt: row.cmt || "N/A", 
+                
+                // Fluidos
+                tanqueCombustivel: cleanStrangeChars(row.tanqueCombustivel) || "N/A", 
+                tanqueArla: row.tanqueArla || "N/A", 
+                carter: row.carter || "N/A", 
             }
         };
 
@@ -120,23 +127,30 @@ fs.createReadStream(INPUT_CSV_FILE, { encoding: 'utf8' })
 // data/veiculos.ts - ARQUIVO GERADO AUTOMATICAMENTE (Total: ${VeiculosData.length} veículos)
 
 export interface FichaTecnica {
-  motor: string;
-  potencia: string;
-  torque: string;
-  transmissao: string;
-  pesoEmOrdemDeMarcha: string;
-  pbtTecnico: string;
-  pbtCombinado: string; // **AJUSTE 3: Novo campo na interface**
-  cmt: string; 
+    motor: string;
+    injecao: string;
+    cilindrada: string;
+    potencia: string;
+    torque: string;
+    faixaTorque: string;
+    padraoEmissao: string;
+    transmissao: string;
+    pesoEmOrdemDeMarcha: string;
+    pbtTecnico: string;
+    pbtCombinado: string;
+    cmt: string; 
+    tanqueCombustivel: string;
+    tanqueArla: string;
+    carter: string;
 }
 
 export interface Veiculo {
-  id: string;
-  nome: string;
-  modelo: string;
-  imagem: string;
-  resumoVantagem: string;
-  fichaTecnica: FichaTecnica;
+    id: string;
+    nome: string;
+    modelo: string;
+    imagem: string;
+    resumoVantagem: string;
+    fichaTecnica: FichaTecnica;
 }
 
 export const VeiculosData: Veiculo[] = ${JSON.stringify(VeiculosData, null, 2)};

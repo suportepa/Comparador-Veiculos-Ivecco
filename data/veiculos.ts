@@ -2,23 +2,30 @@
 // data/veiculos.ts - ARQUIVO GERADO AUTOMATICAMENTE (Total: 38 veículos)
 
 export interface FichaTecnica {
-  motor: string;
-  potencia: string;
-  torque: string;
-  transmissao: string;
-  pesoEmOrdemDeMarcha: string;
-  pbtTecnico: string;
-  pbtCombinado: string; // **AJUSTE 3: Novo campo na interface**
-  cmt: string; 
+    motor: string;
+    injecao: string;
+    cilindrada: string;
+    potencia: string;
+    torque: string;
+    faixaTorque: string;
+    padraoEmissao: string;
+    transmissao: string;
+    pesoEmOrdemDeMarcha: string;
+    pbtTecnico: string;
+    pbtCombinado: string;
+    cmt: string; 
+    tanqueCombustivel: string;
+    tanqueArla: string;
+    carter: string;
 }
 
 export interface Veiculo {
-  id: string;
-  nome: string;
-  modelo: string;
-  imagem: string;
-  resumoVantagem: string;
-  fichaTecnica: FichaTecnica;
+    id: string;
+    nome: string;
+    modelo: string;
+    imagem: string;
+    resumoVantagem: string;
+    fichaTecnica: FichaTecnica;
 }
 
 export const VeiculosData: Veiculo[] = [
@@ -30,13 +37,20 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "PACCAR PX-7",
+      "injecao": "InjeÃ§Ã£o Common-rail",
+      "cilindrada": "6 cilindros / 6,7 litros",
       "potencia": "308 cv",
       "torque": "1200 Nm",
+      "faixaTorque": "1.200 - 1.500",
+      "padraoEmissao": "N/A",
       "transmissao": "Manual (9 marchas)",
       "pesoEmOrdemDeMarcha": "8.270",
       "pbtTecnico": "33.000",
-      "pbtCombinado": "N/A",
-      "cmt": "35.000"
+      "pbtCombinado": "35.000",
+      "cmt": "35.000",
+      "tanqueCombustivel": "300 / 300 + 350",
+      "tanqueArla": "42",
+      "carter": "N/A"
     }
   },
   {
@@ -47,13 +61,20 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "PACCAR MX 13",
+      "injecao": "InjeÃ§Ã£o Common-rail",
+      "cilindrada": "6 cilindros / 10,8 litros",
       "potencia": "480 cv",
       "torque": "2350 Nm",
+      "faixaTorque": "900 - 1.365",
+      "padraoEmissao": "N/A",
       "transmissao": "Automatizada (12 marchas)",
       "pesoEmOrdemDeMarcha": "12.170",
       "pbtTecnico": "58.000",
-      "pbtCombinado": "N/A",
-      "cmt": "150.000"
+      "pbtCombinado": "150.000",
+      "cmt": "150.000",
+      "tanqueCombustivel": "390",
+      "tanqueArla": "45",
+      "carter": "N/A"
     }
   },
   {
@@ -64,13 +85,20 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "PACCAR PX-7",
+      "injecao": "InjeÃ§Ã£o Common-rail",
+      "cilindrada": "6 cilindros / 6,7 litros",
       "potencia": "261 cv",
       "torque": "1000 Nm",
+      "faixaTorque": "1.000 - 1.700",
+      "padraoEmissao": "N/A",
       "transmissao": "Manual (9 marchas)",
       "pesoEmOrdemDeMarcha": "7.095",
       "pbtTecnico": "26.500",
-      "pbtCombinado": "26.500",
-      "cmt": "35.000"
+      "pbtCombinado": "35.000",
+      "cmt": "35.000",
+      "tanqueCombustivel": "300 / 300+350",
+      "tanqueArla": "42",
+      "carter": "N/A"
     }
   },
   {
@@ -81,13 +109,20 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "PACCAR PX-7",
+      "injecao": "InjeÃ§Ã£o Common-rail",
+      "cilindrada": "6 cilindros / 6,7 litros",
       "potencia": "290 cv",
       "torque": "1100 Nm",
+      "faixaTorque": "1.000 - 1.600",
+      "padraoEmissao": "N/A",
       "transmissao": "Manual (9 marchas)",
       "pesoEmOrdemDeMarcha": "7.095",
       "pbtTecnico": "26.500",
-      "pbtCombinado": "26.500",
-      "cmt": "35.000"
+      "pbtCombinado": "35.000",
+      "cmt": "35.000",
+      "tanqueCombustivel": "300 / 300+350",
+      "tanqueArla": "42",
+      "carter": "N/A"
     }
   },
   {
@@ -98,13 +133,20 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "PACCAR PX-7",
+      "injecao": "InjeÃ§Ã£o Common-rail",
+      "cilindrada": "6 cilindros / 6,7 litros",
       "potencia": "308 cv",
       "torque": "1200 Nm",
+      "faixaTorque": "1.200 - 1.500",
+      "padraoEmissao": "N/A",
       "transmissao": "Manual (9 marchas)",
       "pesoEmOrdemDeMarcha": "7.095",
       "pbtTecnico": "26.500",
-      "pbtCombinado": "26.500",
-      "cmt": "35.000"
+      "pbtCombinado": "35.000",
+      "cmt": "35.000",
+      "tanqueCombustivel": "300 / 300+350",
+      "tanqueArla": "42",
+      "carter": "N/A"
     }
   },
   {
@@ -115,13 +157,20 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "PACCAR PX-9",
+      "injecao": "InjeÃ§Ã£o Common-rail",
+      "cilindrada": "6 cilindros / 8,9 litros",
       "potencia": "380 cv",
       "torque": "1700 Nm",
+      "faixaTorque": "1.100 - 1.400",
+      "padraoEmissao": "N/A",
       "transmissao": "Automatizada (12 marchas)",
       "pesoEmOrdemDeMarcha": "7.985",
       "pbtTecnico": "18.100",
-      "pbtCombinado": "53.000",
-      "cmt": "60.000"
+      "pbtCombinado": "60.000",
+      "cmt": "60.000",
+      "tanqueCombustivel": "370 / 520 / 520 + 200",
+      "tanqueArla": "45",
+      "carter": "N/A"
     }
   },
   {
@@ -132,13 +181,20 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "PACCAR MX-11",
+      "injecao": "InjeÃ§Ã£o Common-rail",
+      "cilindrada": "6 cilindros / 10,8 litros",
       "potencia": "370 cv",
       "torque": "1800 Nm",
+      "faixaTorque": "900 - 1.400",
+      "padraoEmissao": "N/A",
       "transmissao": "Automatizada (12 marchas)",
       "pesoEmOrdemDeMarcha": "7.985",
       "pbtTecnico": "18.100",
-      "pbtCombinado": "53.000",
-      "cmt": "60.000"
+      "pbtCombinado": "60.000",
+      "cmt": "60.000",
+      "tanqueCombustivel": "520 / 520 + 200 / 520 + 370",
+      "tanqueArla": "45",
+      "carter": "N/A"
     }
   },
   {
@@ -149,13 +205,20 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "PACCAR MX-11",
+      "injecao": "InjeÃ§Ã£o Common-rail",
+      "cilindrada": "6 cilindros / 10,8 litros",
       "potencia": "410 cv",
       "torque": "2000 Nm",
+      "faixaTorque": "900 - 1.400",
+      "padraoEmissao": "N/A",
       "transmissao": "Automatizada (12 marchas)",
       "pesoEmOrdemDeMarcha": "7.985",
       "pbtTecnico": "18.100",
-      "pbtCombinado": "53.000",
-      "cmt": "60.000"
+      "pbtCombinado": "60.000",
+      "cmt": "60.000",
+      "tanqueCombustivel": "520 / 520 + 200 / 520 + 370",
+      "tanqueArla": "45",
+      "carter": "N/A"
     }
   },
   {
@@ -166,13 +229,20 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "PACCAR MX-11",
+      "injecao": "InjeÃ§Ã£o Common-rail",
+      "cilindrada": "6 cilindros / 10,8 litros",
       "potencia": "450 cv",
       "torque": "2200 Nm",
+      "faixaTorque": "900 - 1.400",
+      "padraoEmissao": "N/A",
       "transmissao": "Automatizada (12 marchas)",
       "pesoEmOrdemDeMarcha": "7.985",
       "pbtTecnico": "18.100",
-      "pbtCombinado": "53.000",
-      "cmt": "60.000"
+      "pbtCombinado": "60.000",
+      "cmt": "60.000",
+      "tanqueCombustivel": "520 / 520 + 200 / 520 + 370",
+      "tanqueArla": "45",
+      "carter": "N/A"
     }
   },
   {
@@ -183,13 +253,20 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "PACCAR MX-11",
+      "injecao": "InjeÃ§Ã£o Common-rail",
+      "cilindrada": "6 cilindros / 10,8 litros",
       "potencia": "410 cv",
       "torque": "2000 Nm",
+      "faixaTorque": "900 - 1.400",
+      "padraoEmissao": "N/A",
       "transmissao": "Automatizada (12 marchas)",
       "pesoEmOrdemDeMarcha": "8.945",
       "pbtTecnico": "27.100",
-      "pbtCombinado": "56.900",
-      "cmt": "60.000"
+      "pbtCombinado": "60.000",
+      "cmt": "60.000",
+      "tanqueCombustivel": "370 + 200 / 520 / 520 + 200 / 520 + 370",
+      "tanqueArla": "45",
+      "carter": "N/A"
     }
   },
   {
@@ -200,13 +277,20 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "PACCAR MX-11",
+      "injecao": "InjeÃ§Ã£o Common-rail",
+      "cilindrada": "6 cilindros / 10,8 litros",
       "potencia": "450 cv",
       "torque": "2200 Nm",
+      "faixaTorque": "900 - 1.400",
+      "padraoEmissao": "N/A",
       "transmissao": "Automatizada (12 marchas)",
       "pesoEmOrdemDeMarcha": "8.945",
       "pbtTecnico": "27.100",
-      "pbtCombinado": "56.900",
-      "cmt": "60.000"
+      "pbtCombinado": "60.000",
+      "cmt": "60.000",
+      "tanqueCombustivel": "370 + 200 / 520 / 520 + 200 / 520 + 370",
+      "tanqueArla": "45",
+      "carter": "N/A"
     }
   },
   {
@@ -217,13 +301,20 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "PACCAR MX 13",
+      "injecao": "InjeÃ§Ã£o Common-rail",
+      "cilindrada": "6 cilindros / 12,9 litros",
       "potencia": "480 cv",
       "torque": "2350 Nm",
+      "faixaTorque": "900 - 1.365",
+      "padraoEmissao": "N/A",
       "transmissao": "Automatizada (12 marchas)",
       "pesoEmOrdemDeMarcha": "10.365",
       "pbtTecnico": "33.500",
-      "pbtCombinado": "74.000",
-      "cmt": "125.000"
+      "pbtCombinado": "125.000",
+      "cmt": "125.000",
+      "tanqueCombustivel": "290 + 200 / 370 + 290",
+      "tanqueArla": "45",
+      "carter": "N/A"
     }
   },
   {
@@ -234,13 +325,20 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "PACCAR MX 13",
+      "injecao": "InjeÃ§Ã£o Common-rail",
+      "cilindrada": "6 cilindros / 12,9 litros",
       "potencia": "480 cv",
       "torque": "2350 Nm",
+      "faixaTorque": "900 - 1.365",
+      "padraoEmissao": "N/A",
       "transmissao": "Automatizada (12 marchas)",
       "pesoEmOrdemDeMarcha": "8.382",
       "pbtTecnico": "18.100",
-      "pbtCombinado": "53.000",
-      "cmt": "60.000"
+      "pbtCombinado": "60.000",
+      "cmt": "60.000",
+      "tanqueCombustivel": "520 / 520+200 / 520+370",
+      "tanqueArla": "90",
+      "carter": "N/A"
     }
   },
   {
@@ -251,13 +349,20 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "PACCAR MX 13",
+      "injecao": "InjeÃ§Ã£o Common-rail",
+      "cilindrada": "6 cilindros / 12,9 litros",
       "potencia": "530 cv",
       "torque": "2500 Nm",
+      "faixaTorque": "1.000 - 1.425",
+      "padraoEmissao": "N/A",
       "transmissao": "Automatizada (12 marchas)",
       "pesoEmOrdemDeMarcha": "8.382",
       "pbtTecnico": "18.100",
-      "pbtCombinado": "53.000",
-      "cmt": "60.000"
+      "pbtCombinado": "60.000",
+      "cmt": "60.000",
+      "tanqueCombustivel": "520 / 520+200 / 520+370",
+      "tanqueArla": "90",
+      "carter": "N/A"
     }
   },
   {
@@ -268,13 +373,20 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "PACCAR MX 13",
+      "injecao": "InjeÃ§Ã£o Common-rail",
+      "cilindrada": "6 cilindros / 12,9 litros",
       "potencia": "480 cv",
       "torque": "2350 Nm",
+      "faixaTorque": "900 - 1.365",
+      "padraoEmissao": "N/A",
       "transmissao": "Automatizada (12 marchas)",
       "pesoEmOrdemDeMarcha": "9.705",
       "pbtTecnico": "27.100",
-      "pbtCombinado": "56.900",
-      "cmt": "60.000"
+      "pbtCombinado": "60.000",
+      "cmt": "60.000",
+      "tanqueCombustivel": "520 / 370 + 200 / 520 + 200 / 520 + 370",
+      "tanqueArla": "90",
+      "carter": "N/A"
     }
   },
   {
@@ -285,13 +397,20 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "PACCAR MX 13",
+      "injecao": "InjeÃ§Ã£o Common-rail",
+      "cilindrada": "6 cilindros / 12,9 litros",
       "potencia": "530 cv",
       "torque": "2500 Nm",
+      "faixaTorque": "1.000 - 1.425",
+      "padraoEmissao": "N/A",
       "transmissao": "Automatizada (12 marchas)",
       "pesoEmOrdemDeMarcha": "9.705",
       "pbtTecnico": "27.100",
-      "pbtCombinado": "56.900",
-      "cmt": "60.000"
+      "pbtCombinado": "60.000",
+      "cmt": "60.000",
+      "tanqueCombustivel": "520 / 370 + 200 / 520 + 200 / 520 + 370",
+      "tanqueArla": "90",
+      "carter": "N/A"
     }
   },
   {
@@ -302,13 +421,20 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "PACCAR MX 13",
+      "injecao": "InjeÃ§Ã£o Common-rail",
+      "cilindrada": "6 cilindros / 12,9 litros",
       "potencia": "480 cv",
       "torque": "2350 Nm",
+      "faixaTorque": "900 - 1.365",
+      "padraoEmissao": "N/A",
       "transmissao": "Automatizada (12 marchas)",
       "pesoEmOrdemDeMarcha": "10.261",
       "pbtTecnico": "28.100",
-      "pbtCombinado": "80.000",
-      "cmt": "74.000"
+      "pbtCombinado": "74.000",
+      "cmt": "74.000",
+      "tanqueCombustivel": "520 / 440 + 200 / 520 + 290 / 520 + 370",
+      "tanqueArla": "90",
+      "carter": "N/A"
     }
   },
   {
@@ -319,47 +445,68 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "PACCAR MX 13",
+      "injecao": "InjeÃ§Ã£o Common-rail",
+      "cilindrada": "6 cilindros / 12,9 litros",
       "potencia": "530 cv",
       "torque": "2500 Nm",
+      "faixaTorque": "1.000 - 1.425",
+      "padraoEmissao": "N/A",
       "transmissao": "Automatizada (12 marchas)",
       "pesoEmOrdemDeMarcha": "10.261",
       "pbtTecnico": "28.100",
-      "pbtCombinado": "80.000",
-      "cmt": "74.000"
+      "pbtCombinado": "74.000",
+      "cmt": "74.000",
+      "tanqueCombustivel": "520 / 440 + 200 / 520 + 290 / 520 + 370",
+      "tanqueArla": "90",
+      "carter": "N/A"
     }
   },
   {
     "id": "daf_xf_ftt_off_road_480_mx_13_480",
-    "nome": "DAF XF FTT OFF-ROAD - 480 - MX-13",
-    "modelo": "XF FTT OFF-ROAD - 480 - MX-13",
+    "nome": "DAF XF FTT OFF-ROADÂ - 480 - MX-13",
+    "modelo": "XF FTT OFF-ROADÂ - 480 - MX-13",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "PACCAR MX 13",
+      "injecao": "InjeÃ§Ã£o Common-rail",
+      "cilindrada": "6 cilindros / 12,9 litros",
       "potencia": "480 cv",
       "torque": "2350 Nm",
+      "faixaTorque": "900 - 1.365",
+      "padraoEmissao": "N/A",
       "transmissao": "Automatizada (12 marchas)",
       "pesoEmOrdemDeMarcha": "11.780",
       "pbtTecnico": "33.500",
-      "pbtCombinado": "74.000 | 91.000",
-      "cmt": "125.000 | 150.000"
+      "pbtCombinado": "125.000 | 150.000",
+      "cmt": "125.000 | 150.000",
+      "tanqueCombustivel": "290 + 200 / 370 + 290",
+      "tanqueArla": "45",
+      "carter": "N/A"
     }
   },
   {
     "id": "daf_xf_ftt_off_road_530_mx_13_530",
-    "nome": "DAF XF FTT OFF-ROAD - 530 - MX-13",
-    "modelo": "XF FTT OFF-ROAD - 530 - MX-13",
+    "nome": "DAF XF FTT OFF-ROADÂ - 530 - MX-13",
+    "modelo": "XF FTT OFF-ROADÂ - 530 - MX-13",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "PACCAR MX 13",
+      "injecao": "InjeÃ§Ã£o Common-rail",
+      "cilindrada": "6 cilindros / 12,9 litros",
       "potencia": "530 cv",
       "torque": "2500 Nm",
+      "faixaTorque": "1.000 - 1.425",
+      "padraoEmissao": "N/A",
       "transmissao": "Automatizada (12 marchas)",
       "pesoEmOrdemDeMarcha": "11.780",
       "pbtTecnico": "33.500",
-      "pbtCombinado": "74.000 | 91.000",
-      "cmt": "125.000 | 150.000"
+      "pbtCombinado": "125.000 | 150.000",
+      "cmt": "125.000 | 150.000",
+      "tanqueCombustivel": "290 + 200 / 370 + 290",
+      "tanqueArla": "45",
+      "carter": "N/A"
     }
   },
   {
@@ -370,13 +517,20 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT / F1C Max",
+      "injecao": "Turbo-intercooler / InjeÃ§Ã£o eletrÃ´nica Common Rail",
+      "cilindrada": "4 cilindros em linha / 2.998 cmÂ³",
       "potencia": "160 cv",
       "torque": "380 Nm",
+      "faixaTorque": "1.600 - 2.900",
+      "padraoEmissao": "N/A",
       "transmissao": "Manual (6 marchas)",
       "pesoEmOrdemDeMarcha": "1.993",
       "pbtTecnico": "3.500",
       "pbtCombinado": "6.500",
-      "cmt": "6.500"
+      "cmt": "6.500",
+      "tanqueCombustivel": "65 l / PlÃ¡stico",
+      "tanqueArla": "17 l",
+      "carter": "8,6 l (9,3 l com troca de filtro)"
     }
   },
   {
@@ -387,13 +541,20 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT / F1C Max",
+      "injecao": "Turbo-intercooler / InjeÃ§Ã£o eletrÃ´nica Common Rail",
+      "cilindrada": "4 cilindros em linha / 2.998 cmÂ³",
       "potencia": "160 cv",
       "torque": "380 Nm",
+      "faixaTorque": "1.600 - 2.900",
+      "padraoEmissao": "N/A",
       "transmissao": "Manual (6 marchas)",
       "pesoEmOrdemDeMarcha": "2.056 / 2.070 | 2.070 / 2.110",
       "pbtTecnico": "3.500",
       "pbtCombinado": "6.500",
-      "cmt": "6.500"
+      "cmt": "6.500",
+      "tanqueCombustivel": "90 l / PlÃ¡stico",
+      "tanqueArla": "17 l",
+      "carter": "8,6 l (9,3 l com troca de filtro)"
     }
   },
   {
@@ -404,13 +565,20 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT / F1C Max",
+      "injecao": "Turbo-intercooler / InjeÃ§Ã£o eletrÃ´nica Common Rail",
+      "cilindrada": "4 cilindros em linha / 2.998 cmÂ³",
       "potencia": "180 cv",
       "torque": "430 Nm",
+      "faixaTorque": "1.600 - 2.900",
+      "padraoEmissao": "N/A",
       "transmissao": "Manual (6 marchas)",
       "pesoEmOrdemDeMarcha": "2.056 / 2.070 | 2.070 / 2.110",
       "pbtTecnico": "3.500",
       "pbtCombinado": "6.500",
-      "cmt": "6.500"
+      "cmt": "6.500",
+      "tanqueCombustivel": "90 l / PlÃ¡stico",
+      "tanqueArla": "17 l",
+      "carter": "8,6 l (9,3 l com troca de filtro)"
     }
   },
   {
@@ -421,13 +589,20 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT / F1C Max",
+      "injecao": "Turbo-intercooler / InjeÃ§Ã£o eletrÃ´nica Common Rail",
+      "cilindrada": "4 cilindros em linha / 2.998 cmÂ³",
       "potencia": "180 cv",
       "torque": "430 Nm",
+      "faixaTorque": "1.600 - 2.900",
+      "padraoEmissao": "N/A",
       "transmissao": "Manual (6 marchas)",
       "pesoEmOrdemDeMarcha": "2.090 / 2.125 | 2.245 / 2.270 | 2.325 / 2.345",
       "pbtTecnico": "5.300",
       "pbtCombinado": "8.000",
-      "cmt": "8.000"
+      "cmt": "8.000",
+      "tanqueCombustivel": "90 l / PlÃ¡stico",
+      "tanqueArla": "17 l",
+      "carter": "8,6 l (9,3 l com troca de filtro)"
     }
   },
   {
@@ -438,13 +613,20 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT / F1C Max",
+      "injecao": "Turbo-intercooler / InjeÃ§Ã£o eletrÃ´nica Common Rail",
+      "cilindrada": "4 cilindros em linha / 2.998 cmÂ³",
       "potencia": "180 cv",
       "torque": "430 Nm",
+      "faixaTorque": "1.600 - 2.900",
+      "padraoEmissao": "N/A",
       "transmissao": "Manual (6 marchas)",
       "pesoEmOrdemDeMarcha": "2.360",
       "pbtTecnico": "5.950",
       "pbtCombinado": "8.800",
-      "cmt": "8.800"
+      "cmt": "8.800",
+      "tanqueCombustivel": "90 l / PlÃ¡stico",
+      "tanqueArla": "17 l",
+      "carter": "8,6 l (9,3 l com troca de filtro)"
     }
   },
   {
@@ -455,132 +637,188 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT / F1C Max",
+      "injecao": "Turbo-intercooler / InjeÃ§Ã£o eletrÃ´nica Common Rail",
+      "cilindrada": "4 cilindros em linha / 2.998 cmÂ³",
       "potencia": "180 cv",
       "torque": "430 Nm",
+      "faixaTorque": "1.600 - 2.900",
+      "padraoEmissao": "N/A",
       "transmissao": "Manual (6 marchas)",
       "pesoEmOrdemDeMarcha": "2.410 / 2.440 | 2.570 / 2.600",
       "pbtTecnico": "6.500",
       "pbtCombinado": "8.800",
-      "cmt": "8.800"
+      "cmt": "8.800",
+      "tanqueCombustivel": "90 l / PlÃ¡stico",
+      "tanqueArla": "17 l",
+      "carter": "8,6 l (9,3 l com troca de filtro)"
     }
   },
   {
     "id": "iveco_daily_furgo_30_160_160",
-    "nome": "Iveco DAILY FURGÃO 30-160",
-    "modelo": "DAILY FURGÃO 30-160",
+    "nome": "Iveco DAILY FURGÃO 30-160",
+    "modelo": "DAILY FURGÃO 30-160",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT / F1C VGT",
+      "injecao": "Bomba de alta pressÃ£o e injeÃ§Ã£o eletrÃ´nica Common Rail",
+      "cilindrada": "4 em linha com 4 vÃ¡lvulas por cilindro / 2.998 cmÂ³ / DistribuiÃ§Ã£o por corrente",
       "potencia": "160 cv",
       "torque": "380 Nm",
+      "faixaTorque": "1.600 - 2.900",
+      "padraoEmissao": "N/A",
       "transmissao": "Manual (6 marchas)",
       "pesoEmOrdemDeMarcha": "2.370 | 2.450 / 2.500",
       "pbtTecnico": "3.500",
       "pbtCombinado": "6.500",
-      "cmt": "6.500"
+      "cmt": "6.500",
+      "tanqueCombustivel": "65 l / PlÃ¡stico",
+      "tanqueArla": "17 l",
+      "carter": "8,6 l (9,3 l com troca de filtro)"
     }
   },
   {
     "id": "iveco_daily_furgo_30_160_predisp_ambulncia_160",
-    "nome": "Iveco DAILY FURGÃO 30-160 PREDISP. AMBULÂNCIA",
-    "modelo": "DAILY FURGÃO 30-160 PREDISP. AMBULÂNCIA",
+    "nome": "Iveco DAILY FURGÃO 30-160 PREDISP. AMBULÃNCIA",
+    "modelo": "DAILY FURGÃO 30-160 PREDISP. AMBULÃNCIA",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT / F1C VGT",
+      "injecao": "Bomba de alta pressÃ£o e injeÃ§Ã£o eletrÃ´nica Common Rail",
+      "cilindrada": "4 em linha com 4 vÃ¡lvulas por cilindro / 2.998 cmÂ³ / DistribuiÃ§Ã£o por corrente",
       "potencia": "160 cv",
       "torque": "380 Nm",
+      "faixaTorque": "1.600 - 2.900",
+      "padraoEmissao": "N/A",
       "transmissao": "Manual (6 marchas)",
       "pesoEmOrdemDeMarcha": "2.500",
       "pbtTecnico": "3.900",
       "pbtCombinado": "6.500",
-      "cmt": "6.500"
+      "cmt": "6.500",
+      "tanqueCombustivel": "65 l / PlÃ¡stico",
+      "tanqueArla": "17 l",
+      "carter": "8,6 l (9,3 l com troca de filtro)"
     }
   },
   {
     "id": "iveco_daily_furgo_45_160_hi_matic_predisp_ambulncia_160",
-    "nome": "Iveco DAILY FURGÃO 45-160 HI-MATIC PREDISP. AMBULÂNCIA",
-    "modelo": "DAILY FURGÃO 45-160 HI-MATIC PREDISP. AMBULÂNCIA",
+    "nome": "Iveco DAILY FURGÃO 45-160 HI-MATIC PREDISP. AMBULÃNCIA",
+    "modelo": "DAILY FURGÃO 45-160 HI-MATIC PREDISP. AMBULÃNCIA",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT / F1C Max",
+      "injecao": "Turbo-intercooler / InjeÃ§Ã£o eletrÃ´nica Common Rail",
+      "cilindrada": "4 cilindros em linha / 2.998 cmÂ³",
       "potencia": "160 cv",
       "torque": "380 Nm",
+      "faixaTorque": "1.600 - 2.900",
+      "padraoEmissao": "N/A",
       "transmissao": "Manual (6 marchas)",
       "pesoEmOrdemDeMarcha": "2.495",
       "pbtTecnico": "4.300",
       "pbtCombinado": "6.500",
-      "cmt": "6.500"
+      "cmt": "6.500",
+      "tanqueCombustivel": "90 l / PlÃ¡stico",
+      "tanqueArla": "17 l",
+      "carter": "8,6 l (9,3 l com troca de filtro)"
     }
   },
   {
     "id": "iveco_daily_furgo_45_160_manual_hi_matic_160",
-    "nome": "Iveco DAILY FURGÃO 45-160 MANUAL | HI-MATIC",
-    "modelo": "DAILY FURGÃO 45-160 MANUAL | HI-MATIC",
+    "nome": "Iveco DAILY FURGÃO 45-160 MANUAL | HI-MATIC",
+    "modelo": "DAILY FURGÃO 45-160 MANUAL | HI-MATIC",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT / F1C Max",
+      "injecao": "Turbo-intercooler / InjeÃ§Ã£o eletrÃ´nica Common Rail",
+      "cilindrada": "4 cilindros em linha / 2.998 cmÂ³",
       "potencia": "160 cv",
       "torque": "380 Nm",
+      "faixaTorque": "1.600 - 2.900",
+      "padraoEmissao": "N/A",
       "transmissao": "Manual (6 marchas)",
       "pesoEmOrdemDeMarcha": "2.419 / 2.444 | 2.499 / 2.524 | 2.550 / 2.575",
       "pbtTecnico": "4.400",
       "pbtCombinado": "6.500",
-      "cmt": "6.500"
+      "cmt": "6.500",
+      "tanqueCombustivel": "90 l / PlÃ¡stico",
+      "tanqueArla": "17 l",
+      "carter": "8,6 l (9,3 l com troca de filtro)"
     }
   },
   {
     "id": "iveco_daily_furgo_45_180_hi_matic_predisp_ambulncia_180",
-    "nome": "Iveco DAILY FURGÃO 45-180 HI-MATIC PREDISP. AMBULÂNCIA",
-    "modelo": "DAILY FURGÃO 45-180 HI-MATIC PREDISP. AMBULÂNCIA",
+    "nome": "Iveco DAILY FURGÃO 45-180 HI-MATIC PREDISP. AMBULÃNCIA",
+    "modelo": "DAILY FURGÃO 45-180 HI-MATIC PREDISP. AMBULÃNCIA",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT / F1C Max",
+      "injecao": "Turbo-intercooler / InjeÃ§Ã£o eletrÃ´nica Common Rail",
+      "cilindrada": "4 cilindros em linha / 2.998 cmÂ³",
       "potencia": "180 cv",
       "torque": "380 Nm",
+      "faixaTorque": "1.600 - 2.900",
+      "padraoEmissao": "N/A",
       "transmissao": "Manual (6 marchas)",
       "pesoEmOrdemDeMarcha": "2.495",
       "pbtTecnico": "4.300",
       "pbtCombinado": "6.500",
-      "cmt": "6.500"
+      "cmt": "6.500",
+      "tanqueCombustivel": "90 l / PlÃ¡stico",
+      "tanqueArla": "17 l",
+      "carter": "8,6 l (9,3 l com troca de filtro)"
     }
   },
   {
     "id": "iveco_daily_furgo_45_180_manual_hi_matic_180",
-    "nome": "Iveco DAILY FURGÃO 45-180 MANUAL | HI-MATIC",
-    "modelo": "DAILY FURGÃO 45-180 MANUAL | HI-MATIC",
+    "nome": "Iveco DAILY FURGÃO 45-180 MANUAL | HI-MATIC",
+    "modelo": "DAILY FURGÃO 45-180 MANUAL | HI-MATIC",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT / F1C Max",
+      "injecao": "Turbo-intercooler / InjeÃ§Ã£o eletrÃ´nica Common Rail",
+      "cilindrada": "4 cilindros em linha / 2.998 cmÂ³",
       "potencia": "180 cv",
       "torque": "380 Nm",
+      "faixaTorque": "1.600 - 2.900",
+      "padraoEmissao": "N/A",
       "transmissao": "Manual (6 marchas)",
       "pesoEmOrdemDeMarcha": "2.419 / 2.444 | 2.499 / 2.524 | 2.550 / 2.575",
       "pbtTecnico": "4.400",
       "pbtCombinado": "6.500",
-      "cmt": "6.500"
+      "cmt": "6.500",
+      "tanqueCombustivel": "90 l / PlÃ¡stico",
+      "tanqueArla": "17 l",
+      "carter": "8,6 l (9,3 l com troca de filtro)"
     }
   },
   {
     "id": "iveco_daily_furgo_55_180_manual_hi_matic_180",
-    "nome": "Iveco DAILY FURGÃO 55-180 MANUAL | HI-MATIC",
-    "modelo": "DAILY FURGÃO 55-180 MANUAL | HI-MATIC",
+    "nome": "Iveco DAILY FURGÃO 55-180 MANUAL | HI-MATIC",
+    "modelo": "DAILY FURGÃO 55-180 MANUAL | HI-MATIC",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT / F1C Max",
+      "injecao": "Turbo-intercooler / InjeÃ§Ã£o eletrÃ´nica Common Rail",
+      "cilindrada": "4 cilindros em linha / 2.998 cmÂ³",
       "potencia": "180 cv",
       "torque": "430 Nm",
+      "faixaTorque": "1.600 - 2.900",
+      "padraoEmissao": "N/A",
       "transmissao": "Manual (6 marchas)",
       "pesoEmOrdemDeMarcha": "2.620 / 2.610 | 2.792 / 2.770",
       "pbtTecnico": "5.300",
       "pbtCombinado": "8.000",
-      "cmt": "8.000"
+      "cmt": "8.000",
+      "tanqueCombustivel": "90 l / PlÃ¡stico",
+      "tanqueArla": "17 l",
+      "carter": "8,6 l (9,3 l com troca de filtro)"
     }
   },
   {
@@ -591,30 +829,44 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT EPWT 550002E / AP MOTOR",
+      "injecao": "ElÃ©trico",
+      "cilindrada": "N/A",
       "potencia": "136 cv",
       "torque": "300 Nm",
+      "faixaTorque": "N/A",
+      "padraoEmissao": "N/A",
       "transmissao": "N/A (? marchas)",
       "pesoEmOrdemDeMarcha": "3.750",
       "pbtTecnico": "N/A",
-      "pbtCombinado": "N/A",
-      "cmt": "1.414"
+      "pbtCombinado": "1.414",
+      "cmt": "1.414",
+      "tanqueCombustivel": "N/A",
+      "tanqueArla": "110 km",
+      "carter": "N/A"
     }
   },
   {
     "id": "iveco_e_daily_42_furgo_136",
-    "nome": "Iveco E-DAILY 4.2 FURGÃO",
-    "modelo": "E-DAILY 4.2 FURGÃO",
+    "nome": "Iveco E-DAILY 4.2 FURGÃO",
+    "modelo": "E-DAILY 4.2 FURGÃO",
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT EPWT 550002 / AP MOTOR",
+      "injecao": "ElÃ©trico",
+      "cilindrada": "N/A",
       "potencia": "136 cv",
       "torque": "300 Nm",
+      "faixaTorque": "N/A",
+      "padraoEmissao": "N/A",
       "transmissao": "N/A (? marchas)",
       "pesoEmOrdemDeMarcha": "3.520",
       "pbtTecnico": "N/A",
-      "pbtCombinado": "N/A",
-      "cmt": "1.403"
+      "pbtCombinado": "1.403",
+      "cmt": "1.403",
+      "tanqueCombustivel": "N/A",
+      "tanqueArla": "110 km",
+      "carter": "N/A"
     }
   },
   {
@@ -625,13 +877,20 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT EPWT 550002E / AP MOTOR",
+      "injecao": "ElÃ©trico",
+      "cilindrada": "N/A",
       "potencia": "193 cv",
       "torque": "400 Nm",
+      "faixaTorque": "N/A",
+      "padraoEmissao": "N/A",
       "transmissao": "N/A (? marchas)",
       "pesoEmOrdemDeMarcha": "4.100 | 4.350",
       "pbtTecnico": "N/A",
-      "pbtCombinado": "N/A",
-      "cmt": "1.642 | 1.675"
+      "pbtCombinado": "1.642 | 1.675",
+      "cmt": "1.642 | 1.675",
+      "tanqueCombustivel": "N/A",
+      "tanqueArla": "120 km",
+      "carter": "N/A"
     }
   },
   {
@@ -641,14 +900,21 @@ export const VeiculosData: Veiculo[] = [
     "imagem": "Imagem",
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
-      "motor": "FPT / Cursor 13, ciclo Otto, a gás natural, biometano ou qualquer mistura de ambos",
+      "motor": "FPT / Cursor 13, ciclo Otto, a gÃ¡s natural, biometano ou qualquer mistura de ambos",
+      "injecao": "Turbo-intercooler / InjeÃ§Ã£o eletrÃ´nica Common Rail",
+      "cilindrada": "6 cilindros em linha / 12.900 cmÂ³",
       "potencia": "460 cv",
       "torque": "2000 Nm",
+      "faixaTorque": "1.000 - 1.400",
+      "padraoEmissao": "N/A",
       "transmissao": "Automatizada (12 marchas)",
       "pesoEmOrdemDeMarcha": "9.960 # 10.060",
       "pbtTecnico": "27.200",
       "pbtCombinado": "53.000",
-      "cmt": "53.000"
+      "cmt": "53.000",
+      "tanqueCombustivel": "8 cilindros de 130l cada, 1.040l no total",
+      "tanqueArla": "200 bar",
+      "carter": "28 l (30 l com troca de filtro)"
     }
   },
   {
@@ -659,13 +925,20 @@ export const VeiculosData: Veiculo[] = [
     "resumoVantagem": "Ponto forte do veículo a ser adicionado.",
     "fichaTecnica": {
       "motor": "FPT / Cursor 13",
+      "injecao": "Turbo-intercooler / InjeÃ§Ã£o eletrÃ´nica Common Rail",
+      "cilindrada": "6 cilindros em linha / 12.900 cmÂ³",
       "potencia": "480 cv",
       "torque": "2450 Nm",
+      "faixaTorque": "1.000 - 1.400",
+      "padraoEmissao": "N/A",
       "transmissao": "Automatizada (12 marchas)",
       "pesoEmOrdemDeMarcha": "N/A",
       "pbtTecnico": "17.200",
-      "pbtCombinado": "46.000",
-      "cmt": "6"
+      "pbtCombinado": "6",
+      "cmt": "6",
+      "tanqueCombustivel": "N/A",
+      "tanqueArla": "N/A",
+      "carter": "N/A"
     }
   }
 ];
