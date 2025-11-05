@@ -103,9 +103,11 @@ fs.createReadStream(INPUT_CSV_FILE, { encoding: 'utf8' })
                 // Combinação das colunas 'acionamento' e 'nMarchas' após limpeza
                 transmissao: `${acionamentoLimpo} (${nMarchasLimpo} marchas)`, 
                 
-                // Os campos abaixo usam os dados brutos (se precisar, aplique cleanStrangeChars aqui também)
-                pesoEmOrdemDeMarcha: "N/A - Conferir Coluna", 
+                // **AJUSTE 1: Usa a coluna 'total' (Peso em Ordem de Marcha)**
+                pesoEmOrdemDeMarcha: row.total || "N/A", 
                 pbtTecnico: row.pbtTecnico || "N/A", 
+                // **AJUSTE 2: Adiciona o campo pbtCombinado usando a coluna 'pbtc'**
+                pbtCombinado: row.pbtc || "N/A", 
                 cmt: row.cmt || "N/A", 
             }
         };
@@ -118,22 +120,23 @@ fs.createReadStream(INPUT_CSV_FILE, { encoding: 'utf8' })
 // data/veiculos.ts - ARQUIVO GERADO AUTOMATICAMENTE (Total: ${VeiculosData.length} veículos)
 
 export interface FichaTecnica {
-  motor: string;
-  potencia: string;
-  torque: string;
-  transmissao: string;
-  pesoEmOrdemDeMarcha: string;
-  pbtTecnico: string;
-  cmt: string; 
+  motor: string;
+  potencia: string;
+  torque: string;
+  transmissao: string;
+  pesoEmOrdemDeMarcha: string;
+  pbtTecnico: string;
+  pbtCombinado: string; // **AJUSTE 3: Novo campo na interface**
+  cmt: string; 
 }
 
 export interface Veiculo {
-  id: string;
-  nome: string;
-  modelo: string;
-  imagem: string;
-  resumoVantagem: string;
-  fichaTecnica: FichaTecnica;
+  id: string;
+  nome: string;
+  modelo: string;
+  imagem: string;
+  resumoVantagem: string;
+  fichaTecnica: FichaTecnica;
 }
 
 export const VeiculosData: Veiculo[] = ${JSON.stringify(VeiculosData, null, 2)};
