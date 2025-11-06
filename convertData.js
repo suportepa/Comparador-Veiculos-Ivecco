@@ -1,121 +1,140 @@
-// convertData.js - VERSÃO FINAL CORRIGIDA COM LIMPEZA DE CARACTERES
+// convertData.js - VERSÃO OTIMIZADA E MELHORADA
 const fs = require('fs');
 const path = require('path');
 const csv = require('csv-parser');
 
 // =======================================================
-// === CONFIGURAÇÃO: NOME DO ARQUIVO CSV DE ENTRADA ===
+// === CONFIGURAÇÃO ===
 // =======================================================
 const INPUT_CSV_FILE = 'dados_veiculos.csv'; 
 const OUTPUT_TS_FILE = path.join('data', 'veiculos.ts');
 
 /**
- * Função para criar um ID limpo e único a partir do nome do veículo.
+ * Cria um ID único e limpo a partir do nome do veículo
  */
 const slugify = (text) => {
     return text
         .toLowerCase()
+        .normalize('NFD')                    // Normaliza caracteres Unicode
+        .replace(/[\u0300-\u036f]/g, '')     // Remove acentos
         .trim()
-        .replace(/[^\w\s-]/g, '')
-        .replace(/[\s_-]+/g, '_');
+        .replace(/[^\w\s-]/g, '')            // Remove caracteres especiais
+        .replace(/[\s_-]+/g, '_')            // Substitui espaços por _
+        .replace(/^_+|_+$/g, '');            // Remove _ do início/fim
 };
 
 /**
- * Função para limpar caracteres estranhos que persistem após a conversão UTF-8.
- * Ela substitui códigos de erro comuns (como os que representam frações ou acentos) por caracteres legíveis.
- * @param {string} text - Texto do CSV.
- * @returns {string} Texto com substituições forçadas.
+ * Limpa caracteres estranhos e problemas de encoding
  */
-const cleanStrangeChars = (text) => {
-    if (!text) return '';
-    // Substituições comuns para códigos de erro (ajuste conforme necessário)
+const cleanText = (text) => {
+    if (!text || text === '') return '';
+    
     return text
-        // Tenta substituir o código feio (que pode ser um acento ou símbolo) por um espaço ou vazio
-        .replace(/ï¿½/g, '')  
-        .replace(/ï¿½ï¿½/g, '')
-        .replace(/\r?\n|\r/g, ' ') // Remove quebras de linha
-        // Frações (ex: 1/2) - pode ser que o código esteja representando um desses
-        .replace('½', ' 1/2') 
-        // Se a letra 'm' no seu print estava estranha, pode ser um 'm' com acento ou símbolo:
-        .replace('mï¿½ï¿½', 'm')
-        // Limpa múltiplos espaços após as substituições
-        .replace(/\s\s+/g, ' ')
+        .replace(/ï¿½/g, '')                 // Remove caracteres de encoding quebrado
+        .replace(/\r?\n|\r/g, ' ')           // Remove quebras de linha
+        .replace(/\s\s+/g, ' ')              // Remove espaços múltiplos
+        .replace(/[^\x20-\x7E\u00C0-\u00FF]/g, '') // Mantém apenas ASCII estendido
         .trim();
 };
 
 /**
- * Função para limpar e retornar o primeiro valor numérico de uma string.
+ * Extrai o primeiro valor numérico de uma string
  */
-const cleanNumericValue = (value) => {
-    if (!value) return '';
-    // Pega o que estiver antes do primeiro espaço ou caractere especial (como "|")
-    const firstValue = value.toString().split(/[\s|]/)[0]; 
-    return firstValue.trim().replace(/\./g, ''); // Remove todos os pontos (milhar)
+const extractFirstNumber = (value) => {
+    if (!value || value === '') return '';
+    
+    // Remove espaços e pega o primeiro valor antes de | ou /
+    const firstValue = value.toString().split(/[\s|/]/)[0].trim();
+    
+    // Remove pontos de milhar mas mantém vírgulas decimais
+    return firstValue.replace(/\./g, '');
 };
 
+/**
+ * Limpa e formata a transmissão
+ */
+const formatTransmission = (acionamento, nMarchas) => {
+    const tipo = cleanText(acionamento || 'Manual').split('|')[0].trim();
+    const marchas = extractFirstNumber(nMarchas || '0');
+    
+    if (marchas && marchas !== '0') {
+        return `${tipo} (${marchas} marchas)`;
+    }
+    return tipo;
+};
+
+/**
+ * Valida se o veículo tem dados mínimos necessários
+ */
+const isValidVehicle = (row) => {
+    return row.modelo && 
+           row.fabricante && 
+           row.cv && 
+           row.nm;
+};
+
+// =======================================================
+// === PROCESSAMENTO PRINCIPAL ===
+// =======================================================
 
 const VeiculosData = [];
+let skippedCount = 0;
 
-// Garante que a pasta 'data' exista
+// Garante que a pasta 'data' existe
 if (!fs.existsSync('data')) {
     fs.mkdirSync('data');
 }
 
-// Usando encoding: 'utf8'. O CSV DEVE estar salvo como UTF-8.
+console.log('🚀 Iniciando conversão do CSV...\n');
+
 fs.createReadStream(INPUT_CSV_FILE, { encoding: 'utf8' })
-    .pipe(csv({ separator: ';' })) 
+    .pipe(csv({ separator: ';' }))
     .on('data', (row) => {
         
-        // Aplica a limpeza de caracteres estranhos nas colunas relevantes
-        const modeloVeiculo = cleanStrangeChars(row.modelo);
-        const acionamento = cleanStrangeChars(row.acionamento);
-        const nMarchas = cleanStrangeChars(row.nMarchas);
-
-        // Limpeza dos dados de potência e torque (numérico)
-        const potenciaCv = cleanNumericValue(row.cv);
-        const torqueNm = cleanNumericValue(row.nm);
-        
-        // Corrigido para 'fabricante' (minúsculo)
-        const fabricanteMotor = row.fabricante; 
-        
-        // Limpeza da Transmissão (Texto)
-        const acionamentoLimpo = (acionamento || 'N/A').split('|')[0].trim();
-        const nMarchasLimpo = (nMarchas || '?').split(' ')[0].trim();
-        
-        // Filtro de linha: só processa se tiver o modelo, CV, NM e Fabricante.
-        if (!modeloVeiculo || !potenciaCv || !torqueNm || !fabricanteMotor) {
-            return; 
+        // Valida se tem dados mínimos
+        if (!isValidVehicle(row)) {
+            skippedCount++;
+            return;
         }
 
-        // Mapeamento e transformação dos dados
+        // Limpeza dos dados
+        const marca = cleanText(row.marca);
+        const modelo = cleanText(row.modelo);
+        const potenciaCv = extractFirstNumber(row.cv);
+        const torqueNm = extractFirstNumber(row.nm);
+        const fabricanteMotor = cleanText(row.fabricante);
+        const pbtTecnico = extractFirstNumber(row.pbtTecnico);
+        const cmt = extractFirstNumber(row.cmt);
+
+        // Monta o objeto do veículo
         const veiculo = {
-            id: slugify(`${row.marca}_${modeloVeiculo}_${potenciaCv}`), 
-            nome: `${row.marca} ${modeloVeiculo}`, 
-            modelo: modeloVeiculo, 
-            imagem: row.imagem || "https://via.placeholder.com/300x200?text=Iveco", 
-            resumoVantagem: cleanStrangeChars(row.resumoVantagem) || "Ponto forte do veículo a ser adicionado.", 
+            id: slugify(`${marca}_${modelo}_${potenciaCv}`),
+            nome: `${marca} ${modelo}`,
+            modelo: modelo,
+            imagem: row.imagem && row.imagem !== 'Imagem' 
+                ? row.imagem 
+                : 'placeholder.png',
             
             fichaTecnica: {
-                motor: fabricanteMotor, 
-                potencia: `${potenciaCv} cv`, 
-                torque: `${torqueNm} Nm`, 
-                
-                // Combinação das colunas 'acionamento' e 'nMarchas' após limpeza
-                transmissao: `${acionamentoLimpo} (${nMarchasLimpo} marchas)`, 
-                
-                // Os campos abaixo usam os dados brutos (se precisar, aplique cleanStrangeChars aqui também)
-                pesoEmOrdemDeMarcha: "N/A - Conferir Coluna", 
-                pbtTecnico: row.pbtTecnico || "N/A", 
-                cmt: row.cmt || "N/A", 
+                motor: fabricanteMotor,
+                potencia: `${potenciaCv} cv`,
+                torque: `${torqueNm} Nm`,
+                transmissao: formatTransmission(row.acionamento, row.nMarchas),
+                pesoEmOrdemDeMarcha: row.pesoEmOrdemDeMarcha 
+                    ? extractFirstNumber(row.pesoEmOrdemDeMarcha) 
+                    : 'N/A',
+                pbtTecnico: pbtTecnico || 'N/A',
+                cmt: cmt || 'N/A',
             }
         };
 
         VeiculosData.push(veiculo);
     })
     .on('end', () => {
-        // Estrutura do arquivo TypeScript de saída
-        const tsContent = `
-// data/veiculos.ts - ARQUIVO GERADO AUTOMATICAMENTE (Total: ${VeiculosData.length} veículos)
+        // Gera o arquivo TypeScript
+        const tsContent = `// data/veiculos.ts - ARQUIVO GERADO AUTOMATICAMENTE
+// Total de veículos: ${VeiculosData.length}
+// Gerado em: ${new Date().toLocaleString('pt-BR')}
 
 export interface FichaTecnica {
   motor: string;
@@ -124,7 +143,7 @@ export interface FichaTecnica {
   transmissao: string;
   pesoEmOrdemDeMarcha: string;
   pbtTecnico: string;
-  cmt: string; 
+  cmt: string;
 }
 
 export interface Veiculo {
@@ -132,21 +151,35 @@ export interface Veiculo {
   nome: string;
   modelo: string;
   imagem: string;
-  resumoVantagem: string;
   fichaTecnica: FichaTecnica;
 }
 
 export const VeiculosData: Veiculo[] = ${JSON.stringify(VeiculosData, null, 2)};
 `;
 
-        // Escreve o novo conteúdo no veiculos.ts
-        fs.writeFileSync(OUTPUT_TS_FILE, tsContent);
+        // Salva o arquivo
+        fs.writeFileSync(OUTPUT_TS_FILE, tsContent, 'utf8');
         
-        console.log('----------------------------------------------------');
-        console.log(`✅ Sucesso! ${VeiculosData.length} veículos foram processados.`);
-        console.log(`Arquivo ${OUTPUT_TS_FILE} gerado com sucesso!`);
-        console.log('----------------------------------------------------');
+        // Resumo final
+        console.log('═══════════════════════════════════════════════════');
+        console.log('✅ CONVERSÃO CONCLUÍDA COM SUCESSO!');
+        console.log('═══════════════════════════════════════════════════');
+        console.log(`📊 Veículos processados: ${VeiculosData.length}`);
+        console.log(`⚠️  Linhas ignoradas: ${skippedCount}`);
+        console.log(`📁 Arquivo gerado: ${OUTPUT_TS_FILE}`);
+        console.log('═══════════════════════════════════════════════════\n');
+        
+        // Mostra amostra dos primeiros 3 veículos
+        console.log('🔍 Amostra dos veículos processados:');
+        VeiculosData.slice(0, 3).forEach((v, i) => {
+            console.log(`\n${i + 1}. ${v.nome}`);
+            console.log(`   ID: ${v.id}`);
+            console.log(`   Motor: ${v.fichaTecnica.motor}`);
+            console.log(`   Potência: ${v.fichaTecnica.potencia}`);
+        });
+        console.log('\n');
     })
     .on('error', (err) => {
-        console.error("ERRO ao processar o CSV:", err.message);
+        console.error('❌ ERRO ao processar o CSV:', err.message);
+        process.exit(1);
     });
