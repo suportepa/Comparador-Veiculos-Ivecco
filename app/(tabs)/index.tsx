@@ -41,15 +41,26 @@ interface ComparacaoProps {
 }
 
 const ComparacaoContainer: React.FC<ComparacaoProps> = ({ veiculo1, veiculo2 }) => {
-  // Define ordem, rótulos e pesos dos campos
-  const specsConfig: { key: keyof FichaTecnica; label: string; peso: number }[] = [
-    { key: 'motor', label: 'MOTOR', peso: 2 },
-    { key: 'potencia', label: 'POTÊNCIA', peso: 3 },
-    { key: 'torque', label: 'TORQUE', peso: 3 },
-    { key: 'transmissao', label: 'TRANSMISSÃO', peso: 1 },
-    { key: 'pesoEmOrdemDeMarcha', label: 'PESO EM ORDEM DE MARCHA', peso: 2 },
-    { key: 'pbtTecnico', label: 'PBT TÉCNICO', peso: 2 },
-    { key: 'cmt', label: 'CMT', peso: 2 },
+  // Estado para os pesos personalizáveis
+  const [pesos, setPesos] = useState({
+    motor: 2,
+    potencia: 3,
+    torque: 3,
+    transmissao: 1,
+    pesoEmOrdemDeMarcha: 2,
+    pbtTecnico: 2,
+    cmt: 2,
+  });
+
+  // Define ordem e rótulos dos campos
+  const specsConfig: { key: keyof FichaTecnica; label: string }[] = [
+    { key: 'motor', label: 'MOTOR' },
+    { key: 'potencia', label: 'POTÊNCIA' },
+    { key: 'torque', label: 'TORQUE' },
+    { key: 'transmissao', label: 'TRANSMISSÃO' },
+    { key: 'pesoEmOrdemDeMarcha', label: 'PESO EM ORDEM DE MARCHA' },
+    { key: 'pbtTecnico', label: 'PBT TÉCNICO' },
+    { key: 'cmt', label: 'CMT' },
   ];
 
   const getVencedor = (key: keyof FichaTecnica) => {
@@ -75,8 +86,9 @@ const ComparacaoContainer: React.FC<ComparacaoProps> = ({ veiculo1, veiculo2 }) 
       veiculo2: [] as string[],
     };
 
-    specsConfig.forEach(({ key, label, peso }) => {
+    specsConfig.forEach(({ key, label }) => {
       const vencedor = getVencedor(key);
+      const peso = pesos[key];
       if (vencedor === 'vencedor1') {
         pontosVeiculo1 += peso;
         vitoriasPorCategoria.veiculo1.push(label);
@@ -90,13 +102,52 @@ const ComparacaoContainer: React.FC<ComparacaoProps> = ({ veiculo1, veiculo2 }) 
   };
 
   const { pontosVeiculo1, pontosVeiculo2, vitoriasPorCategoria } = calcularPontuacao();
-  const totalPontos = pontosVeiculo1 + pontosVeiculo2;
-  const porcentagemV1 = totalPontos > 0 ? (pontosVeiculo1 / totalPontos) * 100 : 50;
-  const porcentagemV2 = totalPontos > 0 ? (pontosVeiculo2 / totalPontos) * 100 : 50;
 
   let vencedorGeral: 'empate' | 1 | 2 = 'empate';
   if (pontosVeiculo1 > pontosVeiculo2) vencedorGeral = 1;
   else if (pontosVeiculo2 > pontosVeiculo1) vencedorGeral = 2;
+
+  // Componente de Controle de Pesos
+  const ControlePesos = () => (
+    <View style={styles.controlePesosContainer}>
+      <Text style={styles.controlePesosTitulo}>⚖️ Personalize os Pesos</Text>
+      <Text style={styles.controlePesosSubtitulo}>Ajuste a importância de cada característica</Text>
+      {specsConfig.map(({ key, label }) => (
+        <View key={key} style={styles.pesoControlRow}>
+          <Text style={styles.pesoControlLabel}>{label}</Text>
+          <View style={styles.pesoButtons}>
+            <TouchableOpacity
+              style={styles.pesoButton}
+              onPress={() => setPesos(prev => ({ ...prev, [key]: Math.max(0, prev[key] - 1) }))}
+            >
+              <Text style={styles.pesoButtonText}>−</Text>
+            </TouchableOpacity>
+            <Text style={styles.pesoValue}>{pesos[key]}</Text>
+            <TouchableOpacity
+              style={styles.pesoButton}
+              onPress={() => setPesos(prev => ({ ...prev, [key]: Math.min(5, prev[key] + 1) }))}
+            >
+              <Text style={styles.pesoButtonText}>+</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      ))}
+      <TouchableOpacity
+        style={styles.resetButton}
+        onPress={() => setPesos({
+          motor: 2,
+          potencia: 3,
+          torque: 3,
+          transmissao: 1,
+          pesoEmOrdemDeMarcha: 2,
+          pbtTecnico: 2,
+          cmt: 2,
+        })}
+      >
+        <Text style={styles.resetButtonText}>Restaurar Padrão</Text>
+      </TouchableOpacity>
+    </View>
+  );
 
   // Componente de Conclusão
   const ConclusaoComponent = () => {
@@ -143,21 +194,8 @@ const ComparacaoContainer: React.FC<ComparacaoProps> = ({ veiculo1, veiculo2 }) 
     <View style={styles.comparisonContainer}>
       <Text style={styles.sectionTitle}>Ficha Técnica Comparada</Text>
 
-      {/* Placar Visual */}
-      <View style={styles.placarContainer}>
-        <View style={styles.placarItem}>
-          <Text style={styles.placarNome} numberOfLines={2}>{veiculo1.nome}</Text>
-          <Text style={styles.placarPontos}>{pontosVeiculo1} pts</Text>
-        </View>
-        <View style={styles.barraContainer}>
-          <View style={[styles.barraVeiculo1, { width: `${porcentagemV1}%` }]} />
-          <View style={[styles.barraVeiculo2, { width: `${porcentagemV2}%` }]} />
-        </View>
-        <View style={styles.placarItem}>
-          <Text style={styles.placarNome} numberOfLines={2}>{veiculo2.nome}</Text>
-          <Text style={styles.placarPontos}>{pontosVeiculo2} pts</Text>
-        </View>
-      </View>
+      {/* Controle de Pesos */}
+      <ControlePesos />
 
       {/* Tabela */}
       <View style={styles.table}>
@@ -167,7 +205,7 @@ const ComparacaoContainer: React.FC<ComparacaoProps> = ({ veiculo1, veiculo2 }) 
           <Text style={styles.headerText} numberOfLines={2}>{veiculo2.nome}</Text>
         </View>
 
-        {specsConfig.map(({ key, label, peso }) => {
+        {specsConfig.map(({ key, label }) => {
           const vencedor = getVencedor(key);
           return (
             <View key={key} style={styles.dataRow}>
@@ -176,7 +214,7 @@ const ComparacaoContainer: React.FC<ComparacaoProps> = ({ veiculo1, veiculo2 }) 
               </VencedorText>
               <View style={styles.specLabelContainer}>
                 <Text style={styles.specLabel} numberOfLines={2}>{label}</Text>
-                <Text style={styles.pesoLabel}>peso: {peso}</Text>
+                <Text style={styles.pesoLabel}>peso: {pesos[key]}</Text>
               </View>
               <VencedorText vencedor={vencedor} isVeiculo1={false}>
                 {veiculo2.fichaTecnica[key]}
@@ -266,9 +304,17 @@ export default function Index() {
         </View>
 
         <View style={styles.imageRow}>
-          <Image source={{ uri: veiculoA.imagem }} style={styles.vehicleImage} resizeMode="cover" />
+          <Image 
+            source={require('../../assets/imagens/img.png')} 
+            style={styles.vehicleImage} 
+            resizeMode="contain" 
+          />
           <Text style={styles.vsText}>VS</Text>
-          <Image source={{ uri: veiculoB.imagem }} style={styles.vehicleImage} resizeMode="cover" />
+          <Image 
+            source={require('../../assets/imagens/img.png')} 
+            style={styles.vehicleImage} 
+            resizeMode="contain" 
+          />
         </View>
 
         <ComparacaoContainer veiculo1={veiculoA} veiculo2={veiculoB} />
@@ -297,21 +343,25 @@ const styles = StyleSheet.create({
   vsText: { fontSize: 20, fontWeight: 'bold', color: '#004A99' },
   comparisonContainer: { width: '100%', padding: 10, backgroundColor: '#fff', borderRadius: 10, shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.1, shadowRadius: 4, elevation: 3 },
   sectionTitle: { fontSize: 18, fontWeight: 'bold', color: '#004A99', textAlign: 'center', marginBottom: 15, paddingBottom: 5, borderBottomWidth: 1, borderBottomColor: '#eee' },
-  placarContainer: { marginBottom: 20, backgroundColor: '#f0f0f0', padding: 15, borderRadius: 8 },
-  placarItem: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 8 },
-  placarNome: { fontSize: 14, fontWeight: '600', color: '#333' },
-  placarPontos: { fontSize: 14, fontWeight: 'bold', color: '#004A99' },
-  barraContainer: { flexDirection: 'row', height: 20, backgroundColor: '#ddd', borderRadius: 10, overflow: 'hidden', marginVertical: 10 },
-  barraVeiculo1: { backgroundColor: '#28A745', height: '100%' },
-  barraVeiculo2: { backgroundColor: '#007BFF', height: '100%' },
+  controlePesosContainer: { marginBottom: 20, backgroundColor: '#E8F4F8', padding: 15, borderRadius: 8, borderWidth: 1, borderColor: '#004A99' },
+  controlePesosTitulo: { fontSize: 16, fontWeight: 'bold', color: '#004A99', textAlign: 'center', marginBottom: 5 },
+  controlePesosSubtitulo: { fontSize: 12, color: '#666', textAlign: 'center', marginBottom: 15, fontStyle: 'italic' },
+  pesoControlRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10, paddingVertical: 8, paddingHorizontal: 10, backgroundColor: '#fff', borderRadius: 6 },
+  pesoControlLabel: { fontSize: 11, fontWeight: '600', color: '#333', flex: 1, marginRight: 10 },
+  pesoButtons: { flexDirection: 'row', alignItems: 'center', gap: 10 },
+  pesoButton: { width: 32, height: 32, backgroundColor: '#004A99', borderRadius: 16, justifyContent: 'center', alignItems: 'center' },
+  pesoButtonText: { color: '#fff', fontSize: 18, fontWeight: 'bold' },
+  pesoValue: { fontSize: 16, fontWeight: 'bold', color: '#004A99', minWidth: 20, textAlign: 'center' },
+  resetButton: { marginTop: 10, backgroundColor: '#DC3545', padding: 12, borderRadius: 6, alignItems: 'center' },
+  resetButtonText: { color: '#fff', fontSize: 14, fontWeight: 'bold' },
   table: { borderWidth: 1, borderColor: '#ddd', borderRadius: 6, marginBottom: 20, overflow: 'hidden' },
-  headerRow: { flexDirection: 'row', backgroundColor: '#004A99', paddingVertical: 10 },
-  headerText: { flex: 1, color: '#fff', fontWeight: 'bold', textAlign: 'center' },
-  dataRow: { flexDirection: 'row', paddingVertical: 12, borderBottomWidth: 1, borderBottomColor: '#eee', backgroundColor: '#f9f9f9' },
-  specLabelContainer: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-  specLabel: { flex: 1, fontWeight: '600', textAlign: 'center', color: '#333' },
-  pesoLabel: { fontSize: 10, color: '#666', fontStyle: 'italic', marginTop: 2 },
-  specValue: { flex: 1, textAlign: 'center', fontSize: 14, fontWeight: '400' },
+  headerRow: { flexDirection: 'row', backgroundColor: '#004A99', paddingVertical: 10, paddingHorizontal: 5 },
+  headerText: { flex: 1, color: '#fff', fontWeight: 'bold', textAlign: 'center', fontSize: 11 },
+  dataRow: { flexDirection: 'row', paddingVertical: 12, paddingHorizontal: 5, borderBottomWidth: 1, borderBottomColor: '#eee', backgroundColor: '#f9f9f9' },
+  specLabelContainer: { flex: 1, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 2 },
+  specLabel: { fontWeight: '600', textAlign: 'center', color: '#333', fontSize: 10 },
+  pesoLabel: { fontSize: 9, color: '#666', fontStyle: 'italic', marginTop: 2 },
+  specValue: { flex: 1, textAlign: 'center', fontSize: 11, fontWeight: '400', paddingHorizontal: 2 },
   vencedorText: { fontWeight: 'bold', color: '#28A745' },
   perdedorText: { fontWeight: '400', color: '#DC3545', opacity: 0.7 },
   conclusaoBox: { backgroundColor: '#FFF9E6', padding: 20, borderRadius: 10, borderWidth: 2, borderColor: '#FFD700', marginBottom: 20, alignItems: 'center' },
@@ -322,9 +372,4 @@ const styles = StyleSheet.create({
   conclusaoSubtitulo: { fontSize: 14, fontWeight: '600', color: '#004A99', marginBottom: 10 },
   vitoriasContainer: { width: '100%' },
   vitoriaItem: { fontSize: 13, color: '#333', marginBottom: 5, paddingLeft: 10 },
-  resumoRow: { flexDirection: 'row', justifyContent: 'space-between', marginTop: 10 },
-  resumoCol: { width: '48%' },
-  resumeBox: { backgroundColor: '#fff', padding: 12, borderRadius: 8, borderWidth: 1, borderColor: '#004A99', minHeight: 120 },
-  resumeTitle: { fontSize: 16, fontWeight: 'bold', color: '#004A99', marginBottom: 5, textAlign: 'center' },
-  resumeText: { fontSize: 13, lineHeight: 18, color: '#333', fontStyle: 'italic', textAlign: 'center' },
 });
